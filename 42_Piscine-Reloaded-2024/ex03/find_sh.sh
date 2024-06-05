@@ -1,3 +1,3 @@
-#!/bin/bash
+#!/bin/sh
 
 find . -type f -name "*.sh" -exec sh -c 'basename {} .sh' \;
