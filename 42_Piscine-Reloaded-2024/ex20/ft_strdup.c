@@ -1,36 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_numbers.c                                 :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vbraband <vbraband@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/04 10:00:19 by vbraband          #+#    #+#             */
-/*   Updated: 2024/06/05 17:27:07 by vbraband         ###   ########.fr       */
+/*   Created: 2024/06/04 18:51:39 by vbraband          #+#    #+#             */
+/*   Updated: 2024/06/05 15:53:49 by vbraband         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include <stdlib.h>
 
-// void	ft_putchar(char c)
-// {
-// 	write(1, &c, 1);
-// }
-
-void	ft_print_numbers(void)
+char	*ft_strdup(char *src)
 {
-	int	i;
+	int		i;
+	int		j;
+	char	*copy;
 
 	i = 0;
-	while (i < 10)
-	{
-		ft_putchar(i + 48);
+	j = 0;
+	if (src == NULL)
+		return (NULL);
+	while (src[i])
 		i++;
+	copy = malloc(i + 1);
+	while (src[j])
+	{
+		copy[j] = src[j];
+		j++;
 	}
+	copy[i] = '\0';
+	if (!copy)
+		return (NULL);
+	return (copy);
 }
-
-// int	main(void)
-// {
-// 	ft_print_numbers();
-// 	return	0;
-// }

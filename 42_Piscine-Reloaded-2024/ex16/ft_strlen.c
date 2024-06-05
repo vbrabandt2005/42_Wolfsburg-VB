@@ -6,7 +6,7 @@
 /*   By: vbraband <vbraband@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/04 17:38:50 by vbraband          #+#    #+#             */
-/*   Updated: 2024/06/04 18:00:56 by vbraband         ###   ########.fr       */
+/*   Updated: 2024/06/05 16:13:29 by vbraband         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,6 @@ int	ft_strlen(char *str)
 	}
 	return (i);
 }
-
 
 // #include <stdio.h>
 

@@ -1,36 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_numbers.c                                 :+:      :+:    :+:   */
+/*   ft_range.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vbraband <vbraband@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/04 10:00:19 by vbraband          #+#    #+#             */
-/*   Updated: 2024/06/05 17:27:07 by vbraband         ###   ########.fr       */
+/*   Created: 2024/06/05 16:39:13 by vbraband          #+#    #+#             */
+/*   Updated: 2024/06/05 16:39:20 by vbraband         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
-// void	ft_putchar(char c)
-// {
-// 	write(1, &c, 1);
-// }
-
-void	ft_print_numbers(void)
+int *ft_range(int min, int max)
 {
-	int	i;
-
-	i = 0;
-	while (i < 10)
-	{
-		ft_putchar(i + 48);
-		i++;
-	}
+    
 }
-
-// int	main(void)
-// {
-// 	ft_print_numbers();
-// 	return	0;
-// }
