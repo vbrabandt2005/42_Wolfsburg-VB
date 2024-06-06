@@ -6,7 +6,7 @@
 /*   By: vbraband <vbraband@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/04 16:15:03 by vbraband          #+#    #+#             */
-/*   Updated: 2024/06/05 17:23:12 by vbraband         ###   ########.fr       */
+/*   Updated: 2024/06/05 17:42:38 by vbraband         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,8 +28,6 @@ int	ft_iterative_factorial(int nb)
 	}
 	return (result);
 }
-
-// #include<stdio.h>
 
 // int main()
 // {

@@ -1,33 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_numbers.c                                 :+:      :+:    :+:   */
+/*   ft_foreach.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vbraband <vbraband@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/04 10:00:19 by vbraband          #+#    #+#             */
-/*   Updated: 2024/06/05 18:19:29 by vbraband         ###   ########.fr       */
+/*   Created: 2024/06/06 09:26:59 by vbraband          #+#    #+#             */
+/*   Updated: 2024/06/06 09:27:00 by vbraband         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
-void	ft_putchar(char c);
-
-void	ft_print_numbers(void)
-{
-	int	i;
-
-	i = 0;
-	while (i < 10)
-	{
-		ft_putchar(i + 48);
-		i++;
-	}
-}
-
-// int	main(void)
-// {
-// 	ft_print_numbers();
-// 	return	0;
-// }

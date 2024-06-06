@@ -6,16 +6,13 @@
 /*   By: vbraband <vbraband@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/04 17:45:08 by vbraband          #+#    #+#             */
-/*   Updated: 2024/06/05 17:36:39 by vbraband         ###   ########.fr       */
+/*   Updated: 2024/06/05 18:19:41 by vbraband         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-// void	ft_putchar(char c)
-// {
-// 	write(1, &c, 1);
-// }
+void	ft_putchar(char c);
 
 void	ft_putstr(char *str)
 {

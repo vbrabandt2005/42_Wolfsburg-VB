@@ -1,33 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_numbers.c                                 :+:      :+:    :+:   */
+/*   ft_abs.h                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vbraband <vbraband@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/04 10:00:19 by vbraband          #+#    #+#             */
-/*   Updated: 2024/06/05 18:19:29 by vbraband         ###   ########.fr       */
+/*   Created: 2024/06/06 09:26:47 by vbraband          #+#    #+#             */
+/*   Updated: 2024/06/06 14:48:00 by vbraband         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#ifndef FT_ABS_H
+# define FT_ABS_H
 
-void	ft_putchar(char c);
+# define ABS(Value)(Value * ((Value < 0) * (-1) + (Value > 0)))
 
-void	ft_print_numbers(void)
-{
-	int	i;
-
-	i = 0;
-	while (i < 10)
-	{
-		ft_putchar(i + 48);
-		i++;
-	}
-}
-
-// int	main(void)
-// {
-// 	ft_print_numbers();
-// 	return	0;
-// }
+#endif
