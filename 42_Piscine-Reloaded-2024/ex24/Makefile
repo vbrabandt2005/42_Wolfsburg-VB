@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: vbrabandt <vbrabandt@student.42.fr>        +#+  +:+       +#+         #
+#    By: vbraband <vbraband@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2024/06/07 00:59:02 by vbrabandt         #+#    #+#              #
-#    Updated: 2024/06/07 00:59:23 by vbrabandt        ###   ########.fr        #
+#    Created: 2024/06/07 09:39:10 by vbraband          #+#    #+#              #
+#    Updated: 2024/06/07 09:39:36 by vbraband         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 

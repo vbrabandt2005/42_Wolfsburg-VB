@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_point.h                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vbrabandt <vbrabandt@student.42.fr>        +#+  +:+       +#+        */
+/*   By: vbraband <vbraband@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/06 09:26:54 by vbraband          #+#    #+#             */
-/*   Updated: 2024/06/07 00:57:49 by vbrabandt        ###   ########.fr       */
+/*   Created: 2024/06/07 09:39:20 by vbraband          #+#    #+#             */
+/*   Updated: 2024/06/07 09:39:25 by vbraband         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,4 +20,3 @@ typedef struct s_point
 }	t_point;
 
 #endif
-

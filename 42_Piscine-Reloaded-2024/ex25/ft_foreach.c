@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_foreach.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vbrabandt <vbrabandt@student.42.fr>        +#+  +:+       +#+        */
+/*   By: vbraband <vbraband@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/06 09:26:59 by vbraband          #+#    #+#             */
-/*   Updated: 2024/06/07 23:56:33 by vbrabandt        ###   ########.fr       */
+/*   Updated: 2024/06/07 14:27:49 by vbraband         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	ft_foreach(int *tab, int length, void (*f)(int))
 	i = 0;
 	while (i < length)
 	{
-		f(tab[i]);
-		i++;
+		(*f)(tab[i]);
+		++i;
 	}
 }
