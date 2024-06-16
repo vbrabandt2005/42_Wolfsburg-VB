@@ -3,10 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vbraband <vbraband@student.42.fr>          +#+  +:+       +#+        */
+/*   By: vbrabandt <vbrabandt@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/11 11:16:28 by vbraband          #+#    #+#             */
-/*   Updated: 2024/06/11 11:16:29 by vbraband         ###   ########.fr       */
+/*   Updated: 2024/06/12 00:10:56 by vbrabandt        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+void	ft_putchar_fd(char c, int fd)
+{
+	write(fd, &c, 1);
+}

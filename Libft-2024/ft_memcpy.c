@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vbraband <vbraband@student.42.fr>          +#+  +:+       +#+        */
+/*   By: vbrabandt <vbrabandt@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/11 12:44:46 by vbraband          #+#    #+#             */
-/*   Updated: 2024/06/11 12:45:21 by vbraband         ###   ########.fr       */
+/*   Updated: 2024/06/12 00:22:18 by vbrabandt        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stddef.h>
 
-void *memcpy (void *dest, const void *src, size_t len)
+void *ft_memcpy (void *dest, const void *src, size_t len)
 {
   char *d = dest;
   const char *s = src;
