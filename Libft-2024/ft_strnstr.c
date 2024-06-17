@@ -1,38 +1,45 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnstr.c*                                      :+:      :+:    :+:   */
+/*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vbraband <vbraband@student.42.fr>          +#+  +:+       +#+        */
+/*   By: vbrabandt <vbrabandt@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/10 10:55:12 by vbraband          #+#    #+#             */
-/*   Updated: 2024/06/17 12:58:37 by vbraband         ###   ########.fr       */
+/*   Updated: 2024/06/17 14:17:07 by vbrabandt        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *strnstr(const char *s, const char *find, size_t slen)
-{
-	char c, sc;
-	size_t len;
+char *strnstr(const char *s, const char *find, size_t slen) {
+    char c, sc;
+    size_t len;
+	size_t i;
 
-	if ((c = *find++) != '\0') {
-		len = strlen(find);
-		do {
-			do {
-				if (slen-- < 1 || (sc = *s++) == '\0')
-					return (NULL);
-			} while (sc != c);
-			if (len > slen)
-				return (NULL);
-		} while (ft_strncmp(s, find, len) != 0);
-		s--;
-	}
-	return ((char *)s);
+    if ((c = *find++) != '\0') {
+        len = strlen(find);
+        while (slen-- > 0) {
+            sc = *s++;
+            if (sc == '\0') {
+                return NULL;  // Reached the end of the main string
+            }
+            if (sc == c) {
+                // Potential match found, start inner loop
+                i = 0;
+                while (i < len && slen > 0 && s[i] == find[i]) {
+                    i++;
+                    slen--;
+                }
+                if (i == len) {
+                    return (char *)s - len;  // Match found, return pointer
+                }
+            }
+        }
+    }
+    return NULL;  // No match found
 }
 
-// needs to be rewritten
 
 /*
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
