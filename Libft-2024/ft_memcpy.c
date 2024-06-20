@@ -6,7 +6,7 @@
 /*   By: vbraband <vbraband@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/11 12:44:46 by vbraband          #+#    #+#             */
-/*   Updated: 2024/06/14 13:20:22 by vbraband         ###   ########.fr       */
+/*   Updated: 2024/06/19 13:59:36 by vbraband         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,35 @@
 
 void *ft_memcpy (void *dest, const void *src, size_t len)
 {
-  char *d = dest;
+  char *d;
+  char *s;
   
-  const char *s = src;
-  
+	d = dest;
+	s = (char *)src;
+
   while (len--)
-    *d++ = *s++;
+	*d++ = *s++;
   return dest;
 }
 
-// untested
+// int main()
+// {
+// 	char dest[20] = "Hello, world!";
+// 	const char src[] = "Copied text";
+
+// 	// Using your ft_memcpy function
+// 	ft_memcpy(dest + 7, src, strlen(src));
+
+// 	// Verify the result
+// 	printf("After ft_memcpy: %s\n", dest);
+
+// 	// Compare with standard memcpy
+// 	char dest2[20] = "Hello, world!";
+// 	memcpy(dest2 + 7, src, strlen(src));
+// 	printf("After memcpy: %s\n", dest2);
+
+// 	return 0;
+// }
 
 /*
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀

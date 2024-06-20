@@ -6,7 +6,7 @@
 /*   By: vbraband <vbraband@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/10 13:26:17 by vbraband          #+#    #+#             */
-/*   Updated: 2024/06/14 13:21:37 by vbraband         ###   ########.fr       */
+/*   Updated: 2024/06/19 12:58:56 by vbraband         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,14 @@
 
 void	ft_bzero(void *s, size_t n)
 {
-    unsigned char	*str;
-	 
-	*str = (unsigned char *)s;
-	while (n--)
-		*str++ = 0;
+	size_t	i;
+
+	i = 0;
+	while (i < n)
+	{
+		((char *)s)[i] = 0;
+		i++;
+	}
 }
 
 // int main(void) {

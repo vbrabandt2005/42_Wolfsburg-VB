@@ -6,41 +6,52 @@
 /*   By: vbraband <vbraband@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/12 10:18:11 by vbraband          #+#    #+#             */
-/*   Updated: 2024/06/14 13:20:18 by vbraband         ###   ########.fr       */
+/*   Updated: 2024/06/19 12:37:49 by vbraband         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void *ft_memmove (void *dest, const void *src, size_t len)
+void *ft_memmove(void *dest, const void *src, size_t len)
 {
-  char *d = dest;
-  const char *s = src;
-  if (d < s)
-    while (len--)
-      *d++ = *s++;
-  else
+    unsigned char *d = (unsigned char *)dest;
+    const unsigned char *s = (const unsigned char *)src;
+
+    if (d < s)
     {
-      char *lasts = s + (len-1);
-      char *lastd = d + (len-1);
-      while (len--)
-        *lastd-- = *lasts--;
+        while (len--)
+            *d++ = *s++;
     }
-  return dest;
+    else
+    {
+        unsigned char *lasts = (unsigned char *)s + (len - 1);
+        unsigned char *lastd = d + (len - 1);
+        while (len--)
+            *lastd-- = *lasts--;
+    }
+
+    return dest;
 }
 
-int main () {
-   char dest[] = "oldstring";
-   const char src[]  = "newstring";
+// int main()
+// {
+//     char dest[] = "oldstring";
+//     const char src[] = "newstring";
+//     char dest2[] = "oldstring";
+//     const char src2[] = "newstring";
 
-   printf("Before memmove dest = %s, src = %s\n", dest, src);
-   ft_memmove(dest, src, 9);
-   printf("After memmove dest = %s, src = %s\n", dest, src);
+//     printf("Before ft_memmove dest = %s, src = %s\n", dest, src);
+//     ft_memmove(dest, src, 9);
+//     printf("After ft_memmove dest = %s, src = %s\n", dest, src);
 
-   return(0);
-}
+// 	printf("\n");
 
-// broken!!!
+//     printf("Before og_memmove dest = %s, src = %s\n", dest2, src2);
+//     memmove(dest2, src2, 9);
+//     printf("After og_memmove dest = %s, src = %s\n", dest2, src2);
+
+//     return 0;
+// }
 
 /*
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀

@@ -6,7 +6,7 @@
 /*   By: vbraband <vbraband@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/10 10:55:09 by vbraband          #+#    #+#             */
-/*   Updated: 2024/06/14 13:18:12 by vbraband         ###   ########.fr       */
+/*   Updated: 2024/06/19 10:48:02 by vbraband         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,14 +34,15 @@ int	ft_strncmp(char *s1, char *s2, unsigned int n)
 
 // int main()
 // {
-// 	char *s1 = "Capybara";
-// 	char *s2 = "Raccoons";
-// 	unsigned int n = 5; // Choose a desired comparison length
+// 	char *s1 = "pp";
+// 	char *s2 = "popo";
+// 	unsigned int n = 50; // Choose a desired comparison length
 
 // 	int result = ft_strncmp(s1, s2, n);
+// 	int result2 = strncmp(s1, s2, n);
 
 // 	printf("ft_strncmp(\"%s\", \"%s\", %u): %d\n", s1, s2, n, result);
-
+// 	printf("ft_strncmp(\"%s\", \"%s\", %u): %d\n", s1, s2, n, result2);
 // 	return 0;
 // }
 
