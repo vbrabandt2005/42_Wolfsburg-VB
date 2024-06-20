@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vbraband <vbraband@student.42.fr>          +#+  +:+       +#+        */
+/*   By: vbrabandt <vbrabandt@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/11 10:53:42 by vbraband          #+#    #+#             */
-/*   Updated: 2024/06/14 13:19:43 by vbraband         ###   ########.fr       */
+/*   Updated: 2024/06/20 03:42:11 by vbrabandt        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,52 @@
 
 char **ft_split(char const *s, char c)
 {
-    
+    if (!s)
+        return NULL;
+    int count = 0;
+    int i = 0;
+    while (s[i])
+    {
+        if (s[i] != c)
+        {
+            count++;
+            while (s[i] && s[i] != c)
+                i++;
+        }
+        else
+            i++;
+    }
+    char **result = (char **)malloc((count + 1) * sizeof(char *));
+    if (!result)
+        return NULL;
+    int j = 0;
+    int start = 0;
+    while (s[start])
+    {
+        if (s[start] != c)
+        {
+            int end = start;
+            while (s[end] && s[end] != c)
+                end++;
+            result[j] = (char *)malloc((end - start + 1) * sizeof(char));
+            if (!result[j])
+            {
+                while (j > 0)
+                    free(result[--j]);
+                free(result);
+                return NULL;
+            }
+            int k = 0;
+            while (start < end)
+                result[j][k++] = s[start++];
+            result[j][k] = '\0';
+            j++;
+        }
+        else
+            start++;
+    }
+    result[j] = NULL;
+    return result;
 }
 
 /*
