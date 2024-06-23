@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vbraband <vbraband@student.42.fr>          +#+  +:+       +#+        */
+/*   By: vbrabandt <vbrabandt@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/10 09:53:42 by vbraband          #+#    #+#             */
-/*   Updated: 2024/06/21 16:21:29 by vbraband         ###   ########.fr       */
+/*   Updated: 2024/06/24 00:08:01 by vbrabandt        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,11 +59,11 @@ void			ft_putnbr_fd(int n, int fd);
 void			ft_putstr_fd(char *c, int fd);
 void			ft_striteri(char *s, void (*f)(unsigned int, char*));
 char			**ft_split(char const *s, char c);
-// ft_strjoin is incomplete
+// ft_strjoin is partially incomplete
 char			*ft_strjoin(char const *s1, char const *s2);
 // ft_strmapi is partially complete
 char            *ft_strmapi(char const *s, char (*f)(unsigned int, char));
-// ft_strtrim is incomplete
+// ft_strtrim is partially incomplete
 char			*ft_strtrim(char const *s1, char const *set);
 char 			*ft_substr(char const *s, unsigned int start, size_t len);
 
