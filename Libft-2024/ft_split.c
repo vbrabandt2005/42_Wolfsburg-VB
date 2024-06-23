@@ -3,64 +3,105 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vbrabandt <vbrabandt@student.42.fr>        +#+  +:+       +#+        */
+/*   By: vbraband <vbraband@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/11 10:53:42 by vbraband          #+#    #+#             */
-/*   Updated: 2024/06/20 03:42:11 by vbrabandt        ###   ########.fr       */
+/*   Updated: 2024/06/21 15:45:42 by vbraband         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char **ft_split(char const *s, char c)
+static size_t ft_toklen(const char *s, char c)
 {
-    if (!s)
-        return NULL;
-    int count = 0;
-    int i = 0;
-    while (s[i])
-    {
-        if (s[i] != c)
-        {
-            count++;
-            while (s[i] && s[i] != c)
-                i++;
-        }
-        else
-            i++;
-    }
-    char **result = (char **)malloc((count + 1) * sizeof(char *));
-    if (!result)
-        return NULL;
-    int j = 0;
-    int start = 0;
-    while (s[start])
-    {
-        if (s[start] != c)
-        {
-            int end = start;
-            while (s[end] && s[end] != c)
-                end++;
-            result[j] = (char *)malloc((end - start + 1) * sizeof(char));
-            if (!result[j])
-            {
-                while (j > 0)
-                    free(result[--j]);
-                free(result);
-                return NULL;
-            }
-            int k = 0;
-            while (start < end)
-                result[j][k++] = s[start++];
-            result[j][k] = '\0';
-            j++;
-        }
-        else
-            start++;
-    }
-    result[j] = NULL;
-    return result;
+	size_t ret = 0;
+	while (*s)
+	{
+		if (*s != c)
+		{
+			++ret;
+			while (*s && *s != c)
+				++s;
+		}
+		else
+			++s;
+	}
+	return ret;
 }
+
+char *ft_strncpy(char *dest, const char *src, size_t n)
+{
+	size_t i;
+
+	i = 0;
+	while (src[i] != '\0' && i < n)
+	{
+		dest[i] = src[i];
+		i++;
+	}
+	while (i < n)
+	{
+		dest[i] = '\0';
+		i++;
+	}
+	return dest;
+}
+
+char	**ft_split(const char *s, char c)
+{
+	char	**ret;
+	size_t	i;
+	size_t	len;
+
+	if (!s)
+		return (0);
+	i = 0;
+	ret = malloc(sizeof(char *) * (ft_toklen(s, c) + 1));
+	if (!ret)
+		return (0);
+	while (*s)
+	{
+		if (*s != c)
+		{
+			len = 0;
+			while (*s && *s != c && ++len)
+				++s;
+			ret[i++] = ft_substr(s - len, 0, len);
+		}
+		else
+			++s;
+	}
+	ret[i] = 0;
+	return (ret);
+}
+
+// int main()
+// {
+// 	char **words;
+// 	const char *sentence = "Capybaras are the cutest animals in the world.";
+
+// 	words = ft_split(sentence, ' ');
+
+// 	if (words == NULL)
+// 	{
+// 		printf("Error: ft_split failed to allocate memory\n");
+// 		return 1;
+// 	}
+
+// 	for (int i = 0; words[i] != NULL; i++)
+// 	{
+// 		printf("%s\n", words[i]);
+// 	}
+
+// 	// Free allocated memory
+// 	for (int i = 0; words[i] != NULL; i++)
+// 	{
+// 		free(words[i]);
+// 	}
+// 	free(words);
+
+// 	return 0;
+// }
 
 /*
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀

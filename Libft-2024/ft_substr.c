@@ -6,7 +6,7 @@
 /*   By: vbraband <vbraband@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/11 10:44:30 by vbraband          #+#    #+#             */
-/*   Updated: 2024/06/17 16:13:07 by vbraband         ###   ########.fr       */
+/*   Updated: 2024/06/21 15:35:30 by vbraband         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,50 @@
 
 char *ft_substr(char const *s, unsigned int start, size_t len)
 {
-	
+    size_t s_len;
+    size_t sub_len;
+    char *substr;
+    char *temp_s = strdup(s); // Create a non-const copy of s
+
+    if (temp_s == NULL) // Check if memory allocation failed
+        return NULL;
+
+    s_len = ft_strlen(temp_s);
+    free(temp_s); // Free the memory allocated by strdup
+
+    if (start >= s_len)
+        return NULL;
+    if (len > s_len - start) {
+        sub_len = s_len - start;
+    } else {
+        sub_len = len;
+    }
+    substr = (char *)malloc((sub_len + 1) * sizeof(char)); // Corrected line
+    if (substr == NULL)
+        return NULL;
+    ft_strlcpy(substr, s + start, sub_len + 1);
+    return substr;
 }
+
+// int main(void)
+// {
+//     char *str = "I think capybaras are the cutest animals in the world.";
+//     unsigned int start = 8;
+//     size_t len = 46;
+//     char *substr = ft_substr(str, start, len);
+    
+//     if (substr)
+//     {
+//         printf("Substring: %s\n", substr);
+//         free(substr);
+//     }
+//     else
+//     {
+//         printf("Failed to allocate memory for substring.\n");
+//     }
+
+//     return 0;
+// }
 
 /*
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀

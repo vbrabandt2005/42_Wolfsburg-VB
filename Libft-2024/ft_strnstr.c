@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vbrabandt <vbrabandt@student.42.fr>        +#+  +:+       +#+        */
+/*   By: vbraband <vbraband@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/10 10:55:12 by vbraband          #+#    #+#             */
-/*   Updated: 2024/06/20 03:39:04 by vbrabandt        ###   ########.fr       */
+/*   Updated: 2024/06/20 11:37:25 by vbraband         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,42 +39,42 @@ char *ft_strnstr(const char *s, const char *find, size_t slen) {
 	return NULL;
 }
 
-int main(void) {
-	const char *main_str = "This is a string with a substring";
-	const char *sub_str = "substring";
-	size_t max_len = strlen(main_str);
+// int main(void) {
+// 	const char *main_str = "This is a string with a substring";
+// 	const char *sub_str = "substring";
+// 	size_t max_len = strlen(main_str);
 
-	printf("Testing strnstr:\n");
-	// Search for the entire substring
-	char *found_ptr = strnstr(main_str, sub_str, max_len);
-	if (found_ptr != NULL) {
-		printf("Found substring '%s' at: %s\n", sub_str, found_ptr);
-	} else {
-		printf("Substring '%s' not found within %zu characters.\n", sub_str, max_len);
-	}
+// 	printf("Testing strnstr:\n");
+// 	// Search for the entire substring
+// 	char *found_ptr = strnstr(main_str, sub_str, max_len);
+// 	if (found_ptr != NULL) {
+// 		printf("Found substring '%s' at: %s\n", sub_str, found_ptr);
+// 	} else {
+// 		printf("Substring '%s' not found within %zu characters.\n", sub_str, max_len);
+// 	}
 
-	printf("\nTesting with shorter search length:\n");
-	// Search for only part of the substring (limited length)
-	size_t shorter_len = 7;  // Search for only the first 7 characters of the substring
-	found_ptr = strnstr(main_str, sub_str, shorter_len);
-	if (found_ptr != NULL) {
-		printf("Found substring (limited search length) at: %s\n", found_ptr);
-	} else {
-		printf("Substring not found within %zu characters.\n", shorter_len);
-	}
+// 	printf("\nTesting with shorter search length:\n");
+// 	// Search for only part of the substring (limited length)
+// 	size_t shorter_len = 7;  // Search for only the first 7 characters of the substring
+// 	found_ptr = strnstr(main_str, sub_str, shorter_len);
+// 	if (found_ptr != NULL) {
+// 		printf("Found substring (limited search length) at: %s\n", found_ptr);
+// 	} else {
+// 		printf("Substring not found within %zu characters.\n", shorter_len);
+// 	}
 
-	printf("\nTesting with empty substring:\n");
-	// Search for an empty substring (should always match)
-	sub_str = "";
-	found_ptr = strnstr(main_str, sub_str, max_len);
-	if (found_ptr != NULL) {
-		printf("Found empty substring at: %s\n", found_ptr);
-	} else {
-		printf("Failed to find empty substring (unexpected).\n");
-	}
+// 	printf("\nTesting with empty substring:\n");
+// 	// Search for an empty substring (should always match)
+// 	sub_str = "";
+// 	found_ptr = strnstr(main_str, sub_str, max_len);
+// 	if (found_ptr != NULL) {
+// 		printf("Found empty substring at: %s\n", found_ptr);
+// 	} else {
+// 		printf("Failed to find empty substring (unexpected).\n");
+// 	}
 
-	return (0);
-}
+// 	return (0);
+// }
 
 /*
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀

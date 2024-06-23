@@ -6,7 +6,7 @@
 /*   By: vbraband <vbraband@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/10 14:16:02 by vbraband          #+#    #+#             */
-/*   Updated: 2024/06/17 12:48:19 by vbraband         ###   ########.fr       */
+/*   Updated: 2024/06/20 11:56:12 by vbraband         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,21 +15,18 @@
 char	*ft_strdup(const char *s)
 {
 	size_t i;
-	
-	if (s == NULL) {
-		return NULL;
-	}
-
 	size_t len;
-	len = strlen(s);
-	char *dup = malloc(len + 1);
-	
-	if (dup == NULL) {
+	char *dup;
+
+	if (s == NULL)
 		return NULL;
-	}
-	
+
+	len = ft_strlen((char *)s);
+	dup = malloc(len + 1);
+
+	if (dup == NULL) 
+		return NULL;
 	i = 0;
-	
 	while (s[i] != '\0') 
 	{
 		dup[i] = s[i];
@@ -56,31 +53,31 @@ char	*ft_strdup(const char *s)
 
 // 	// Check if the memory is properly allocated and initialized
 // 	if (strcmp(str, dup_str) != 0) {
-//         printf("ft_strdup: Content mismatch!\n");
-//         free(dup_str);  // Free memory before returning
-//         return (1);
-//     }
+// 		printf("ft_strdup: Content mismatch!\n");
+// 		free(dup_str);  // Free memory before returning
+// 		return (1);
+// 	}
 
-//     printf("ft_strdup: Memory allocated and initialized successfully.\n");
+// 	printf("ft_strdup: Memory allocated and initialized successfully.\n");
 
-//     // Free the allocated memory
-//     free(dup_str);
+// 	// Free the allocated memory
+// 	free(dup_str);
 
-//     printf("\nTesting real strdup:\n");
-//     char *real_dup = strdup(str);
-//     if (real_dup == NULL) {
-//         printf("strdup failed!\n");
-//         return (1);
-//     }
+// 	printf("\nTesting real strdup:\n");
+// 	char *real_dup = strdup(str);
+// 	if (real_dup == NULL) {
+// 		printf("strdup failed!\n");
+// 		return (1);
+// 	}
 
-//     printf("Duplicated string (real strdup): %s\n", real_dup);
+// 	printf("Duplicated string (real strdup): %s\n", real_dup);
 
-//     // No need to check initialization for real strdup (already guaranteed)
-//     printf("strdup: Memory allocated and initialized successfully.\n");
+// 	// No need to check initialization for real strdup (already guaranteed)
+// 	printf("strdup: Memory allocated and initialized successfully.\n");
 
-//     free(real_dup);
+// 	free(real_dup);
 
-//     return (0);
+// 	return (0);
 // }
 
 /*

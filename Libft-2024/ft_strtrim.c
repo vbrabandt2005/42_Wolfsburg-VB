@@ -6,15 +6,36 @@
 /*   By: vbraband <vbraband@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/11 10:46:18 by vbraband          #+#    #+#             */
-/*   Updated: 2024/06/14 13:17:56 by vbraband         ###   ########.fr       */
+/*   Updated: 2024/06/21 15:35:22 by vbraband         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *ft_strtrim(char const *s1, char const *set)
+static int	ft_isset(char c, const char *set)
 {
-    
+	while (*set)
+		if (c == *set++)
+			return (1);
+	return (0);
+}
+
+char	*ft_strtrim(const char *s1, const char *set)
+{
+	char	*ret;
+	char	*start;
+	char	*end;
+
+	if (!s1 || !set)
+		return (0);
+	start = (char *)s1;
+	end = start + ft_strlen(s1);
+	while (*start && ft_isset(*start, set))
+		++start;
+	while (start < end && ft_isset(*(end - 1), set))
+		--end;
+	ret = ft_substr(start, 0, end - start);
+	return (ret);
 }
 
 /*

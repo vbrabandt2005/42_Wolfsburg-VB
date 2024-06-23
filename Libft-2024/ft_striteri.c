@@ -6,16 +6,42 @@
 /*   By: vbraband <vbraband@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/11 10:57:45 by vbraband          #+#    #+#             */
-/*   Updated: 2024/06/14 13:19:17 by vbraband         ###   ########.fr       */
+/*   Updated: 2024/06/21 16:22:53 by vbraband         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_striteri(char *s, void (*f)(unsigned int, char*))
+void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 {
-    
+	unsigned int	i;
+
+	if (!s)
+		return ;
+	i = 0;
+	while (s[i])
+	{
+		f(i, &s[i]);
+		++i;
+	}
 }
+
+// void capitalize(unsigned int i, char *c)
+// {
+// 	if (*c >= 'a' && *c <= 'z')
+// 		*c = *c - 'a' + 'A';
+// }
+
+// int main(void)
+// {
+// 	char str[] = "hello world";
+
+// 	printf("Before: %s\n", str);
+// 	ft_striteri(str, capitalize);
+// 	printf("After: %s\n", str);
+
+// 	return 0;
+// }
 
 /*
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
