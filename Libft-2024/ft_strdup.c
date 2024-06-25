@@ -6,7 +6,7 @@
 /*   By: vbraband <vbraband@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/10 14:16:02 by vbraband          #+#    #+#             */
-/*   Updated: 2024/06/20 11:56:12 by vbraband         ###   ########.fr       */
+/*   Updated: 2024/06/24 16:11:23 by vbraband         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,27 +14,22 @@
 
 char	*ft_strdup(const char *s)
 {
-	size_t i;
-	size_t len;
-	char *dup;
-
-	if (s == NULL)
-		return NULL;
+	size_t	i;
+	size_t	len;
+	char	*dup;
 
 	len = ft_strlen((char *)s);
 	dup = malloc(len + 1);
-
-	if (dup == NULL) 
-		return NULL;
+	if (dup == NULL)
+		return (NULL);
 	i = 0;
-	while (s[i] != '\0') 
+	while (s[i] != '\0')
 	{
 		dup[i] = s[i];
 		i++;
 	}
 	dup[i] = '\0';
-
-	return dup;
+	return (dup);
 }
 
 // int main(void)

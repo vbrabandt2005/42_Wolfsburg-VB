@@ -6,15 +6,17 @@
 /*   By: vbraband <vbraband@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/11 10:53:42 by vbraband          #+#    #+#             */
-/*   Updated: 2024/06/21 15:45:42 by vbraband         ###   ########.fr       */
+/*   Updated: 2024/06/24 14:27:10 by vbraband         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static size_t ft_toklen(const char *s, char c)
+static size_t	ft_toklen(const char *s, char c)
 {
-	size_t ret = 0;
+	size_t	ret;
+
+	ret = 0;
 	while (*s)
 	{
 		if (*s != c)
@@ -26,12 +28,12 @@ static size_t ft_toklen(const char *s, char c)
 		else
 			++s;
 	}
-	return ret;
+	return (ret);
 }
 
-char *ft_strncpy(char *dest, const char *src, size_t n)
+char	*ft_strncpy(char *dest, const char *src, size_t n)
 {
-	size_t i;
+	size_t	i;
 
 	i = 0;
 	while (src[i] != '\0' && i < n)
@@ -44,7 +46,7 @@ char *ft_strncpy(char *dest, const char *src, size_t n)
 		dest[i] = '\0';
 		i++;
 	}
-	return dest;
+	return (dest);
 }
 
 char	**ft_split(const char *s, char c)

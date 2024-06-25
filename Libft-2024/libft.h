@@ -3,31 +3,25 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vbrabandt <vbrabandt@student.42.fr>        +#+  +:+       +#+        */
+/*   By: vbraband <vbraband@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/10 09:53:42 by vbraband          #+#    #+#             */
-/*   Updated: 2024/06/24 00:08:01 by vbrabandt        ###   ########.fr       */
+/*   Updated: 2024/06/25 13:07:52 by vbraband         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
-typedef struct s_list
-{
-void *content;
-struct s_list *next;
-} t_list;
-
 /*Standard libraries*/
-#include <stdio.h>
-#include <string.h>
-#include <stddef.h>
-#include <stdlib.h>
-#include <unistd.h>
+# include <stdio.h>
+# include <string.h>
+# include <stddef.h>
+# include <stdlib.h>
+# include <unistd.h>
 
 /*Custom implimentation of libc*/
-int				ft_atoi(char *str);
+int				ft_atoi(char const *str);
 void			ft_bzero(void *s, size_t n);
 void			*ft_calloc(size_t nmemb, size_t size);
 int				ft_isalnum(int c);
@@ -40,18 +34,19 @@ int				ft_memcmp(void const *s1, void const *s2, size_t n);
 void			*ft_memcpy(void *dest, const void *src, size_t len);
 void			*ft_memmove(void *dest, const void *src, size_t len);
 void			*ft_memset(void *dest, int val, size_t len);
-char			*ft_strchr(const char *s, int c);
 char			*ft_strdup(const char *s);
 unsigned int	ft_strlcat(char *dest, char *src, unsigned int size);
 size_t			ft_strlcpy(char *dest, char const *src, size_t n);
 int				ft_strlen(char *str);
-int				ft_strncmp(char *s1, char *s2, unsigned int n);
-char 			*ft_strnstr(const char *s, const char *find, size_t slen);
-char 			*ft_strrchr(const char *s, int c);
+int				ft_strncmp(char const *s1, char const *s2, size_t n);
+char			*ft_strnstr(const char *s, const char *find, size_t slen);
+char			*ft_strchr(const char *s, int c);
+char			*ft_strrchr(const char *s, int c);
 char			ft_tolower(char c);
 char			ft_toupper(char c);
 
 /*Additional functions*/
+// itoa timeout
 char			*ft_itoa(int n);
 void			ft_putchar_fd(char c, int fd);
 void			ft_putendl_fd(char *s, int fd);
@@ -59,15 +54,11 @@ void			ft_putnbr_fd(int n, int fd);
 void			ft_putstr_fd(char *c, int fd);
 void			ft_striteri(char *s, void (*f)(unsigned int, char*));
 char			**ft_split(char const *s, char c);
-// ft_strjoin is partially incomplete
 char			*ft_strjoin(char const *s1, char const *s2);
-// ft_strmapi is partially complete
-char            *ft_strmapi(char const *s, char (*f)(unsigned int, char));
-// ft_strtrim is partially incomplete
+char			*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 char			*ft_strtrim(char const *s1, char const *set);
-char 			*ft_substr(char const *s, unsigned int start, size_t len);
-
-/*Everything has norminette errors*/
+// substr KO
+char			*ft_substr(char const *s, unsigned int start, size_t len);
 
 #endif
 

@@ -6,31 +6,38 @@
 /*   By: vbraband <vbraband@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/12 10:18:11 by vbraband          #+#    #+#             */
-/*   Updated: 2024/06/19 12:37:49 by vbraband         ###   ########.fr       */
+/*   Updated: 2024/06/24 16:53:02 by vbraband         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void *ft_memmove(void *dest, const void *src, size_t len)
+void	*ft_memmove(void *dest, const void *src, size_t len)
 {
-    unsigned char *d = (unsigned char *)dest;
-    const unsigned char *s = (const unsigned char *)src;
+	unsigned char		*d;
+	const unsigned char	*s;
+	unsigned char		*lasts;
+	unsigned char		*lastd;
 
-    if (d < s)
-    {
-        while (len--)
-            *d++ = *s++;
-    }
-    else
-    {
-        unsigned char *lasts = (unsigned char *)s + (len - 1);
-        unsigned char *lastd = d + (len - 1);
-        while (len--)
-            *lastd-- = *lasts--;
-    }
-
-    return dest;
+	d = (unsigned char *)dest;
+	s = (const unsigned char *)src;
+	if (!dest && !src)
+		return (NULL);
+	if (d == s)
+		return (dest);
+	else if (d < s)
+	{
+		while (len--)
+			*d++ = *s++;
+	}
+	else
+	{
+		lasts = (unsigned char *)s + (len - 1);
+		lastd = d + (len - 1);
+		while (len--)
+			*lastd-- = *lasts--;
+	}
+	return (dest);
 }
 
 // int main()

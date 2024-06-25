@@ -6,33 +6,38 @@
 /*   By: vbraband <vbraband@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/13 13:24:52 by vbraband          #+#    #+#             */
-/*   Updated: 2024/06/21 15:45:40 by vbraband         ###   ########.fr       */
+/*   Updated: 2024/06/25 13:30:12 by vbraband         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strchr(const char *s, int c)
+char	*ft_strchr(char const *str, int c)
 {
-	while ((*s != '\0') && (*s != c))
-		s++;
-	if (*s == c)
-		return ((char *)s);
-	return ((char*)NULL);
+	while (*str)
+	{
+		if (*str == (char)c)
+			return ((char *)str);
+		str++;
+	}
+	if (*str == (char)c)
+		return ((char *)str);
+	else
+		return (NULL);
 }
 
 // int main()
 // {
-//     char my_string[] = "Capybaras";
-//     char target_char = 'o';
+//     char my_str[] = "Capybaras";
+//     char tar_char = 'o';
 
 //     // Find the first occurrence of 'o' in my_string
-//     char *result = ft_strchr(my_string, target_char);
+//     char *result = ft_strchr(my_str, tar_char);
 
 //     if (result)
-//         printf("Found '%c' at position %ld.\n", target_char, result - my_string + 1);
+//         printf("Fond '%c' at pos %ld.\n", tar_char, result - my_str + 1);
 //     else
-//         printf("'%c' not found in the string.\n", target_char);
+//         printf("'%c' not found in the string.\n", tar_char);
 
 //     return 0;
 // }

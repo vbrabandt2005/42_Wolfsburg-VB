@@ -6,7 +6,7 @@
 /*   By: vbraband <vbraband@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/11 10:54:09 by vbraband          #+#    #+#             */
-/*   Updated: 2024/06/21 16:15:50 by vbraband         ###   ########.fr       */
+/*   Updated: 2024/06/24 12:25:52 by vbraband         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ char	*ft_strmapi(const char *s, char (*f)(unsigned int, char))
 
 	if (!s)
 		return (0);
-	ret = malloc(sizeof(char) * (ft_strlen(s) + 1));
+	ret = malloc(sizeof(char) * (ft_strlen((char *)s) + 1));
 	if (!ret)
 		return (0);
 	i = 0;

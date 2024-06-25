@@ -6,44 +6,59 @@
 /*   By: vbraband <vbraband@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/10 10:54:43 by vbraband          #+#    #+#             */
-/*   Updated: 2024/06/17 10:27:22 by vbraband         ###   ########.fr       */
+/*   Updated: 2024/06/25 13:27:52 by vbraband         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_atoi(char *str)
+static int	check_space(int c)
 {
-	int		i;
-	int		mult;
-	int		nb;
-
-	mult = 1;
-	nb = 0;
-	i = 0;
-	while (str[i] == ' ' || str[i] == '\f' || str[i] == '\n'
-		|| str[i] == '\r' || str[i] == '\t' || str[i] == '\v')
-	{
-		i++;
-	}
-	while (str[i] == '-' || str[i] == '+')
-	{
-		if (str[i] == '-')
-			mult *= -1;
-		i++;
-	}
-	while (str[i] >= '0' && str[i] <= '9')
-	{
-		nb = (nb * 10) + (str[i] - '0');
-		i++;
-	}
-	nb *= mult;
-	return (nb);
+	if ((c > 8 && c < 14)
+		|| (c == 32))
+		return (8192);
+	return (0);
 }
 
-// int main(void)
+static int	check_digit(int c)
+{
+	if (c > 47 && c < 58)
+		return (1);
+	return (0);
+}
+
+int	ft_atoi(char const *str)
+{
+	long long int	n;
+	long long int	check;
+	int				sign;
+
+	n = 0;
+	sign = 1;
+	while (*str && check_space(*str))
+		str++;
+	if (*str == 45 || *str == 43)
+	{
+		if (*str == 45)
+			sign *= -1;
+		str++;
+	}
+	while (*str && check_digit(*str))
+	{
+		check = n;
+		n = n * 10 + sign * (*str - 48);
+		if (n > check && sign < 0)
+			return (0);
+		if (n < check && sign > 0)
+			return (-1);
+		str++;
+	}
+	return (n);
+}
+
+// int	main(void)
 // {
-// 	printf("%d", ft_atoi("888"));
+// 	printf("%d", ft_atoi("69420"));
 // }
 
 /*

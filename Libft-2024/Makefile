@@ -6,29 +6,32 @@
 #    By: vbraband <vbraband@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/06/10 09:38:04 by vbraband          #+#    #+#              #
-#    Updated: 2024/06/19 14:15:32 by vbraband         ###   ########.fr        #
+#    Updated: 2024/06/25 14:26:02 by vbraband         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-name = libft.a
-cc = gcc
+NAME = libft.a
+cc = cc
 srcs = $(wildcard *.c)
 objects = $(srcs:.c=.o)
 flags = -Wall -Wextra -Werror
+rm = rm -f
 
-ALL: $(name)
+all: $(NAME)
 
-$(name): $(objects)
-			ar rcs $(name) $(objects)
+$(NAME): $(objects)
+		ar -rcs $(NAME) $(objects)
 
 %.o: %.c
-		$(cc) -c $(flags) $?
+		$(cc) -c $(flags) $< -o $@
 
 clean:
-	rm -f $(objects)
+		$(rm) $(objects)
+
 fclean: clean
-	rm -f $(name)
-re: fclean all
+		$(rm) $(NAME)
+
+re: fclean $(NAME)
 
 .PHONY: all clean fclean re
 
