@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vbraband <vbraband@student.42.fr>          +#+  +:+       +#+        */
+/*   By: vbrabandt <vbrabandt@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/11 10:44:30 by vbraband          #+#    #+#             */
-/*   Updated: 2024/06/25 16:36:50 by vbraband         ###   ########.fr       */
+/*   Updated: 2024/06/26 11:50:09 by vbrabandt        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 // {
 //     char *str = "I think capybaras are the cutest animals in the world.";
 //     unsigned int start = 8;
-//     size_t len = 46;
+//     size_t len = 100;
 //     char *substr = ft_substr(str, start, len);
 //     if (substr)
 //     {
