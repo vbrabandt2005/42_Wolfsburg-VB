@@ -6,23 +6,21 @@
 /*   By: vbraband <vbraband@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/10 10:03:25 by vbraband          #+#    #+#             */
-/*   Updated: 2024/06/25 12:27:11 by vbraband         ###   ########.fr       */
+/*   Updated: 2024/06/25 16:17:21 by vbraband         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strlen(char *str)
+size_t	ft_strlen(char const *str)
 {
-	int		i;
+	size_t	i;
 
 	i = 0;
-	while (str[i] != '\0')
+	while (*(str + i))
 		i++;
 	return (i);
 }
-
-// #include <stdio.h>
 
 // int main (void)
 // {

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vbrabandt <vbrabandt@student.42.fr>        +#+  +:+       +#+        */
+/*   By: vbraband <vbraband@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/11 10:46:18 by vbraband          #+#    #+#             */
-/*   Updated: 2024/06/24 00:07:54 by vbrabandt        ###   ########.fr       */
+/*   Updated: 2024/06/25 16:36:50 by vbraband         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,16 +26,6 @@ static size_t	char_check(char const *str, char const c)
 		i++;
 	}
 	return (0);
-}
-
-static size_t	str_len(char const *str)
-{
-	size_t	i;
-
-	i = 0;
-	while (*(str + i))
-		i++;
-	return (i);
 }
 
 static char	*str_new(size_t n)
@@ -60,7 +50,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	start = 0;
 	while (*(s1 + start) && char_check(set, *(s1 + start)))
 		start++;
-	end = str_len(s1);
+	end = ft_strlen(s1);
 	while (end > start && char_check(set, *(s1 + (end - 1))))
 		end--;
 	trim = str_new(end - start);
@@ -75,6 +65,27 @@ char	*ft_strtrim(char const *s1, char const *set)
 	*(trim + i) = '\0';
 	return (trim);
 }
+
+// int main() {
+// 	// Test cases
+// 	char *s1 = "   hello   ";
+// 	char *set = " ";
+// 	char *trimmed = ft_strtrim(s1, set);
+// 	printf("Trimmed string: \"%s\"\n", trimmed);
+// 	free(trimmed);
+
+// 	char *s2 = "   hello world   ";
+// 	char *trimmed2 = ft_strtrim(s2, set);
+// 	printf("Trimmed string: \"%s\"\n", trimmed2);
+// 	free(trimmed2);
+
+// 	char *s3 = "hello";
+// 	char *trimmed3 = ft_strtrim(s3, set);
+// 	printf("Trimmed string: \"%s\"\n", trimmed3);
+// 	free(trimmed3);
+
+// 	return 0;
+// }
 
 /*
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀

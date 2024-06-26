@@ -6,13 +6,13 @@
 /*   By: vbraband <vbraband@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/10 10:55:22 by vbraband          #+#    #+#             */
-/*   Updated: 2024/06/14 13:17:33 by vbraband         ###   ########.fr       */
+/*   Updated: 2024/06/25 16:06:44 by vbraband         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	ft_toupper(char c)
+int	ft_toupper(int c)
 {
 	if (c >= 'a' && c <= 'z')
 	{

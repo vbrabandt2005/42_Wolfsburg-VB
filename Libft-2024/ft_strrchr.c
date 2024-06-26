@@ -6,26 +6,27 @@
 /*   By: vbraband <vbraband@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/10 10:55:15 by vbraband          #+#    #+#             */
-/*   Updated: 2024/06/24 14:07:33 by vbraband         ###   ########.fr       */
+/*   Updated: 2024/06/25 16:27:41 by vbraband         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strrchr(const char *s, int c)
+char	*ft_strrchr(char const *str, int c)
 {
-	char	*last_occurrence;
+	char const	*aux;
 
-	last_occurrence = NULL;
-	while (*s != '\0')
+	aux = NULL;
+	while (*str)
 	{
-		if (*s == (char)c)
-			last_occurrence = (char *)s;
-		s++;
+		if (*str == (char)c)
+			aux = str;
+		str++;
 	}
-	if (c == '\0' && *s == '\0')
-		last_occurrence = (char *)s;
-	return (last_occurrence);
+	if (*str == (char)c)
+		return ((char *)str);
+	else
+		return ((char *)aux);
 }
 
 // int main()

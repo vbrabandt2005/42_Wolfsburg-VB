@@ -6,13 +6,13 @@
 /*   By: vbraband <vbraband@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/10 10:55:19 by vbraband          #+#    #+#             */
-/*   Updated: 2024/06/14 13:17:37 by vbraband         ###   ########.fr       */
+/*   Updated: 2024/06/25 16:08:28 by vbraband         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	ft_tolower(char c)
+int	ft_tolower(int c)
 {
 	if (c >= 'A' && c <= 'Z')
 	{

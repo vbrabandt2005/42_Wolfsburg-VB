@@ -6,7 +6,7 @@
 /*   By: vbraband <vbraband@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/10 13:26:17 by vbraband          #+#    #+#             */
-/*   Updated: 2024/06/19 12:58:56 by vbraband         ###   ########.fr       */
+/*   Updated: 2024/06/25 15:08:25 by vbraband         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,13 +33,12 @@ void	ft_bzero(void *s, size_t n)
 //     printf("str2: %s\n", str2);
 
 //     // Test ft_bzero
-//     ft_bzero(str1, 10);  // Zero out the first 20 bytes of str1
-
-//     printf("\nAfter ft_bzero(str1, 20):\n");
+//     ft_bzero(str1, 10);
+//     printf("\nAfter ft_bzero(str1, 10):\n");
 //     printf("str1: %s\n", str1);
 
 //     // Test real bzero
-//     bzero(str2, 20);  // Zero out the first 20 bytes of str2 using real bzero
+//     bzero(str2, 20);
 
 //     printf("\nAfter bzero(str2, 20):\n");
 //     printf("str2: %s\n", str2);

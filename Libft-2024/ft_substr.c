@@ -6,44 +6,42 @@
 /*   By: vbraband <vbraband@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/11 10:44:30 by vbraband          #+#    #+#             */
-/*   Updated: 2024/06/25 14:17:49 by vbraband         ###   ########.fr       */
+/*   Updated: 2024/06/25 16:36:50 by vbraband         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+static char	*str_new(size_t n)
+{
+	char	*str;
+
+	str = (char *)malloc(sizeof(char) * (n + 1));
+	if (!str)
+		return (NULL);
+	return (str);
+}
+
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	size_t	s_len;
-	size_t	sub_len;
-	char	*substr;
-	char	*temp_s;
+	char	*str;
+	char	*str_ptr;
 
-	temp_s = strdup(s);
-	if (temp_s == NULL)
+	if (!s)
 		return (NULL);
-	s_len = ft_strlen(temp_s);
-	if (start > s_len)
+	if (start > ft_strlen(s))
 		len = 0;
-	if (len > s_len - start)
-		sub_len = s_len - start;
-	else
-		sub_len = len;
-	if (sub_len == 0)
-	{
-		substr = (char *)malloc(sizeof(char));
-		if (substr == NULL)
-			return (NULL);
-		*substr = '\0';
-	}
-	else
-	{
-		substr = (char *)malloc((sub_len + 1) * sizeof(char));
-		if (substr == NULL)
-			return (NULL);
-		ft_strlcpy(substr, s + start, sub_len + 1);
-	}
-	return (substr);
+	else if (len > (ft_strlen(s) - start))
+		len = ft_strlen(s) - start;
+	str = str_new(len);
+	if (!str)
+		return (NULL);
+	s += start;
+	str_ptr = str;
+	*(str + len) = '\0';
+	while (len-- && *s)
+		*str++ = *s++;
+	return (str_ptr);
 }
 
 // int main(void)

@@ -6,21 +6,11 @@
 /*   By: vbraband <vbraband@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/11 10:45:51 by vbraband          #+#    #+#             */
-/*   Updated: 2024/06/25 12:27:14 by vbraband         ###   ########.fr       */
+/*   Updated: 2024/06/25 16:36:50 by vbraband         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-static size_t	str_len(char const *str)
-{
-	size_t	i;
-
-	i = 0;
-	while (*(str + i))
-		i++;
-	return (i);
-}
 
 static char	*str_new(size_t n)
 {
@@ -39,7 +29,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 
 	if (!s1 || !s2)
 		return (NULL);
-	str = str_new(str_len(s1) + str_len(s2));
+	str = str_new(ft_strlen(s1) + ft_strlen(s2));
 	if (!str)
 		return (NULL);
 	str_ptr = str;
@@ -50,6 +40,21 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	*str = '\0';
 	return (str_ptr);
 }
+
+// #include <stdio.h>
+
+// int main(void) {
+// 	char *s1 = "Capybara ";
+// 	char *s2 = "are the custest animal on this entire earth";
+// 	char *result = ft_strjoin(s1, s2);
+// 	if (result) {
+// 		printf("Concatenated string: %s\n", result);
+// 		free(result);
+// 	} else {
+// 		printf("Error: Unable to concatenate strings\n");
+// 	}
+// 	return 0;
+// }
 
 /*
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀

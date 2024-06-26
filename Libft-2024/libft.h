@@ -6,7 +6,7 @@
 /*   By: vbraband <vbraband@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/10 09:53:42 by vbraband          #+#    #+#             */
-/*   Updated: 2024/06/25 13:07:52 by vbraband         ###   ########.fr       */
+/*   Updated: 2024/06/25 16:17:44 by vbraband         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,13 +37,13 @@ void			*ft_memset(void *dest, int val, size_t len);
 char			*ft_strdup(const char *s);
 unsigned int	ft_strlcat(char *dest, char *src, unsigned int size);
 size_t			ft_strlcpy(char *dest, char const *src, size_t n);
-int				ft_strlen(char *str);
+size_t			ft_strlen(char const *str);
 int				ft_strncmp(char const *s1, char const *s2, size_t n);
 char			*ft_strnstr(const char *s, const char *find, size_t slen);
 char			*ft_strchr(const char *s, int c);
 char			*ft_strrchr(const char *s, int c);
-char			ft_tolower(char c);
-char			ft_toupper(char c);
+int				ft_tolower(int c);
+int				ft_toupper(int c);
 
 /*Additional functions*/
 // itoa timeout
@@ -57,7 +57,6 @@ char			**ft_split(char const *s, char c);
 char			*ft_strjoin(char const *s1, char const *s2);
 char			*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 char			*ft_strtrim(char const *s1, char const *set);
-// substr KO
 char			*ft_substr(char const *s, unsigned int start, size_t len);
 
 #endif
