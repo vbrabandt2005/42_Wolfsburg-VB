@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vbraband <vbraband@student.42.fr>          +#+  +:+       +#+        */
+/*   By: vbrabandt <vbrabandt@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/10 10:54:55 by vbraband          #+#    #+#             */
-/*   Updated: 2024/06/14 13:20:32 by vbraband         ###   ########.fr       */
+/*   Updated: 2024/06/26 10:29:16 by vbrabandt        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,22 @@ void	*ft_memchr(void const *str, int c, size_t n)
 	}
 	return (NULL);
 }
+
+// int main()
+// {
+// 	char str[] = "Hello, World!";
+// 	char *result = ft_memchr(str, 'W', sizeof(str));
+// 	if (result != NULL)
+// 	{
+// 		printf("Character found at index: %ld\n", result - str);
+// 	}
+// 	else
+// 	{
+// 		printf("Character not found\n");
+// 	}
+// 	return 0;
+// }
+
 
 /*
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
