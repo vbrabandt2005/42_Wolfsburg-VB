@@ -123,6 +123,7 @@ Check if password policy is working `chage -l new_username`
 
 Configuring `sudoers` group again
 
+find these and edit them to:
 ```
 Defaults env_reset
 Defaults mail_badpass
