@@ -49,7 +49,7 @@ Change `#Port22` to `Port 4242`
 
 ### Install UFW
 
-`sudo apt install ufw net-tools`
+`sudo apt install ufw net-tools` installs ufw and net-tools (net-tools to test for IP adresse)
 
 `sudo ufw enable`
 
@@ -134,6 +134,70 @@ Defaults logfile="/var/log/sudo/sudo.log"
 Defaults log_input, log_output
 Defaults requiretty
 ```
+
+### Monitoring.sh
+
+`cd /usr/local/bin/` go to directory
+
+`touch monitoring.sh` make the monitoring script
+
+ `chmod 777 monitoring.sh` change the permissions of the file
+
+ Somehow copy this script into the file:
+```
+ #!/bin/bash
+arc=$(uname -a)
+pcpu=$(grep "physical id" /proc/cpuinfo | sort | uniq | wc -l) 
+vcpu=$(grep "^processor" /proc/cpuinfo | wc -l)
+fram=$(free -m | awk '$1 == "Mem:" {print $2}')
+uram=$(free -m | awk '$1 == "Mem:" {print $3}')
+pram=$(free | awk '$1 == "Mem:" {printf("%.2f"), $3/$2*100}')
+fdisk=$(df -BG | grep '^/dev/' | grep -v '/boot$' | awk '{ft += $2} END {print ft}')
+udisk=$(df -BM | grep '^/dev/' | grep -v '/boot$' | awk '{ut += $3} END {print ut}')
+pdisk=$(df -BM | grep '^/dev/' | grep -v '/boot$' | awk '{ut += $3} {ft+= $2} END {printf("%d"), ut/ft*100}')
+cpul=$(top -bn1 | grep '^%Cpu' | cut -c 9- | xargs | awk '{printf("%.1f%%"), $1 + $3}')
+lb=$(who -b | awk '$1 == "system" {print $3 " " $4}')
+lvmu=$(if [ $(lsblk | grep "lvm" | wc -l) -eq 0 ]; then echo no; else echo yes; fi)
+ctcp=$(ss -Ht state established | wc -l)
+ulog=$(users | wc -w)
+ip=$(hostname -I)
+mac=$(ip link show | grep "ether" | awk '{print $2}')
+cmds=$(journalctl _COMM=sudo | grep COMMAND | wc -l)
+wall "	#Architecture: $arc
+	#CPU physical: $pcpu
+	#vCPU: $vcpu
+	#Memory Usage: $uram/${fram}MB ($pram%)
+	#Disk Usage: $udisk/${fdisk}Gb ($pdisk%)
+	#CPU load: $cpul
+	#Last boot: $lb
+	#LVM use: $lvmu
+	#Connections TCP: $ctcp ESTABLISHED
+	#User log: $ulog
+	#Network: IP $ip ($mac)
+	#Sudo: $cmds cmd"
+```
+
+(Tip: use SSH from host)
+
+#### Activating the script
+
+`sudo visudo`
+
+Add `your_username ALL=(ALL) NOPASSWD: /usr/local/bin/monitoring.sh` under `%sudo ALL=(ALL:ALL) ALL`
+
+exit and then `sudo reboot`
+
+then to test out the script run `sudo /usr/local/bin/monitoring.sh`
+
+#### To have it run every 10mins
+
+open crontab by `sudo crontab -u root -e`
+
+At the end of the crontab add `*/10 * * * * /usr/local/bin/monitoring.sh` which will make the system run every 10 mins
+
+### signature.txt
+
+find your freaking vdi (virtual disk file) in the terminal and run `shasum [virtualdiskfile.vdi]`, you should get a weird number string, just copy that into a file called `signature.txt` and tada :)
 
 ## Post-VM
 
