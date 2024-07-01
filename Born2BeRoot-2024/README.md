@@ -33,7 +33,7 @@ Check if user is in group: `getent group sudo`
 
 Add user to `sudoers` file: `sudo visudo`
 
-add `vbraband ALL=(ALL) ALL` under `root ....`
+add `vbraband ALL=(ALL:ALL) ALL` under `root ....`
 
 you can exit with the `exit` command
 
