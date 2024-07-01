@@ -87,6 +87,14 @@ Find `PASS_MAX_DAYS 9999` & `PASS_MIN_DAYS 0`
 
 Change them too `PASS_MAX_DAYS 30` and `PASS_MIN_DAYS 2`
 
+(Note: if this doesn't work, you may have to do it manually with
+```
+sudo chage -M 30 <user>
+sudo chage -m 2 <user>
+sudo chage -W 7 <user>
+```
+)
+
 Then `sudo reboot`
 
 ### Creating groups
