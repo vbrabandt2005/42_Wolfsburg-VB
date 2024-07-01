@@ -16,7 +16,7 @@ Debian is a community-based distro (unlike Rocky Linux which is designed for ent
 
 ### Install requirements
 
-Use guided-encrypted partitioning
+Use guided-encrypted partitioning (seperate /home, /temp /var partitions)
 
 **Hostname:** username42
 **Password:** [password]
