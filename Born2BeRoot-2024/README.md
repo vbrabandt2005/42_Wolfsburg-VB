@@ -245,4 +245,7 @@ Cron is a command line utility which allows the scheduling of scripts/commands t
 
 `cd /usr/local/bin`
 
+### Check partitions
+
+`lsblk`
 `sudo crontab -u root -e`
