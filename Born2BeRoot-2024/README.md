@@ -23,6 +23,8 @@ Use guided-encrypted partitioning (seperate /home, /temp /var partitions)
 
 ## Post-install
 
+`su -` to get into root mode
+
 **Install:** sudo git curl
 
 Add user to sudo group: `usermod -aG sudo vbraband`
