@@ -77,7 +77,7 @@ From host: `ssh vbraband@[IP-Adress] -p 4242`
 
 `sudo nano /etc/pam.d/common-password`
 
-Find `password requisite`
+Find `password requisite password requisite pam_pwquality.so retry=3 `
 
 Then add `password requisite pam_pwquality.so retry=3 minlen=10 ucredit=-1 lcredit=-1 dcredit=-1 maxrepeat=3 reject_username difok=7 enforce_for_root`
 
