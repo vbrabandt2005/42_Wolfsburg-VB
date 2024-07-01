@@ -16,7 +16,7 @@ Debian is a community-based distro (unlike Rocky Linux which is designed for ent
 
 ### Install requirements
 
-Use guided-encrypted partitioning (seperate /home, /temp /var partitions)
+Use guided-encrypted partitioning (seperate /home /temp /var partitions)
 
 **Hostname:** username42
 **Password:** [password]
@@ -25,7 +25,7 @@ Use guided-encrypted partitioning (seperate /home, /temp /var partitions)
 
 `su -` to get into root mode
 
-**Install:** sudo git curl
+`apt install sudo git curl`
 
 Add user to sudo group: `usermod -aG sudo vbraband`
 
