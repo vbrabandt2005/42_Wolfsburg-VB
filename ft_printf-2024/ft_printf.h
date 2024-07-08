@@ -1,109 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_split.c                                         :+:      :+:    :+:   */
+/*   ft_printf.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vbraband <vbraband@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/11 10:53:42 by vbraband          #+#    #+#             */
-/*   Updated: 2024/06/27 14:08:38 by vbraband         ###   ########.fr       */
+/*   Created: 2024/07/04 17:30:53 by vbraband          #+#    #+#             */
+/*   Updated: 2024/07/05 14:45:23 by vbraband         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#ifndef FT_PRINTF_H
+# define FT_PRINTF_H
 
-static size_t	ft_toklen(const char *s, char c)
-{
-	size_t	ret;
+/* Standard liberaries */
+# include <stdio.h>
+# include <string.h>
+# include <stddef.h>
+# include <stdlib.h>
+# include <unistd.h>
 
-	ret = 0;
-	while (*s)
-	{
-		if (*s != c)
-		{
-			++ret;
-			while (*s && *s != c)
-				++s;
-		}
-		else
-			++s;
-	}
-	return (ret);
-}
+/* Custom liberaries */
+void	ft_print_char(char c);
+void	ft_print_str(char *str);
+void	ft_print_nbr(int nbr);
+void	ft_print_unsigned(unsigned int nbr);
+void	ft_print_hex(unsigned int nbr);
+void    ft_print_pointer(unsigned long long nbr);
+void	ft_print_percent(void);
 
-char	*ft_strncpy(char *dest, const char *src, size_t n)
-{
-	size_t	i;
-
-	i = 0;
-	while (src[i] != '\0' && i < n)
-	{
-		dest[i] = src[i];
-		i++;
-	}
-	while (i < n)
-	{
-		dest[i] = '\0';
-		i++;
-	}
-	return (dest);
-}
-
-char	**ft_split(const char *s, char c)
-{
-	char	**ret;
-	size_t	i;
-	size_t	len;
-
-	if (!s)
-		return (0);
-	i = 0;
-	ret = malloc(sizeof(char *) * (ft_toklen(s, c) + 1));
-	if (!ret)
-		return (0);
-	while (*s)
-	{
-		if (*s != c)
-		{
-			len = 0;
-			while (*s && *s != c && ++len)
-				++s;
-			ret[i++] = ft_substr(s - len, 0, len);
-		}
-		else
-			++s;
-	}
-	ret[i] = 0;
-	return (ret);
-}
-
-// int main()
-// {
-// 	char **words;
-// 	const char *sentence = "Capybaras are the cutest animals in the world.";
-
-// 	words = ft_split(sentence, ' ');
-
-// 	if (words == NULL)
-// 	{
-// 		printf("Error: ft_split failed to allocate memory\n");
-// 		return 1;
-// 	}
-
-// 	for (int i = 0; words[i] != NULL; i++)
-// 	{
-// 		printf("%s\n", words[i]);
-// 	}
-
-// 	// Free allocated memory
-// 	for (int i = 0; words[i] != NULL; i++)
-// 	{
-// 		free(words[i]);
-// 	}
-// 	free(words);
-
-// 	return 0;
-// }
+#endif
 
 /*
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
