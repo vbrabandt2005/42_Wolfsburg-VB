@@ -6,14 +6,18 @@
 /*   By: vbraband <vbraband@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/04 17:31:05 by vbraband          #+#    #+#             */
-/*   Updated: 2024/07/05 15:32:22 by vbraband         ###   ########.fr       */
+/*   Updated: 2024/07/08 15:14:58 by vbraband         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-
-int ft_printf(const char *, ...)
+int	get_speci()
 {
-    
+	
+}
+
+int	ft_printf(const char *, ...)
+{
+	
 }
