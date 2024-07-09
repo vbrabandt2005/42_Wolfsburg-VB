@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf-char.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vbraband <vbraband@student.42.fr>          +#+  +:+       +#+        */
+/*   By: vbrabandt <vbrabandt@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/05 14:12:21 by vbraband          #+#    #+#             */
-/*   Updated: 2024/07/08 15:10:44 by vbraband         ###   ########.fr       */
+/*   Updated: 2024/07/09 11:12:19 by vbrabandt        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,25 +38,27 @@ int	ft_print_str(char *str)
 }
 // %s - print a string
 
-int	ft_put_hex(size_t n, char *hex)
+int	ft_print_hex(size_t n, char *hex)
 {
 	int		i;
 
 	i = 0;
 	if (n / 16)
-		i += ft_put_hex(n / 16, hex);
-	i += ft_printchar(hex[n % 16]);
+		i += ft_print_hex(n / 16, hex);
+	i += ft_print_char(hex[n % 16]);
 	return (i);
 }
-// %x - print a number in hexadecimal
+// %x/X - print a number in hexadecimal
 
-int	ft_print_pointer(void *nbr)
+int	ft_print_pointer(void *ptr)
 {
 	int	i;
 
-	if (nbr == NULL)
+	i = 0;
+	if (ptr == NULL)
 		return ("(nil)");
 	i += ft_print_str("0x");
-	ft_print_hex((unsigned int)nbr);
+	i += int_print_hex((size_t)ptr, "0123456789abcdef");
+	return (i);
 }
 // %p - print a pointer address in hexadecimal

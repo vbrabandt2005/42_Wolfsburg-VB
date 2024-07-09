@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf-num.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vbraband <vbraband@student.42.fr>          +#+  +:+       +#+        */
+/*   By: vbrabandt <vbrabandt@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/08 15:09:50 by vbraband          #+#    #+#             */
-/*   Updated: 2024/07/08 15:10:22 by vbraband         ###   ########.fr       */
+/*   Updated: 2024/07/09 11:12:15 by vbrabandt        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,29 +28,29 @@ int	ft_print_int(int nbr)
 
 void	ft_print_nbr(int nbr)
 {
+	int	i;
+
+	i = 0;
 	if (nbr < 0)
 	{
-		ft_print_char('-');
+		i += ft_printchar('-');
 		nbr = -nbr;
 	}
-	if (nbr >= 10)
-	{
-		ft_print_nbr(nbr / 10);
-		ft_print_nbr(nbr % 10);
-	}
-	else
-		ft_print_char(nbr + '0');
+	if (nbr / 10)
+		i += ft_printnum(nbr / 10);
+	i += ft_printchar((nbr % 10) + '0');
+	return (i);
 }
 // %d - print a number (decimal)
 
 void	ft_print_unsigned(unsigned int nbr)
 {
-	if (nbr >= 10)
-	{
-		ft_print_unsigned(nbr / 10);
-		ft_print_unsigned(nbr % 10);
-	}
-	else
-		ft_print_char(nbr + '0');
+	int	i;
+
+	i = 0;
+	if (nbr / 10)
+		i += ft_printunum(nbr / 10);
+	i += ft_printchar((nbr % 10) + '0');
+	return (i);
 }
 // %u - print an unsigned number
