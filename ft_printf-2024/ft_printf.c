@@ -6,7 +6,7 @@
 /*   By: vbrabandt <vbrabandt@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/04 17:31:05 by vbraband          #+#    #+#             */
-/*   Updated: 2024/07/09 11:13:01 by vbrabandt        ###   ########.fr       */
+/*   Updated: 2024/07/09 11:47:08 by vbrabandt        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,29 @@ int	get_speci(const char *s, int i, va_list args)
 	return (output);
 }
 
-int	ft_printf(const char *, ...)
+int	ft_printf(const char *s, ...)
 {
+    va_list	args;
+    int		i;
+    int		output;
 
+    i = 0;
+    output = 0;
+    va_start(args, s);
+    while (s[i])
+    {
+        if (s[i] == '%')
+        {
+            i++;
+            output += get_speci(s, i, args);
+        }
+        else
+        {
+            ft_putchar(s[i]);
+            output++;
+        }
+        i++;
+    }
+    va_end(args);
+    return (output);
 }
