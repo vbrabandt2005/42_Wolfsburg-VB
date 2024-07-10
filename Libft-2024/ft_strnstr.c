@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vbraband <vbraband@student.42.fr>          +#+  +:+       +#+        */
+/*   By: vbrabandt <vbrabandt@proton.me>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/10 10:55:12 by vbraband          #+#    #+#             */
-/*   Updated: 2024/06/25 13:05:07 by vbraband         ###   ########.fr       */
+/*   Updated: 2024/07/10 04:07:41 by vbrabandt        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,17 +35,18 @@ char	*ft_strnstr(char const *haystack, char const *needle, size_t n)
 	return (NULL);
 }
 
-// int main(void) {
-// 	char haystack[] = "Hello, world!";
-// 	char needle[] = "world";
-// 	char *result = ft_strnstr(haystack, needle, sizeof(haystack));
-// 	if (result != NULL)
-// 		printf("Needle found at index: %ld\n", result - haystack);
-// 	else
-// 		printf("Needle not found\n");
-// 	return (0);
-// }
-
+/*
+int main(void) {
+	char haystack[] = "Hello, world!";
+	char needle[] = "world";
+	char *result = ft_strnstr(haystack, needle, sizeof(haystack));
+	if (result != NULL)
+		printf("Needle found at index: %ld\n", result - haystack);
+	else
+		printf("Needle not found\n");
+	return (0);
+}
+*/
 /*
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣸⣬⠷⣶⡖⠲⡄⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀

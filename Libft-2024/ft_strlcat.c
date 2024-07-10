@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vbraband <vbraband@student.42.fr>          +#+  +:+       +#+        */
+/*   By: vbrabandt <vbrabandt@proton.me>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/10 10:55:01 by vbraband          #+#    #+#             */
-/*   Updated: 2024/06/24 13:59:42 by vbraband         ###   ########.fr       */
+/*   Updated: 2024/07/10 04:06:37 by vbrabandt        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,22 +40,24 @@ unsigned int	ft_strlcat(char *dest, char *src, unsigned int size)
 	return (result);
 }
 
-// #include <stdio.h>
+/* 
+#include <stdio.h>
 
-// unsigned int ft_strlcat(char *dest, char *src, unsigned int size);
+unsigned int ft_strlcat(char *dest, char *src, unsigned int size);
 
-// int main() {
-//     char dest[50] = "Capybara are ";
-//     char src[] = "CUTE";
-//     unsigned int result;
+int main() {
+    char dest[50] = "Capybara are ";
+    char src[] = "CUTE";
+    unsigned int result;
 
-//     result = ft_strlcat(dest, src, sizeof(dest));
+    result = ft_strlcat(dest, src, sizeof(dest));
 
-//     printf("Original destination string: %s\n", dest);
-//     printf("Modified destination string: %s\n", dest);
-//     printf("combined length (including null termi): %u\n", result);
-//     return 0;
-// }
+    printf("Original destination string: %s\n", dest);
+    printf("Modified destination string: %s\n", dest);
+    printf("combined length (including null termi): %u\n", result);
+    return 0;
+}
+*/
 
 /*
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vbraband <vbraband@student.42.fr>          +#+  +:+       +#+        */
+/*   By: vbrabandt <vbrabandt@proton.me>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/11 10:53:42 by vbraband          #+#    #+#             */
-/*   Updated: 2024/06/27 14:08:38 by vbraband         ###   ########.fr       */
+/*   Updated: 2024/07/10 04:04:53 by vbrabandt        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,33 +77,35 @@ char	**ft_split(const char *s, char c)
 	return (ret);
 }
 
-// int main()
-// {
-// 	char **words;
-// 	const char *sentence = "Capybaras are the cutest animals in the world.";
+/* 
+int main()
+{
+	char **words;
+	const char *sentence = "Capybaras are the cutest animals in the world.";
 
-// 	words = ft_split(sentence, ' ');
+	words = ft_split(sentence, ' ');
 
-// 	if (words == NULL)
-// 	{
-// 		printf("Error: ft_split failed to allocate memory\n");
-// 		return 1;
-// 	}
+	if (words == NULL)
+	{
+		printf("Error: ft_split failed to allocate memory\n");
+		return 1;
+	}
 
-// 	for (int i = 0; words[i] != NULL; i++)
-// 	{
-// 		printf("%s\n", words[i]);
-// 	}
+	for (int i = 0; words[i] != NULL; i++)
+	{
+		printf("%s\n", words[i]);
+	}
 
-// 	// Free allocated memory
-// 	for (int i = 0; words[i] != NULL; i++)
-// 	{
-// 		free(words[i]);
-// 	}
-// 	free(words);
+	// Free allocated memory
+	for (int i = 0; words[i] != NULL; i++)
+	{
+		free(words[i]);
+	}
+	free(words);
 
-// 	return 0;
-// }
+	return 0;
+}
+*/
 
 /*
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀

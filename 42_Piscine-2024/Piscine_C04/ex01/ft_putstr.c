@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vbraband <vbraband@student.42.fr>          +#+  +:+       +#+        */
+/*   By: vbrabandt <vbrabandt@proton.me>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/15 10:38:45 by vbraband          #+#    #+#             */
-/*   Updated: 2024/02/17 15:08:59 by vbraband         ###   ########.fr       */
+/*   Updated: 2024/07/10 03:50:00 by vbrabandt        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,8 +29,9 @@ void	ft_putstr(char *str)
 	}
 }
 
-
+/* 
 int main()
 {
 	ft_putstr("Capybaras are the cutest!!\n");
-}
+} 
+*/

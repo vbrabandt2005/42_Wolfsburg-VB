@@ -1,4 +1,6 @@
-# This header file, `libft.h`, declares a collection of functions that are part of a custom C library, presumably named `libft`. This library appears to be designed to mimic and extend the functionality of the standard C library, providing basic string manipulation, memory management, and utility functions
+# Libft (June - 2024)
+
+Everything except for bonuses are done, ft_split has a memory leak (though moulinette ignores this)
 
 ## String Functions
 

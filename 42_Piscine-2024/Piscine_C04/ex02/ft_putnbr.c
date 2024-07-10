@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putnbr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vbraband <vbraband@student.42.fr>          +#+  +:+       +#+        */
+/*   By: vbrabandt <vbrabandt@proton.me>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/15 10:45:20 by vbraband          #+#    #+#             */
-/*   Updated: 2024/02/17 15:09:56 by vbraband         ###   ########.fr       */
+/*   Updated: 2024/07/10 03:50:13 by vbrabandt        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ void	ft_putnbr(int nb)
 	}
 }
 
-
+/* 
 #include <stdio.h>
 
 int main (void)
@@ -49,4 +49,5 @@ int main (void)
 	ft_putnbr(-2147483648);
     printf("\n");
 	return (0);
-}
+} 
+*/

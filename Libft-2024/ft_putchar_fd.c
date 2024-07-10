@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vbraband <vbraband@student.42.fr>          +#+  +:+       +#+        */
+/*   By: vbrabandt <vbrabandt@proton.me>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/11 11:16:28 by vbraband          #+#    #+#             */
-/*   Updated: 2024/06/25 15:29:23 by vbraband         ###   ########.fr       */
+/*   Updated: 2024/07/10 04:03:15 by vbrabandt        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,15 +17,17 @@ void	ft_putchar_fd(char c, int fd)
 	write(fd, &c, 1);
 }
 
-// int main(void)
-// {
-// 	char c = 'A';
-// 	int fd = 1;
+/* 
+int main(void)
+{
+	char c = 'A';
+	int fd = 1;
 
-// 	ft_putchar_fd(c, fd);
+	ft_putchar_fd(c, fd);
 
-// 	return 0;
-// }
+	return 0;
+}
+*/
 
 /*
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀

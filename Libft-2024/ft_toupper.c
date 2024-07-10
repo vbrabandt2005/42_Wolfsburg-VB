@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_toupper.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vbraband <vbraband@student.42.fr>          +#+  +:+       +#+        */
+/*   By: vbrabandt <vbrabandt@proton.me>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/10 10:55:22 by vbraband          #+#    #+#             */
-/*   Updated: 2024/06/25 16:06:44 by vbraband         ###   ########.fr       */
+/*   Updated: 2024/07/10 04:09:10 by vbrabandt        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,13 +21,15 @@ int	ft_toupper(int c)
 	return (c);
 }
 
-// #include <stdio.h>
+/*
+#include <stdio.h>
 
-// int main(void)
-// {
-// 	char c = 'D';
-// 	printf(("String: %c\n"), ft_toupper(c)); 
-// }
+int main(void)
+{
+	char c = 'D';
+	printf(("String: %c\n"), ft_toupper(c)); 
+}
+*/
 
 /*
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀

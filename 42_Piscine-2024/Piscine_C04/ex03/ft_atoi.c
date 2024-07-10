@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vbraband <vbraband@student.42.fr>          +#+  +:+       +#+        */
+/*   By: vbrabandt <vbrabandt@proton.me>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/08/05 04:18:16 by vbraband          #+#    #+#             */
-/*   Updated: 2024/02/17 15:12:38 by vbraband         ###   ########.fr       */
+/*   Created: 2024/02/20 18:16:00 by vbraband          #+#    #+#             */
+/*   Updated: 2024/07/10 03:50:25 by vbrabandt        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,9 +39,11 @@ int	ft_atoi(char *str)
 	return (nb);
 }
 
+/* 
 #include <stdio.h>
 
 int main(void)
 {
 	printf("%d", ft_atoi("29487"));
-}
+} 
+*/

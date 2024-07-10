@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isdigit.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vbraband <vbraband@student.42.fr>          +#+  +:+       +#+        */
+/*   By: vbrabandt <vbrabandt@proton.me>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/10 10:54:50 by vbraband          #+#    #+#             */
-/*   Updated: 2024/06/14 13:20:46 by vbraband         ###   ########.fr       */
+/*   Updated: 2024/07/10 04:00:43 by vbrabandt        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,13 +22,15 @@ int	ft_isdigit(int c)
 		return (0);
 }
 
-// #include <stdio.h>
+/* 
+#include <stdio.h>
 
-// int main(void)
-// {
-// 	char c = '6';
-// 	printf("%d\n", ft_isdigit(c));
-// }
+int main(void)
+{
+	char c = '6';
+	printf("%d\n", ft_isdigit(c));
+}
+*/
 
 /*
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀

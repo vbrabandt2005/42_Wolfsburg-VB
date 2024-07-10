@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vbraband <vbraband@student.42.fr>          +#+  +:+       +#+        */
+/*   By: vbrabandt <vbrabandt@proton.me>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/11 11:17:31 by vbraband          #+#    #+#             */
-/*   Updated: 2024/06/24 14:16:45 by vbraband         ###   ########.fr       */
+/*   Updated: 2024/07/10 04:04:11 by vbrabandt        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,19 +34,21 @@ void	ft_putnbr_fd(int n, int fd)
 	}
 }
 
-// int main()
-// {
-// 	int numbers[] = {-2147483648, -100, -1, 0, 1, 100, 2147483647};
-// 	int arraySize = sizeof(numbers) / sizeof(numbers[0]);
+/* 
+int main()
+{
+	int numbers[] = {-2147483648, -100, -1, 0, 1, 100, 2147483647};
+	int arraySize = sizeof(numbers) / sizeof(numbers[0]);
 
-// 	for (int i = 0; i < arraySize; i++)
-// 	{
-// 		ft_putnbr_fd(numbers[i], STDOUT_FILENO);
-// 		ft_putchar_fd('\n', STDOUT_FILENO); // print a newline for readability
-// 	}
+	for (int i = 0; i < arraySize; i++)
+	{
+		ft_putnbr_fd(numbers[i], STDOUT_FILENO);
+		ft_putchar_fd('\n', STDOUT_FILENO); // print a newline for readability
+	}
 
-// 	return 0;
-// }
+	return 0;
+}
+*/
 
 /*
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀

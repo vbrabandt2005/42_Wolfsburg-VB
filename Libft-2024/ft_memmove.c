@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vbraband <vbraband@student.42.fr>          +#+  +:+       +#+        */
+/*   By: vbrabandt <vbrabandt@proton.me>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/12 10:18:11 by vbraband          #+#    #+#             */
-/*   Updated: 2024/06/24 16:53:02 by vbraband         ###   ########.fr       */
+/*   Updated: 2024/07/10 04:02:31 by vbrabandt        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,25 +40,27 @@ void	*ft_memmove(void *dest, const void *src, size_t len)
 	return (dest);
 }
 
-// int main()
-// {
-//     char dest[] = "oldstring";
-//     const char src[] = "newstring";
-//     char dest2[] = "oldstring";
-//     const char src2[] = "newstring";
+/* 
+int main()
+{
+    char dest[] = "oldstring";
+    const char src[] = "newstring";
+    char dest2[] = "oldstring";
+    const char src2[] = "newstring";
 
-//     printf("Before ft_memmove dest = %s, src = %s\n", dest, src);
-//     ft_memmove(dest, src, 9);
-//     printf("After ft_memmove dest = %s, src = %s\n", dest, src);
+    printf("Before ft_memmove dest = %s, src = %s\n", dest, src);
+    ft_memmove(dest, src, 9);
+    printf("After ft_memmove dest = %s, src = %s\n", dest, src);
 
-// 	printf("\n");
+	printf("\n");
 
-//     printf("Before og_memmove dest = %s, src = %s\n", dest2, src2);
-//     memmove(dest2, src2, 9);
-//     printf("After og_memmove dest = %s, src = %s\n", dest2, src2);
+    printf("Before og_memmove dest = %s, src = %s\n", dest2, src2);
+    memmove(dest2, src2, 9);
+    printf("After og_memmove dest = %s, src = %s\n", dest2, src2);
 
-//     return 0;
-// }
+    return 0;
+}
+*/
 
 /*
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀

@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: vbraband <vbraband@student.42.fr>          +#+  +:+       +#+         #
+#    By: vbrabandt <vbrabandt@proton.me>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/07/04 13:56:08 by vbraband          #+#    #+#              #
-#    Updated: 2024/07/09 17:57:43 by vbraband         ###   ########.fr        #
+#    Updated: 2024/07/10 03:33:19 by vbrabandt        ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -29,6 +29,13 @@ fclean: clean
 	$(rm) $(NAME)
 
 re: fclean $(NAME)
+
+fuck: fclean
+	$(rm) a.out
+
+auto: all clean
+	gcc main.c libftprintf.a
+
 
 .PHONY: all clean fclean re
 

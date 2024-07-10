@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vbrabandt <vbrabandt@student.42.fr>        +#+  +:+       +#+        */
+/*   By: vbrabandt <vbrabandt@proton.me>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/11 10:44:30 by vbraband          #+#    #+#             */
-/*   Updated: 2024/06/26 11:50:09 by vbrabandt        ###   ########.fr       */
+/*   Updated: 2024/07/10 04:08:37 by vbrabandt        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,22 +44,24 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	return (str_ptr);
 }
 
-// int main(void)
-// {
-//     char *str = "I think capybaras are the cutest animals in the world.";
-//     unsigned int start = 8;
-//     size_t len = 100;
-//     char *substr = ft_substr(str, start, len);
-//     if (substr)
-//     {
-//         printf("Substring: %s\n", substr);
-//         free(substr);
-//     }
-//     else
-//         printf("Failed to allocate memory for substring.\n");
+/* 
+int main(void)
+{
+    char *str = "I think capybaras are the cutest animals in the world.";
+    unsigned int start = 8;
+    size_t len = 100;
+    char *substr = ft_substr(str, start, len);
+    if (substr)
+    {
+        printf("Substring: %s\n", substr);
+        free(substr);
+    }
+    else
+        printf("Failed to allocate memory for substring.\n");
 
-//     return (0);
-// }
+    return (0);
+}
+*/
 
 /*
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀

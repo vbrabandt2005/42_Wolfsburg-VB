@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vbraband <vbraband@student.42.fr>          +#+  +:+       +#+        */
+/*   By: vbrabandt <vbrabandt@proton.me>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/11 10:45:51 by vbraband          #+#    #+#             */
-/*   Updated: 2024/06/25 16:36:50 by vbraband         ###   ########.fr       */
+/*   Updated: 2024/07/10 04:06:17 by vbrabandt        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,20 +41,22 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	return (str_ptr);
 }
 
-// #include <stdio.h>
+/* 
+#include <stdio.h>
 
-// int main(void) {
-// 	char *s1 = "Capybara ";
-// 	char *s2 = "are the custest animal on this entire earth";
-// 	char *result = ft_strjoin(s1, s2);
-// 	if (result) {
-// 		printf("Concatenated string: %s\n", result);
-// 		free(result);
-// 	} else {
-// 		printf("Error: Unable to concatenate strings\n");
-// 	}
-// 	return 0;
-// }
+int main(void) {
+	char *s1 = "Capybara ";
+	char *s2 = "are the custest animal on this entire earth";
+	char *result = ft_strjoin(s1, s2);
+	if (result) {
+		printf("Concatenated string: %s\n", result);
+		free(result);
+	} else {
+		printf("Error: Unable to concatenate strings\n");
+	}
+	return 0;
+}
+*/
 
 /*
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vbraband <vbraband@student.42.fr>          +#+  +:+       +#+        */
+/*   By: vbrabandt <vbrabandt@proton.me>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/11 11:16:25 by vbraband          #+#    #+#             */
-/*   Updated: 2024/06/20 11:36:46 by vbraband         ###   ########.fr       */
+/*   Updated: 2024/07/10 04:04:33 by vbrabandt        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,14 +18,16 @@ void	ft_putstr_fd(char *c, int fd)
 		write(fd, c, ft_strlen(c));
 }
 
-// int main()
-// {
-// 	char *sentence = "Hello Capybara, you're the cutest animal in the world.";
+/* 
+int main()
+{
+	char *sentence = "Hello Capybara, you're the cutest animal in the world.";
 
-// 	ft_putstr_fd(sentence, 1);
+	ft_putstr_fd(sentence, 1);
 
-// 	return 0;
-// }
+	return 0;
+}
+*/
 
 /*
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀

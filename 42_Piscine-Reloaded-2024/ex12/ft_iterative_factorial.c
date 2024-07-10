@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_iterative_factorial.c                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vbraband <vbraband@student.42.fr>          +#+  +:+       +#+        */
+/*   By: vbrabandt <vbrabandt@proton.me>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/04 16:15:03 by vbraband          #+#    #+#             */
-/*   Updated: 2024/06/05 17:42:38 by vbraband         ###   ########.fr       */
+/*   Updated: 2024/07/10 03:53:41 by vbrabandt        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,12 +29,14 @@ int	ft_iterative_factorial(int nb)
 	return (result);
 }
 
-// int main()
-// {
-// 	int number = 10;
-// 	long fact;
+/* 
+int main()
+{
+	int number = 10;
+	long fact;
 
-// 	fact = ft_iterative_factorial(number);
-// 	printf("Factorial of %d is %ld\n", number, fact);
-// 	return 0;
-// }
+	fact = ft_iterative_factorial(number);
+	printf("Factorial of %d is %ld\n", number, fact);
+	return 0;
+} 
+*/

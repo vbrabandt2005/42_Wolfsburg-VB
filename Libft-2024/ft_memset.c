@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vbraband <vbraband@student.42.fr>          +#+  +:+       +#+        */
+/*   By: vbrabandt <vbrabandt@proton.me>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/11 10:43:04 by vbraband          #+#    #+#             */
-/*   Updated: 2024/06/24 14:09:06 by vbraband         ###   ########.fr       */
+/*   Updated: 2024/07/10 04:03:00 by vbrabandt        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,14 +22,16 @@ void	*ft_memset(void *dest, int val, size_t len)
 	return (dest);
 }
 
-// int main()
-// {
-// 	char str[50] = "Hello, World!";
-// 	printf("Before memset: %s\n", str);
-// 	ft_memset(str, '*', 5);
-// 	printf("After memset: %s\n", str);
-// 	return 0;
-// }
+/* 
+int main()
+{
+	char str[50] = "Hello, World!";
+	printf("Before memset: %s\n", str);
+	ft_memset(str, '*', 5);
+	printf("After memset: %s\n", str);
+	return 0;
+}
+*/
 
 /*
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀

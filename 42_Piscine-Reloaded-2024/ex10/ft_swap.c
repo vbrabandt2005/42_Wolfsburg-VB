@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_swap.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vbraband <vbraband@student.42.fr>          +#+  +:+       +#+        */
+/*   By: vbrabandt <vbrabandt@proton.me>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/04 14:51:26 by vbraband          #+#    #+#             */
-/*   Updated: 2024/06/04 14:57:56 by vbraband         ###   ########.fr       */
+/*   Updated: 2024/07/10 03:53:10 by vbrabandt        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,22 +19,24 @@ void	ft_swap(int *a, int *b)
 	*b = swap;
 }
 
-// #include <stdio.h>
+/* 
+#include <stdio.h>
 
-// int main(void)
-// {
-// 	int		a;
-// 	int		b;
-// 	int		*ptra;
-// 	int		*ptrb;
+int main(void)
+{
+	int		a;
+	int		b;
+	int		*ptra;
+	int		*ptrb;
 
-// 	a = 1;
-// 	b = 2;
+	a = 1;
+	b = 2;
 
-// 	ptra = &a;
-// 	ptrb = &b;
+	ptra = &a;
+	ptrb = &b;
 
-// 	ft_swap(ptra, ptrb);
+	ft_swap(ptra, ptrb);
 
-// 	printf("a : %d, b : %d\n", a, b);
-// }
+	printf("a : %d, b : %d\n", a, b);
+} 
+*/

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vbraband <vbraband@student.42.fr>          +#+  +:+       +#+        */
+/*   By: vbrabandt <vbrabandt@proton.me>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/11 10:57:45 by vbraband          #+#    #+#             */
-/*   Updated: 2024/06/21 16:22:53 by vbraband         ###   ########.fr       */
+/*   Updated: 2024/07/10 04:05:59 by vbrabandt        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,22 +26,24 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 	}
 }
 
-// void capitalize(unsigned int i, char *c)
-// {
-// 	if (*c >= 'a' && *c <= 'z')
-// 		*c = *c - 'a' + 'A';
-// }
+/* 
+void capitalize(unsigned int i, char *c)
+{
+	if (*c >= 'a' && *c <= 'z')
+		*c = *c - 'a' + 'A';
+}
 
-// int main(void)
-// {
-// 	char str[] = "hello world";
+int main(void)
+{
+	char str[] = "hello world";
 
-// 	printf("Before: %s\n", str);
-// 	ft_striteri(str, capitalize);
-// 	printf("After: %s\n", str);
+	printf("Before: %s\n", str);
+	ft_striteri(str, capitalize);
+	printf("After: %s\n", str);
 
-// 	return 0;
-// }
+	return 0;
+}
+*/
 
 /*
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀

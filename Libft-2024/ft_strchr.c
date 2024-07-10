@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vbraband <vbraband@student.42.fr>          +#+  +:+       +#+        */
+/*   By: vbrabandt <vbrabandt@proton.me>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/13 13:24:52 by vbraband          #+#    #+#             */
-/*   Updated: 2024/06/25 13:30:12 by vbraband         ###   ########.fr       */
+/*   Updated: 2024/07/10 04:05:22 by vbrabandt        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,22 +26,23 @@ char	*ft_strchr(char const *str, int c)
 		return (NULL);
 }
 
-// int main()
-// {
-//     char my_str[] = "Capybaras";
-//     char tar_char = 'o';
+/* 
+int main()
+{
+    char my_str[] = "Capybaras";
+    char tar_char = 'o';
 
-//     // Find the first occurrence of 'o' in my_string
-//     char *result = ft_strchr(my_str, tar_char);
+    // Find the first occurrence of 'o' in my_string
+    char *result = ft_strchr(my_str, tar_char);
 
-//     if (result)
-//         printf("Fond '%c' at pos %ld.\n", tar_char, result - my_str + 1);
-//     else
-//         printf("'%c' not found in the string.\n", tar_char);
+    if (result)
+        printf("Fond '%c' at pos %ld.\n", tar_char, result - my_str + 1);
+    else
+        printf("'%c' not found in the string.\n", tar_char);
 
-//     return 0;
-// }
-
+    return 0;
+}
+*/
 /*
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣸⣬⠷⣶⡖⠲⡄⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀

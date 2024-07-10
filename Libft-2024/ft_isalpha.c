@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isalpha.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vbraband <vbraband@student.42.fr>          +#+  +:+       +#+        */
+/*   By: vbrabandt <vbrabandt@proton.me>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/10 10:05:32 by vbraband          #+#    #+#             */
-/*   Updated: 2024/06/14 13:21:20 by vbraband         ###   ########.fr       */
+/*   Updated: 2024/07/10 04:00:51 by vbrabandt        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,15 +23,17 @@ int	ft_isalpha(int c)
 		return (0);
 }
 
-// #include <stdio.h>
+/* 
+#include <stdio.h>
 
-// int main(void)
-// {
-// 	char c = '"';
-// 	printf("%d\n", ft_isalpha(c));
+int main(void)
+{
+	char c = '"';
+	printf("%d\n", ft_isalpha(c));
 
-// 	return (0);
-// }
+	return (0);
+}
+*/
 
 /*
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀

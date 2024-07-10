@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vbraband <vbraband@student.42.fr>          +#+  +:+       +#+        */
+/*   By: vbrabandt <vbrabandt@proton.me>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/10 10:55:15 by vbraband          #+#    #+#             */
-/*   Updated: 2024/06/25 16:27:41 by vbraband         ###   ########.fr       */
+/*   Updated: 2024/07/10 04:08:01 by vbrabandt        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,26 +29,28 @@ char	*ft_strrchr(char const *str, int c)
 		return ((char *)aux);
 }
 
-// int main()
-// {
-//     // initializing string
-// 	char str[] = "GeeksforGeeks";
+/*
+int main()
+{
+    // initializing string
+	char str[] = "GeeksforGeeks";
 
-//     // character to be searched
-//     char chr = 'k';
+    // character to be searched
+    char chr = 'k';
 
-//     // Storing pointer returned by
-// 	char* ptr = ft_strrchr(str, chr);
+    // Storing pointer returned by
+	char* ptr = ft_strrchr(str, chr);
 
-//     // getting the position of the character
-// 	if (ptr)
-// 		printf("Last occurrence of %c in %s is at index %d",
-// 			chr, str, ptr - str);
-//     // condition for character not present
-// 	else
-// 		printf("%c is not present in %s ", chr, str);
-// 	return (0);
-// }
+    // getting the position of the character
+	if (ptr)
+		printf("Last occurrence of %c in %s is at index %d",
+			chr, str, ptr - str);
+    // condition for character not present
+	else
+		printf("%c is not present in %s ", chr, str);
+	return (0);
+}
+*/
 
 /*
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀

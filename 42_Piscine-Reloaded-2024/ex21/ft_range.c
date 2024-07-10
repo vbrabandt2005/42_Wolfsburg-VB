@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_range.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vbraband <vbraband@student.42.fr>          +#+  +:+       +#+        */
+/*   By: vbrabandt <vbrabandt@proton.me>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/05 16:39:13 by vbraband          #+#    #+#             */
-/*   Updated: 2024/06/06 10:55:51 by vbraband         ###   ########.fr       */
+/*   Updated: 2024/07/10 03:55:20 by vbrabandt        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,23 +33,25 @@ int	*ft_range(int min, int max)
 	return (result);
 }
 
-// #include <stdio.h>
+/* 
+#include <stdio.h>
 
-// int main(void)
-// {
-// 	int	min;
-// 	int	max;
-// 	int	*tab;
-// 	int	i = 0;
-// 	int	size;
+int main(void)
+{
+	int	min;
+	int	max;
+	int	*tab;
+	int	i = 0;
+	int	size;
 
-// 	min = 1;
-// 	max = 1000;
-// 	size = max - min;
-// 	tab = ft_range(min, max);
-// 	while(i < size)
-// 	{
-// 		printf("%d, ", tab[i]);
-// 		i++;
-// 	}
-// }
+	min = 1;
+	max = 1000;
+	size = max - min;
+	tab = ft_range(min, max);
+	while(i < size)
+	{
+		printf("%d, ", tab[i]);
+		i++;
+	}
+} 
+*/

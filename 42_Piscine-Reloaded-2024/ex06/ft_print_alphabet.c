@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_print_alphabet.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vbraband <vbraband@student.42.fr>          +#+  +:+       +#+        */
+/*   By: vbrabandt <vbrabandt@proton.me>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/04 09:38:22 by vbraband          #+#    #+#             */
-/*   Updated: 2024/06/05 18:19:27 by vbraband         ###   ########.fr       */
+/*   Updated: 2024/07/10 03:52:15 by vbrabandt        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,8 +26,10 @@ void	ft_print_alphabet(void)
 	}
 }
 
-// int	main(void)
-// {
-// 	ft_print_alphabet();
-// 	return	0;
-// }
+/* 
+int	main(void)
+{
+	ft_print_alphabet();
+	return	0;
+} 
+*/

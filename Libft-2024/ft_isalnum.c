@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isalnum.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vbraband <vbraband@student.42.fr>          +#+  +:+       +#+        */
+/*   By: vbrabandt <vbrabandt@proton.me>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/10 12:02:06 by vbraband          #+#    #+#             */
-/*   Updated: 2024/06/14 13:21:26 by vbraband         ###   ########.fr       */
+/*   Updated: 2024/07/10 04:00:54 by vbrabandt        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,16 +23,17 @@ int	ft_isalnum(int c)
 		return (0);
 }
 
-// #include <stdio.h>
+/* 
+#include <stdio.h>
 
-// int main(void)
-// {
-// 	char c = '9';
-// 	printf("%d\n", ft_isalnum(c));
+int main(void)
+{
+	char c = '9';
+	printf("%d\n", ft_isalnum(c));
 
-// 	return (0);
-// }
-
+	return (0);
+}
+*/
 /*
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣸⣬⠷⣶⡖⠲⡄⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vbraband <vbraband@student.42.fr>          +#+  +:+       +#+        */
+/*   By: vbrabandt <vbrabandt@proton.me>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/11 10:46:18 by vbraband          #+#    #+#             */
-/*   Updated: 2024/06/25 16:36:50 by vbraband         ###   ########.fr       */
+/*   Updated: 2024/07/10 04:08:17 by vbrabandt        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,26 +66,28 @@ char	*ft_strtrim(char const *s1, char const *set)
 	return (trim);
 }
 
-// int main() {
-// 	// Test cases
-// 	char *s1 = "   hello   ";
-// 	char *set = " ";
-// 	char *trimmed = ft_strtrim(s1, set);
-// 	printf("Trimmed string: \"%s\"\n", trimmed);
-// 	free(trimmed);
+/* 
+int main() {
+	// Test cases
+	char *s1 = "   hello   ";
+	char *set = " ";
+	char *trimmed = ft_strtrim(s1, set);
+	printf("Trimmed string: \"%s\"\n", trimmed);
+	free(trimmed);
 
-// 	char *s2 = "   hello world   ";
-// 	char *trimmed2 = ft_strtrim(s2, set);
-// 	printf("Trimmed string: \"%s\"\n", trimmed2);
-// 	free(trimmed2);
+	char *s2 = "   hello world   ";
+	char *trimmed2 = ft_strtrim(s2, set);
+	printf("Trimmed string: \"%s\"\n", trimmed2);
+	free(trimmed2);
 
-// 	char *s3 = "hello";
-// 	char *trimmed3 = ft_strtrim(s3, set);
-// 	printf("Trimmed string: \"%s\"\n", trimmed3);
-// 	free(trimmed3);
+	char *s3 = "hello";
+	char *trimmed3 = ft_strtrim(s3, set);
+	printf("Trimmed string: \"%s\"\n", trimmed3);
+	free(trimmed3);
 
-// 	return 0;
-// }
+	return 0;
+}
+*/
 
 /*
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀

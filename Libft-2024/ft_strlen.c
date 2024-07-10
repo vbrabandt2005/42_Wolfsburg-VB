@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vbraband <vbraband@student.42.fr>          +#+  +:+       +#+        */
+/*   By: vbrabandt <vbrabandt@proton.me>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/10 10:03:25 by vbraband          #+#    #+#             */
-/*   Updated: 2024/06/25 16:17:21 by vbraband         ###   ########.fr       */
+/*   Updated: 2024/07/10 04:07:04 by vbrabandt        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,10 +22,12 @@ size_t	ft_strlen(char const *str)
 	return (i);
 }
 
-// int main (void)
-// {
-// 	printf("%i\n", ft_strlen("Capybara"));
-// }
+/*
+int main (void)
+{
+	printf("%i\n", ft_strlen("Capybara"));
+}
+*/
 
 /*
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀

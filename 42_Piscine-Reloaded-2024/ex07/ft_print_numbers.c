@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_print_numbers.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vbraband <vbraband@student.42.fr>          +#+  +:+       +#+        */
+/*   By: vbrabandt <vbrabandt@proton.me>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/04 10:00:19 by vbraband          #+#    #+#             */
-/*   Updated: 2024/06/05 18:19:29 by vbraband         ###   ########.fr       */
+/*   Updated: 2024/07/10 03:52:28 by vbrabandt        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,8 +26,10 @@ void	ft_print_numbers(void)
 	}
 }
 
-// int	main(void)
-// {
-// 	ft_print_numbers();
-// 	return	0;
-// }
+/* 
+int	main(void)
+{
+	ft_print_numbers();
+	return	0;
+} 
+*/

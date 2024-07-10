@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_is_negative.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vbraband <vbraband@student.42.fr>          +#+  +:+       +#+        */
+/*   By: vbrabandt <vbrabandt@proton.me>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/04 10:16:20 by vbraband          #+#    #+#             */
-/*   Updated: 2024/06/05 18:19:32 by vbraband         ###   ########.fr       */
+/*   Updated: 2024/07/10 03:52:41 by vbrabandt        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,10 +26,12 @@ void	ft_is_negative(int n)
 	}
 }
 
-// int main(void)
-// {
-//     int  num = 0;
-//     ft_is_negative(num);
-//     ft_putchar('\n');
-//     return 0;
-// }
+/* 
+int main(void)
+{
+    int  num = 0;
+    ft_is_negative(num);
+    ft_putchar('\n');
+    return 0;
+} 
+*/
