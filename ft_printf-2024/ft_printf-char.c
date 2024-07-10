@@ -37,30 +37,12 @@ int	ft_print_str(char *str)
 }
 // %s - print a string
 
-int	ft_print_hex(size_t n, char *hex)
+int	ft_print_percent(void)
 {
-	int		i;
-
-	i = 0;
-	if (n / 16)
-		i += ft_print_hex(n / 16, hex);
-	i += ft_print_char(hex[n % 16]);
-	return (i);
+	ft_print_char('%');
+	return (1);
 }
-// %x/X - print a number in hexadecimal
-
-int	ft_print_pointer(void *ptr)
-{
-	int	i;
-
-	i = 0;
-	if (ptr == NULL)
-		return (ft_print_str("(nil)"));
-	i += ft_print_str("0x");
-	i += ft_print_hex((size_t)ptr, "0123456789abcdef");
-	return (i);
-}
-// %p - print a pointer address in hexadecimal
+// %% - literal percent sign
 
 /*
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
