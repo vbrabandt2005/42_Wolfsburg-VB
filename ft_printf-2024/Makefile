@@ -6,14 +6,13 @@
 #    By: vbraband <vbraband@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/07/04 13:56:08 by vbraband          #+#    #+#              #
-#    Updated: 2024/07/04 14:23:10 by vbraband         ###   ########.fr        #
+#    Updated: 2024/07/09 17:57:43 by vbraband         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libftprintf.a
 cc = cc
-srcs = 
-
+srcs = ft_printf.c ft_printf-char.c ft_printf-num.c
 objects = $(srcs:.c=.o)
 CFLAGS = -Wall -Wextra -Werror
 rm = rm -f

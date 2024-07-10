@@ -6,7 +6,7 @@
 /*   By: vbraband <vbraband@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/04 17:30:53 by vbraband          #+#    #+#             */
-/*   Updated: 2024/07/08 17:31:17 by vbraband         ###   ########.fr       */
+/*   Updated: 2024/07/09 15:57:25 by vbraband         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,13 +22,15 @@
 # include <stdarg.h>
 
 /* Custom liberaries */
-int		ft_print_percent(void);
-int		ft_print_char(char c);
-int		ft_print_str(char *str);
-int		ft_print_nbr(int nbr);
-void	ft_print_unsigned(unsigned int nbr);
-int		ft_print_hex(size_t n, char *hex);
-int		ft_print_pointer(void *nbr);
+int	ft_print_percent(void);
+int	ft_print_char(char c);
+int	ft_print_str(char *str);
+int	ft_print_nbr(long nbr);
+int	ft_print_int(int nbr);
+int	ft_print_unsigned(unsigned long nbr);
+int	ft_print_hex(size_t n, char *hex);
+int	ft_print_pointer(void *ptr);
+int	ft_printf(const char *s, ...);
 
 #endif
 
