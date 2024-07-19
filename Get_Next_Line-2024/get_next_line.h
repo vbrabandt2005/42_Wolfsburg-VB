@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line.h                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vbraband <vbraband@student.42.fr>          +#+  +:+       +#+        */
+/*   By: vbrabandt <vbrabandt@proton.me>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/15 14:32:28 by vbraband          #+#    #+#             */
-/*   Updated: 2024/07/15 15:52:54 by vbraband         ###   ########.fr       */
+/*   Updated: 2024/07/19 12:46:21 by vbrabandt        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,10 @@
 # include <fcntl.h>
 # include <stdio.h>
 
-
+size_t	ft_strlen(char const *str);
+char	*ft_strchr(char const *str, int c);
+char	*ft_strdup(const char *s);
+char	*ft_strjoin(char const *s1, char const *s2);
+char	*ft_substr(char const *s, unsigned int start, size_t len);
 
 #endif
