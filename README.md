@@ -1,6 +1,6 @@
 # 42_Wolfsburg-VB
 
- Repository/archive of everything I've done at 42WOB
+ Repository/Archive of everything I've done at 42WOB
 
 ## Piscine
 
