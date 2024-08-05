@@ -18,4 +18,4 @@
 
 - Born2BeRoot (Documentation only - July 2024)
 - ft_printf (July 2024)
-- get_next_line (WIP - July 2024)
+- Get_Next_Line (WIP - July 2024)
