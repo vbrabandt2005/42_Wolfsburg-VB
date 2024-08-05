@@ -1,45 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line.h                                    :+:      :+:    :+:   */
+/*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vbraband <vbraband@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/08/02 16:41:34 by vbrabandt         #+#    #+#             */
-/*   Updated: 2024/08/05 13:33:00 by vbraband         ###   ########.fr       */
+/*   Created: 2024/08/05 13:10:41 by vbraband          #+#    #+#             */
+/*   Updated: 2024/08/05 13:20:45 by vbraband         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef GET_NEXT_LINE_H
-# define GET_NEXT_LINE_H
-# include <stdlib.h>
-# include <stdio.h>
-# include <stdlib.h>
-# include <unistd.h>
-# include <string.h>
+#include "get_next_line.h"
 
-/* Define BUFFER_SIZE */
-# ifndef BUFFER_SIZE
-#  define BUFFER_SIZE 32
-# endif
-
-/* s_list thing idk */
-typedef struct s_list
+int	main(int argc, char **argv)
 {
-	char			buf[BUFFER_SIZE + 1];
-	struct s_list	*next;
-}				t_list;
+	if (argc != 2)
+	{
+		fprintf(stderr, "Usage: %s <file_path>\n", argv[0]);
+		return (1);
+	}
 
-/* Get_Next_Line */
-char	*get_next_line(int fd);
+	FILE *file = fopen(argv[1], "r");
+	if (!file) {
+		perror("Error opening file");
+		return (1);
+	}
 
-/* Get_Next_Line Utilities */
-char	*ft_strchr(char *s, char c);
-size_t	ft_strsize(const char *str);
-size_t	ft_lstlen(t_list *lst);
-void	*ft_lstreset(t_list *lst);
+	int fd = fileno(file);
+	char *line;
+	while ((line = get_next_line(fd)) != NULL)
+	{
+		printf("%s", line);
+		free(line);
+	}
 
-#endif
+	fclose(file);
+	return (0);
+}
 
 /*
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
