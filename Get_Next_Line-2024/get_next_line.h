@@ -3,41 +3,34 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line.h                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vbraband <vbraband@student.42.fr>          +#+  +:+       +#+        */
+/*   By: vbrabandt <vbrabandt@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/08/02 16:41:34 by vbrabandt         #+#    #+#             */
-/*   Updated: 2024/08/05 13:33:00 by vbraband         ###   ########.fr       */
+/*   Created: 2024/08/06 11:28:35 by vbrabandt         #+#    #+#             */
+/*   Updated: 2024/08/06 11:39:40 by vbrabandt        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef GET_NEXT_LINE_H
 # define GET_NEXT_LINE_H
-# include <stdlib.h>
 # include <stdio.h>
-# include <stdlib.h>
 # include <unistd.h>
-# include <string.h>
+# include <stdlib.h>
+# include <fcntl.h>
 
-/* Define BUFFER_SIZE */
+/* BUFFER_SIZE */
 # ifndef BUFFER_SIZE
-#  define BUFFER_SIZE 32
+#  define BUFFER_SIZE 42
 # endif
-
-/* s_list thing idk */
-typedef struct s_list
-{
-	char			buf[BUFFER_SIZE + 1];
-	struct s_list	*next;
-}				t_list;
 
 /* Get_Next_Line */
 char	*get_next_line(int fd);
 
-/* Get_Next_Line Utilities */
-char	*ft_strchr(char *s, char c);
-size_t	ft_strsize(const char *str);
-size_t	ft_lstlen(t_list *lst);
-void	*ft_lstreset(t_list *lst);
+/* Utils */
+size_t	ft_strlen(const char *str);
+char	*ft_strdup(const char *str);
+char	*ft_strchr(const char *str, int c);
+char	*ft_strjoin(const char *str1, const char *str2);
+char	*ft_substr(const char *str, unsigned int start, size_t len);
 
 #endif
 

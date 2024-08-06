@@ -3,60 +3,101 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line_utils.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vbraband <vbraband@student.42.fr>          +#+  +:+       +#+        */
+/*   By: vbrabandt <vbrabandt@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/08/02 16:41:52 by vbrabandt         #+#    #+#             */
-/*   Updated: 2024/08/05 13:31:22 by vbraband         ###   ########.fr       */
+/*   Created: 2024/08/06 11:28:46 by vbrabandt         #+#    #+#             */
+/*   Updated: 2024/08/06 11:39:56 by vbrabandt        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
 
-char	*ft_strchr(char *s, char c)
-{
-	while (*s != '\0')
-	{
-		if (*s == c)
-			return (s);
-		s++;
-	}
-	return (NULL);
-}
-
-size_t	ft_strsize(const char *str)
+size_t	ft_strlen(const char *str)
 {
 	size_t	i;
 
 	i = 0;
-	while (str[i] != '\0')
+	while (str[i])
 		i++;
 	return (i);
 }
 
-size_t	ft_lstlen(t_list *lst)
+char	*ft_strchr(const char *str, int c)
 {
-	size_t	len;
-
-	len = 0;
-	while (lst != NULL)
+	while (*str)
 	{
-		len += ft_strsize(lst->buf);
-		lst = lst->next;
+		if (*str == (char)c)
+			return ((char *)str);
+		str++;
 	}
-	return (len);
+	if (*str == (char)c)
+		return ((char *)str);
+	else
+		return (NULL);
 }
 
-void	*ft_lstreset(t_list *lst)
+char	*ft_strdup(const char *str)
 {
-    t_list	*temp;
+	char	*new;
+	int		i;
 
-    while (lst != NULL)
-    {
-        temp = lst->next;
-        free(lst);
-        lst = temp;
-    }
-    return (NULL);
+	i = 0;
+	new = (char *)malloc(sizeof(char) * ft_strlen(str) + 1);
+	if (new == NULL)
+		return (NULL);
+	while (*str)
+	{
+		new[i] = *str++;
+		i++;
+	}
+	new[i] = '\0';
+	return (new);
+}
+
+char	*ft_strjoin(const char *str1, const char *str2)
+{
+	size_t			len1;
+	size_t			len2;
+	char			*slen;
+	char			*start;
+
+	len1 = ft_strlen(str1);
+	len2 = ft_strlen(str2);
+	slen = (char *)malloc(sizeof(char) * (len1 + len2 + 1));
+	if (slen == NULL)
+		return (NULL);
+	start = slen;
+	while (*str1)
+		*slen++ = *str1++;
+	while (*str2)
+		*slen++ = *str2++;
+	*slen = '\0';
+	return (start);
+}
+
+char	*ft_substr(const char *str, unsigned int start, size_t len)
+{
+	unsigned int	i;
+	char			*slen;
+
+	i = 0;
+	if (str == NULL)
+		return (NULL);
+	if (start > ft_strlen(str))
+		len = 0;
+	else if (len > (ft_strlen(str) - start))
+		len = ft_strlen(str) - start;
+	slen = malloc(sizeof(char) * (len + 1));
+	if (slen == NULL)
+		return (NULL);
+	while (i < len && str[start])
+	{
+		slen[i] = str[start];
+		i++;
+		start++;
+	}
+	slen[i] = '\0';
+	return (slen);
 }
 
 /*

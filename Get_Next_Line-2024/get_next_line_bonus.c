@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line.c                                    :+:      :+:    :+:   */
+/*   get_next_line_bonus.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vbrabandt <vbrabandt@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/08/06 11:33:38 by vbrabandt         #+#    #+#             */
-/*   Updated: 2024/08/06 12:02:35 by vbrabandt        ###   ########.fr       */
+/*   Created: 2024/08/06 11:25:27 by vbrabandt         #+#    #+#             */
+/*   Updated: 2024/08/06 12:03:08 by vbrabandt        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line.h"
+#include "get_next_line_bonus.h"
 
 char	*ft_readfile(int fd, char *str, char *buffer)
 {
@@ -65,25 +65,25 @@ char	*get_next_line(int fd)
 {
 	char			*line;
 	char			*buffer;
-	static char		*str;	
+	static char		*str[MAX_FD];
 
 	buffer = (char *)malloc(BUFFER_SIZE + 1);
 	if (buffer == NULL)
 		return (NULL);
 	if (BUFFER_SIZE <= 0 || fd < 0 || read(fd, 0, 0) < 0)
 	{
-		free(str);
+		free(str[fd]);
 		free(buffer);
-		str = NULL;
+		str[fd] = NULL;
 		buffer = NULL;
 		return (NULL);
 	}
-	line = ft_readfile(fd, str, buffer);
+	line = ft_readfile(fd, str[fd], buffer);
 	free(buffer);
 	buffer = NULL;
 	if (line == NULL)
 		return (NULL);
-	str = ft_freeline(line);
+	str[fd] = ft_freeline(line);
 	return (line);
 }
 

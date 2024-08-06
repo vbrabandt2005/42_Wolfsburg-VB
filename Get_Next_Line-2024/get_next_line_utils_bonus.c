@@ -1,90 +1,103 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line.c                                    :+:      :+:    :+:   */
+/*   get_next_line_utils_bonus.c                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vbrabandt <vbrabandt@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/08/06 11:33:38 by vbrabandt         #+#    #+#             */
-/*   Updated: 2024/08/06 12:02:35 by vbrabandt        ###   ########.fr       */
+/*   Created: 2024/08/06 11:27:50 by vbrabandt         #+#    #+#             */
+/*   Updated: 2024/08/06 11:40:01 by vbrabandt        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line.h"
+#include "get_next_line_bonus.h"
 
-char	*ft_readfile(int fd, char *str, char *buffer)
+size_t	ft_strlen(const char *str)
 {
-	char	*tmp;
-	int		buff_read;
+	size_t	i;
 
-	buff_read = 1;
-	while (buff_read > 0)
-	{
-		buff_read = read(fd, buffer, BUFFER_SIZE);
-		if (buff_read == -1)
-		{
-			free(str);
-			return (NULL);
-		}
-		if (buff_read == 0)
-			break ;
-		buffer[buff_read] = '\0';
-		if (str == NULL)
-			str = ft_strdup("");
-		tmp = str;
-		str = ft_strjoin(tmp, buffer);
-		free(tmp);
-		tmp = NULL;
-		if (ft_strchr(buffer, '\n'))
-			break ;
-	}
-	return (str);
+	i = 0;
+	while (str[i])
+		i++;
+	return (i);
 }
 
-char	*ft_freeline(char *str)
+char	*ft_strchr(const char *str, int c)
 {
-	char	*line;
+	while (*str)
+	{
+		if (*str == (char)c)
+			return ((char *)str);
+		str++;
+	}
+	if (*str == (char)c)
+		return ((char *)str);
+	else
+		return (NULL);
+}
+
+char	*ft_strdup(const char *str)
+{
+	char	*new;
 	int		i;
 
 	i = 0;
-	while (str[i] && str[i] != '\n')
-		i++;
-	if (str[i] == '\0' || str[1] == '\0')
+	new = (char *)malloc(sizeof(char) * ft_strlen(str) + 1);
+	if (new == NULL)
 		return (NULL);
-	line = ft_substr(str, i + 1, ft_strlen(str) - i);
-	if (*line == 0)
+	while (*str)
 	{
-		free(line);
-		line = NULL;
+		new[i] = *str++;
+		i++;
 	}
-	str[i + 1] = '\0';
-	return (line);
+	new[i] = '\0';
+	return (new);
 }
 
-char	*get_next_line(int fd)
+char	*ft_strjoin(const char *str1, const char *str2)
 {
-	char			*line;
-	char			*buffer;
-	static char		*str;	
+	size_t			len1;
+	size_t			len2;
+	char			*slen;
+	char			*start;
 
-	buffer = (char *)malloc(BUFFER_SIZE + 1);
-	if (buffer == NULL)
+	len1 = ft_strlen(str1);
+	len2 = ft_strlen(str2);
+	slen = (char *)malloc(sizeof(char) * (len1 + len2 + 1));
+	if (slen == NULL)
 		return (NULL);
-	if (BUFFER_SIZE <= 0 || fd < 0 || read(fd, 0, 0) < 0)
+	start = slen;
+	while (*str1)
+		*slen++ = *str1++;
+	while (*str2)
+		*slen++ = *str2++;
+	*slen = '\0';
+	return (start);
+}
+
+char	*ft_substr(const char *str, unsigned int start, size_t len)
+{
+	unsigned int	i;
+	char			*slen;
+
+	i = 0;
+	if (str == NULL)
+		return (NULL);
+	if (start > ft_strlen(str))
+		len = 0;
+	else if (len > (ft_strlen(str) - start))
+		len = ft_strlen(str) - start;
+	slen = malloc(sizeof(char) * (len + 1));
+	if (slen == NULL)
+		return (NULL);
+	while (i < len && str[start])
 	{
-		free(str);
-		free(buffer);
-		str = NULL;
-		buffer = NULL;
-		return (NULL);
+		slen[i] = str[start];
+		i++;
+		start++;
 	}
-	line = ft_readfile(fd, str, buffer);
-	free(buffer);
-	buffer = NULL;
-	if (line == NULL)
-		return (NULL);
-	str = ft_freeline(line);
-	return (line);
+	slen[i] = '\0';
+	return (slen);
 }
 
 /*

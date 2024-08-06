@@ -19,3 +19,7 @@
 - Born2BeRoot (Documentation only - July 2024)
 - ft_printf (July 2024)
 - Get_Next_Line (July-August 2024)
+
+I DON'T WANT TO Get_Next_Line ANYMORE!!!!!!!!
+
+aaaaaaaaaaaaaaaaaAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHHHHHHHHHHHHHHHHHHH

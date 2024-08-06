@@ -1,91 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line.c                                    :+:      :+:    :+:   */
+/*   get_next_line_bonus.h                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vbrabandt <vbrabandt@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/08/06 11:33:38 by vbrabandt         #+#    #+#             */
-/*   Updated: 2024/08/06 12:02:35 by vbrabandt        ###   ########.fr       */
+/*   Created: 2024/08/06 11:25:38 by vbrabandt         #+#    #+#             */
+/*   Updated: 2024/08/06 11:40:06 by vbrabandt        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line.h"
+#ifndef GET_NEXT_LINE_BONUS_H
+# define GET_NEXT_LINE_BONUS_H
+# include <stdio.h>
+# include <unistd.h>
+# include <stdlib.h>
+# include <fcntl.h>
 
-char	*ft_readfile(int fd, char *str, char *buffer)
-{
-	char	*tmp;
-	int		buff_read;
+/* BUFFER_SIZE */
+# ifndef BUFFER_SIZE
+#  define BUFFER_SIZE 42
+# endif
+# define MAX_FD 1024
 
-	buff_read = 1;
-	while (buff_read > 0)
-	{
-		buff_read = read(fd, buffer, BUFFER_SIZE);
-		if (buff_read == -1)
-		{
-			free(str);
-			return (NULL);
-		}
-		if (buff_read == 0)
-			break ;
-		buffer[buff_read] = '\0';
-		if (str == NULL)
-			str = ft_strdup("");
-		tmp = str;
-		str = ft_strjoin(tmp, buffer);
-		free(tmp);
-		tmp = NULL;
-		if (ft_strchr(buffer, '\n'))
-			break ;
-	}
-	return (str);
-}
+/* Get_Next_Line_Bonus */
+char	*get_next_line(int fd);
 
-char	*ft_freeline(char *str)
-{
-	char	*line;
-	int		i;
+/* Bonus_Utils */
+size_t	ft_strlen(const char *str);
+char	*ft_strdup(const char *str);
+char	*ft_strchr(const char *str, int c);
+char	*ft_strjoin(const char *str1, const char *str2);
+char	*ft_substr(const char *str, unsigned int start, size_t len);
 
-	i = 0;
-	while (str[i] && str[i] != '\n')
-		i++;
-	if (str[i] == '\0' || str[1] == '\0')
-		return (NULL);
-	line = ft_substr(str, i + 1, ft_strlen(str) - i);
-	if (*line == 0)
-	{
-		free(line);
-		line = NULL;
-	}
-	str[i + 1] = '\0';
-	return (line);
-}
-
-char	*get_next_line(int fd)
-{
-	char			*line;
-	char			*buffer;
-	static char		*str;	
-
-	buffer = (char *)malloc(BUFFER_SIZE + 1);
-	if (buffer == NULL)
-		return (NULL);
-	if (BUFFER_SIZE <= 0 || fd < 0 || read(fd, 0, 0) < 0)
-	{
-		free(str);
-		free(buffer);
-		str = NULL;
-		buffer = NULL;
-		return (NULL);
-	}
-	line = ft_readfile(fd, str, buffer);
-	free(buffer);
-	buffer = NULL;
-	if (line == NULL)
-		return (NULL);
-	str = ft_freeline(line);
-	return (line);
-}
+#endif
 
 /*
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
