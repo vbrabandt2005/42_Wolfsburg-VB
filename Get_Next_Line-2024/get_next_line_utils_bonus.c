@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line_utils_bonus.c                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vbrabandt <vbrabandt@student.42.fr>        +#+  +:+       +#+        */
+/*   By: vbrabandt <vbrabandt@proton.me>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/06 11:27:50 by vbrabandt         #+#    #+#             */
-/*   Updated: 2024/08/06 11:40:01 by vbrabandt        ###   ########.fr       */
+/*   Updated: 2024/08/08 02:04:09 by vbrabandt        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
