@@ -25,4 +25,4 @@
 
 - [Born2BeRoot](https://github.com/vbrabandt2005/42_Wolfsburg-VB/tree/main/Born2BeRoot-2024) (Documentation only - 100% - July 2024)
 - [ft_printf](https://github.com/vbrabandt2005/42_Wolfsburg-VB/tree/main/ft_printf-2024) (100% - July 2024)
-- [get_next_line](https://github.com/vbrabandt2005/42_Wolfsburg-VB/tree/main/Get_Next_Line-2024) (WIP - July 2024)
+- [Get_Next_Line](https://github.com/vbrabandt2005/42_Wolfsburg-VB/tree/main/Get_Next_Line-2024) (WIP - July 2024)
