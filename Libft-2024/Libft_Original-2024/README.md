@@ -1,4 +1,4 @@
-# Libft (June - 2024)
+# Libft_Original (June - 2024)
 
 Everything except for bonuses are done, ft_split has a memory leak (though moulinette ignores this)
 
