@@ -65,4 +65,4 @@ Handles leftovers: It stores the remaining part of the string for the next call.
 
 **`get_next_line`** orchestrates the overall process and provides the extracted line to the caller.
 
-If you want to see how the code works step-by-step, I have a rather messy Markdown file [here](https://github.com/vbrabandt2005/42_Wolfsburg-VB/blob/add-GNL/Get_Next_Line-2024/Program_StepByStep.md).
+If you want to see how the code works step-by-step, I have a rather messy Markdown file [here](https://github.com/vbrabandt2005/42_Wolfsburg-VB/blob/main/Get_Next_Line-2024/Program_StepByStep.md).
