@@ -1,12 +1,12 @@
 # Get_Next_Line
 
-## Explaination 
+## Explanation
 
-A Program which reads a text file.
+A Program which reads a text file line by line efficiently.
 
-## Bonus Explaintion
+## Bonus Explanation
 
-Basically the Bonus version allows multiple **File Descriptors** to be read
+Basically the Bonus version allows multiple **File Descriptors** (in simple terms files) to be read.
 
 ### To Run the code
 
@@ -24,9 +24,7 @@ Compile the code: `gcc -D BUFFER_SIZE=10000 get_next_line_bonus.c get_next_line_
 
 You can define the `BUFFER_SIZE` here for texting.
 
-To Run it: `./a.out <File1.txt> <File2.txt>`
-
-Note: My `main_bonus.c` probably only works with 2 files right now.
+To Run it: `./a.out <File1.txt> <File2.txt> ....`
 
 ## Understanding the Three Functions
 
@@ -66,3 +64,5 @@ Handles leftovers: It stores the remaining part of the string for the next call.
 **`ft_freeline`** processes the read data to extract a single line.
 
 **`get_next_line`** orchestrates the overall process and provides the extracted line to the caller.
+
+If you want to see how the code works step-by-step, I have a rather messy Markdown file [here](https://github.com/vbrabandt2005/42_Wolfsburg-VB/blob/add-GNL/Get_Next_Line-2024/Program_StepByStep.md).
