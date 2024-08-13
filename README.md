@@ -1,6 +1,6 @@
 # 42_Wolfsburg-VB
 
- Repository/Archive of everything I've done at [42WOB](https://42wolfsburg.de/).
+Repository/Archive of everything I've done at [42WOB](https://42wolfsburg.de/).
 
 ## Piscine
 
