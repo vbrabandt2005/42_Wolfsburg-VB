@@ -6,21 +6,21 @@
 /*   By: vbrabandt <vbrabandt@proton.me>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/10 09:53:42 by vbraband          #+#    #+#             */
-/*   Updated: 2024/07/10 03:37:13 by vbrabandt        ###   ########.fr       */
+/*   Updated: 2024/08/15 14:26:45 by vbrabandt        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
-/*Standard libraries*/
+/* Standard libraries */
 # include <stdio.h>
 # include <string.h>
 # include <stddef.h>
 # include <stdlib.h>
 # include <unistd.h>
 
-/*Custom implimentation of libc*/
+/* Custom implimentation of libc */
 int				ft_atoi(char const *str);
 void			ft_bzero(void *s, size_t n);
 void			*ft_calloc(size_t nmemb, size_t size);
@@ -45,8 +45,7 @@ char			*ft_strrchr(const char *s, int c);
 int				ft_tolower(int c);
 int				ft_toupper(int c);
 
-/*Additional functions*/
-// itoa timeout
+/* Additional functions */
 char			*ft_itoa(int n);
 void			ft_putchar_fd(char c, int fd);
 void			ft_putendl_fd(char *s, int fd);
