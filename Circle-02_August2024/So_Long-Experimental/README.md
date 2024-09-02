@@ -2,4 +2,4 @@
 
 A 2D game utilising MiniLibX
 
-Forked from acloos
+Forked from Bjorn
