@@ -6,7 +6,7 @@
 /*   By: vbraband <vbraband@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/02 13:58:22 by vbraband          #+#    #+#             */
-/*   Updated: 2024/09/02 15:03:29 by vbraband         ###   ########.fr       */
+/*   Updated: 2024/09/02 17:59:55 by vbraband         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ void	display_game(t_game *game)
 
 int	start_game(t_game *game)
 {
-	printf("\n\t --Welcome to the Adventure of Cali!--\n\n");
+	printf("\n\t --Execute Operation Capybara freedom!--\n\n");
 	game->window.mlx_ptr = mlx_init();
 	if (!game->window.mlx_ptr)
 	{

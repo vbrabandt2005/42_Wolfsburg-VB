@@ -6,7 +6,7 @@
 /*   By: vbraband <vbraband@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/02 13:54:44 by vbraband          #+#    #+#             */
-/*   Updated: 2024/09/02 14:50:09 by vbraband         ###   ########.fr       */
+/*   Updated: 2024/09/02 17:59:03 by vbraband         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void	game_over(void)
 {
 	game_over_vis();
-	ft_printf("\n\n%s%sSo Long my friend.... we failed....\n\n", F_D_GREEN, RESET);
+	ft_printf("\n\n%s%sSo Long my Capy friend.... we failed....\n\n", F_D_GREEN, RESET);
 }
 
 void	game_over_vis(void)

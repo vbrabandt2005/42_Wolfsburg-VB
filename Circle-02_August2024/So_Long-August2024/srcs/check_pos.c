@@ -6,7 +6,7 @@
 /*   By: vbraband <vbraband@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/02 13:54:27 by vbraband          #+#    #+#             */
-/*   Updated: 2024/09/02 13:54:28 by vbraband         ###   ########.fr       */
+/*   Updated: 2024/09/02 17:58:51 by vbraband         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,17 +50,17 @@ int	mission_ready(t_game *game)
 {
 	if (game->map.hero_count == 0)
 	{
-		ft_error(game, "Can't start mission! Cali is nowhere to be found");
+		ft_error(game, "Can't start mission! Capy is missing");
 		return (0);
 	}
 	if (game->map.exit_count == 0)
 	{
-		ft_error(game, "Can't start mission! There is no way out");
+		ft_error(game, "Can't start mission! There is no Exit");
 		return (0);
 	}
 	if (game->map.item_count == 0)
 	{
-		ft_error(game, "Can't start mission! There is no Treasure");
+		ft_error(game, "Can't start mission! There are no keys to grant Capy's freedom");
 		return (0);
 	}
 	game = elem_pos(game);

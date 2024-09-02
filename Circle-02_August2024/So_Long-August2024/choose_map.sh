@@ -3,6 +3,8 @@
 # Directory containing the maps
 MAP_DIR="maps"
 
+printf "\n\e[1;92mWelcome to Operation Capybara freedom (So_Long)!\e[0m\n\n"
+
 # List available maps
 echo "Available maps:"
 mapfile -t maps < <(ls "$MAP_DIR"/*.ber)

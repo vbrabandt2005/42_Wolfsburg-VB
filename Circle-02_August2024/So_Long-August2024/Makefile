@@ -6,7 +6,7 @@
 #    By: vbraband <vbraband@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/08/16 17:11:28 by vbrabandt         #+#    #+#              #
-#    Updated: 2024/09/02 14:54:55 by vbraband         ###   ########.fr        #
+#    Updated: 2024/09/02 18:02:51 by vbraband         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -43,12 +43,12 @@ $(obj_dir)/%.o:			srcs/%.c
 						$(cc) $(CFLAGS) -I libft/srcs -I mlx -I srcs  -c $< -o $@ $(includes)
 
 all:					$(NAME) 
-						@echo "\033[32m[The Program is ready to use (spoken in chinese bluetooth speaker accent)]\033[0m"
+						@echo "\033[32m[The Game is ready to be played]\033[0m"
 
 
 $(NAME):				$(libft) $(obj_dir) $(obj)
 						$(cc) $(CFLAGS) $(obj) -o $(NAME) $(libinclude) $(mlxflags)
-						@echo "\033[32m[So_Long has been created (also spoken in chinese bluetooth speaker accent)]\033[0m"					
+						@echo "\033[32m[So_Long has been created]\033[0m"					
 						
 
 $(libft):
@@ -72,6 +72,9 @@ fclean:					clean
 
 re:						fclean 
 						make all
+
+run:					all
+						./choose_map.sh
 
 auto:					fclean 
 						make all 

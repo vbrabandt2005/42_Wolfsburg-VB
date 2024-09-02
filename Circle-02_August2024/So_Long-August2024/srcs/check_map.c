@@ -6,7 +6,7 @@
 /*   By: vbraband <vbraband@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/02 13:54:18 by vbraband          #+#    #+#             */
-/*   Updated: 2024/09/02 14:46:15 by vbraband         ###   ########.fr       */
+/*   Updated: 2024/09/02 17:58:15 by vbraband         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,9 +35,9 @@ int	check_char(char check, t_game *game)
 	if (game->map.hero_count > 1 || game->map.exit_count > 1)
 	{
 		if (game->map.hero_count > 1)
-			ft_error(game, "Its only Cali's Adventure!");
+			ft_error(game, "although Capy is kind, there can only be one Capy!");
 		else if (game->map.exit_count > 1)
-			ft_error(game, "There can only be one Way!");
+			ft_error(game, "there can only be one exit!");
 		return (0);
 	}
 	return (1);
