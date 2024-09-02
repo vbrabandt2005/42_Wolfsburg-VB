@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ansi_colors.h                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vbrabandt <vbrabandt@proton.me>            +#+  +:+       +#+        */
+/*   By: vbraband <vbraband@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/02 11:51:36 by acloos            #+#    #+#             */
-/*   Updated: 2024/08/16 12:49:34 by vbrabandt        ###   ########.fr       */
+/*   Updated: 2024/09/02 13:12:10 by vbraband         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,13 +19,8 @@
 # include<sys/types.h>
 # include "../lib/Libft_Modified-2024/srcs/libft.h"
 
-//NWS = not widely supported
-//possible escape seqences :
-//	\033
-//	\x1b
-
 //reset & defaults
-# define RST "\033[0m" //reset
+# define RESET "\033[0m" //reset
 # define F_DEFAULT "\033[39m"//default foreground color (implementation defined)
 # define B_DEFAULT "\033[49m"//default background color (implementation defined)
 # define FONT_DEFAULT "\033[10m" //default font

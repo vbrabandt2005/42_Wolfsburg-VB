@@ -5,55 +5,48 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: vbraband <vbraband@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/14 17:51:55 by acloos            #+#    #+#             */
-/*   Updated: 2024/08/22 16:18:41 by vbraband         ###   ########.fr       */
+/*   Created: 2024/09/02 13:54:18 by vbraband          #+#    #+#             */
+/*   Updated: 2024/09/02 14:46:15 by vbraband         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "so_long.h"
 
-/*
-This function records the numbers of special characters: player, items and exits
-If this number is not valid, it displays the appropriate warning
-*/
-
-int	check_char(char iji, t_game *game)
+int	check_char(char check, t_game *game)
 {
-	char	*char_ok;
+	char	*valid;
 
-	char_ok = "01EPC";
-	if (iji == 'P')
+	valid = "01EPCG";
+	if (check == 'P')
 		game->map.hero_count++;
-	if (iji == 'E')
+	if (check == 'E')
 		game->map.exit_count++;
-	if (iji == 'C')
+	if (check == 'C')
 		game->map.item_count++;
-	if (!ft_strchr(char_ok, iji))
+	if (check == 'G')
+		game->map.enemy_count++;
+	if (!ft_strchr(valid, check))
 	{
 		ft_error(game, "This map contains invalid character(s)!\n\
-		Valid characters are : 0 1 P E C\n\
+		Valid characters are: 0 1 P E C G\n\
 		Please provide a valid map.\n");
 		return (0);
 	}
 	if (game->map.hero_count > 1 || game->map.exit_count > 1)
 	{
 		if (game->map.hero_count > 1)
-			ft_error(game, "This is not a multi-player game !");
+			ft_error(game, "Its only Cali's Adventure!");
 		else if (game->map.exit_count > 1)
-			ft_error(game, "Swiss cheese is not a valid map !");
+			ft_error(game, "There can only be one Way!");
 		return (0);
 	}
 	return (1);
 }
-/*
-This function goes through the map and verifies every character 
-with check_char()
-*/
 
 int	valid_char(t_game *game)
 {
-	int	i;
-	int	j;
+	int		i;
+	int		j;
 
 	i = 1;
 	while (i < game->map.col_size - 1)
@@ -72,16 +65,10 @@ int	valid_char(t_game *game)
 	return (1);
 }
 
-/*
-This function checks whether the map is fully enclosed with walls
-	- checks all of 1st and last line
-	- checks first and last character of all intermediate lines
-*/
-
-int	closed_up(t_game *game)
+int	valid_walls(t_game *game)
 {
-	int	i;
-	int	j;
+	int		i;
+	int		j;
 
 	i = 0;
 	j = 0;
@@ -102,16 +89,10 @@ int	closed_up(t_game *game)
 	return (1);
 }
 
-/*
-This function checks the shape of the map (has to be rectangular)
-It does so by checking that all lines have the same length as the first
-That's why you can't have any empty line
-*/
-
-int	shape(t_game *game)
+int	valid_shape(t_game *game)
 {
-	int	i;
-	int	check;
+	int		i;
+	int		check;
 
 	i = 0;
 	check = game->map.line_size;
@@ -130,20 +111,16 @@ int	shape(t_game *game)
 	return (1);
 }
 
-/*
-This function is a hub to check everything else
-*/
-
 int	check_map(t_game *game)
 {
-	if (!shape(game))
+	if (!valid_shape(game))
 	{
-		ft_error(game, "Please provide a rectangular map");
+		ft_error(game, "Please provide a rectangular shaped map!");
 		return (0);
 	}
-	if (!closed_up(game))
+	if (!valid_walls(game))
 	{
-		ft_error(game, "please provide closed map");
+		ft_error(game, "Please provide a Consealed map!");
 		return (0);
 	}
 	if (!valid_char(game))

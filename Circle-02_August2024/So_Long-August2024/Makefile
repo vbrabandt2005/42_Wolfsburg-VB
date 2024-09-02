@@ -6,7 +6,7 @@
 #    By: vbraband <vbraband@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/08/16 17:11:28 by vbrabandt         #+#    #+#              #
-#    Updated: 2024/08/29 11:28:20 by vbraband         ###   ########.fr        #
+#    Updated: 2024/09/02 14:54:55 by vbraband         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,10 +16,10 @@ cc						=	gcc
 CFLAGS					=	-Wall -Wextra -Werror -g3 -MMD
 rm						=	rm -rf
 
-srcs					=	main.c error.c struct_init.c struct_tiles_init.c \
-							parsing.c map_init.c check_map.c flood_fill.c elem_pos.c \
-							start_game.c ft_xpm.c events_hook.c tiles.c move.c mlx_closing.c game_end.c \
-							move_count.c
+srcs					=	main.c error.c start_game.c end_game.c closing.c \
+							tiles.c xpm_assets.c \
+							check_map.c parse_map.c init_map.c init_tiles.c init_game.c fill_window.c \
+							events.c movement.c move_count.c check_pos.c
                
 src_dir					=	srcs
 srcs_full				=	$(addprefix $(src_dir)/, $(srcs))
@@ -76,6 +76,11 @@ re:						fclean
 auto:					fclean 
 						make all 
 						make clean
-						./so_long maps/ex03.ber
+						./choose_map.sh
+
+debug:					fclean 
+						make all 
+						make clean
+						valgrind --leak-check=full ./so_long ./maps/ex02.ber
 
 .PHONY:	all clean fclean re libft

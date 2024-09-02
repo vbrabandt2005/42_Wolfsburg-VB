@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: vbraband <vbraband@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/08/21 13:42:21 by vbraband          #+#    #+#             */
-/*   Updated: 2024/08/21 13:42:23 by vbraband         ###   ########.fr       */
+/*   Created: 2024/09/02 13:58:51 by vbraband          #+#    #+#             */
+/*   Updated: 2024/09/02 14:40:53 by vbraband         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,16 +20,16 @@ int	main(int argc, char **argv)
 	if (!game)
 	{
 		ft_nomap(game, "Malloc error.");
-		game_under();
+		game_over();
 	}
 	if (argc != 2)
 	{
-		ft_nomap(game, "Syntax error detected !\n\
-		Please use as :\n\t\t\t./so_long <map.ber>\n");
-		game_under();
+		ft_nomap(game, "Please do: ./so_long maps/<map.ber>");
+		game_over();
 		return (2);
 	}
 	if (init_game_structs(game) && valid_map(argv[1], game))
 		start_game(game);
+	free(game);
 	return (0);
 }

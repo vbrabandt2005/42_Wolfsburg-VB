@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: vbraband <vbraband@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/03 15:59:52 by acloos            #+#    #+#             */
-/*   Updated: 2024/08/28 12:11:08 by vbraband         ###   ########.fr       */
+/*   Created: 2024/09/02 13:58:22 by vbraband          #+#    #+#             */
+/*   Updated: 2024/09/02 15:03:29 by vbraband         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,29 +33,30 @@ void	display_map(t_game *game)
 void	display_game(t_game *game)
 {
 	display_map(game);
-	mlx_hook(game->show.win_ptr, 2, KeyPressMask, kb_input, game);
-	mlx_hook(game->show.win_ptr, ClientMessage, LeaveWindowMask, \
+	mlx_hook(game->window.win_ptr, 2, KeyPressMask, key_press, game);
+	mlx_hook(game->window.win_ptr, ClientMessage, LeaveWindowMask,
 		mlx_map_destroyer, game);
-	mlx_loop(game->show.mlx_ptr);
+	mlx_loop(game->window.mlx_ptr);
 }
 
 int	start_game(t_game *game)
 {
-	ft_printf("\n\tHelp Capy go home!!!\n\n");
-	game->show.mlx_ptr = mlx_init();
-	if (!game->show.mlx_ptr)
+	printf("\n\t --Welcome to the Adventure of Cali!--\n\n");
+	game->window.mlx_ptr = mlx_init();
+	if (!game->window.mlx_ptr)
 	{
-		ft_error(game, "Could not start mlx");
+		ft_error(game, "Could not start MLX");
 		return (0);
 	}
-	game->show.x_win = game->map.line_size * TILE_SIZE;
-	game->show.y_win = game->map.col_size * TILE_SIZE;
-	game->show.win_ptr = mlx_new_window(game->show.mlx_ptr, game->show.x_win, \
-		game->show.y_win, "So_long");
-	if (!game->show.win_ptr)
+	game->window.x_win = game->map.line_size * TILE_SIZE;
+	game->window.y_win = game->map.col_size * TILE_SIZE;
+	game->window.win_ptr = mlx_new_window(game->window.mlx_ptr,
+			game->window.x_win, game->window.y_win, "Operation Capy freedom");
+	if (!game->window.win_ptr)
 	{
-		mlx_destroy_display(game->show.mlx_ptr);
-		free(game->show.mlx_ptr);
+		mlx_destroy_window(game->window.mlx_ptr, game->window.win_ptr);
+		mlx_destroy_display(game->window.mlx_ptr);
+		free(game->window.mlx_ptr);
 		ft_error(game, "Could not open game window");
 		return (0);
 	}
