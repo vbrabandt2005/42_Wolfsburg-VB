@@ -2,7 +2,7 @@
 
 A 2D game utilising MiniLibX
 
-Working with/Forked from Bjorn
+Working with/Forked from [Grumpyx3](https://github.com/Grumpyx3)
 
 - Work from 2 September 2024
 
