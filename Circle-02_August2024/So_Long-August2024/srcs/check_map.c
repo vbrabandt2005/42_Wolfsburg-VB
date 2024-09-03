@@ -6,7 +6,7 @@
 /*   By: vbraband <vbraband@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/02 13:54:18 by vbraband          #+#    #+#             */
-/*   Updated: 2024/09/02 17:58:15 by vbraband         ###   ########.fr       */
+/*   Updated: 2024/09/03 14:33:01 by vbraband         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,15 +27,13 @@ int	check_char(char check, t_game *game)
 		game->map.enemy_count++;
 	if (!ft_strchr(valid, check))
 	{
-		ft_error(game, "This map contains invalid character(s)!\n\
-		Valid characters are: 0 1 P E C G\n\
-		Please provide a valid map.\n");
+		ft_error(game, "This map contains invalid character(s)!");
 		return (0);
 	}
 	if (game->map.hero_count > 1 || game->map.exit_count > 1)
 	{
 		if (game->map.hero_count > 1)
-			ft_error(game, "although Capy is kind, there can only be one Capy!");
+			ft_error(game, "Capy is kind, but there can only be one Capy!");
 		else if (game->map.exit_count > 1)
 			ft_error(game, "there can only be one exit!");
 		return (0);

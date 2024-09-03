@@ -6,7 +6,7 @@
 /*   By: vbraband <vbraband@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/02 13:54:27 by vbraband          #+#    #+#             */
-/*   Updated: 2024/09/02 17:58:51 by vbraband         ###   ########.fr       */
+/*   Updated: 2024/09/03 14:33:55 by vbraband         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,7 +60,7 @@ int	mission_ready(t_game *game)
 	}
 	if (game->map.item_count == 0)
 	{
-		ft_error(game, "Can't start mission! There are no keys to grant Capy's freedom");
+		ft_error(game, "Can't start mission! No keys to grant Capy's freedom");
 		return (0);
 	}
 	game = elem_pos(game);

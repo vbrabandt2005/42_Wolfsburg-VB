@@ -6,25 +6,11 @@
 /*   By: vbraband <vbraband@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/02 13:55:18 by vbraband          #+#    #+#             */
-/*   Updated: 2024/09/02 14:55:44 by vbraband         ###   ########.fr       */
+/*   Updated: 2024/09/03 14:29:34 by vbraband         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "so_long.h"
-
-int	init_window(t_game *game)
-{
-	game->window.mlx_ptr = 0;
-	game->window.win_ptr = 0;
-	game->window.img = "";
-	game->window.addr = "";
-	game->window.bpp = 0;
-	game->window.size_line = 0;
-	game->window.endian = 0;
-	game->window.x_win = 0;
-	game->window.y_win = 0;
-	return (1);
-}
 
 int	init_char(t_game *game)
 {
@@ -48,6 +34,7 @@ int	init_map(t_game *game)
 	game->map.y_map = 0;
 	return (1);
 }
+
 void	init_enemy(t_game *game)
 {
 	game->enemy.x_char = 32;

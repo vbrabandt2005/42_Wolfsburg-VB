@@ -6,7 +6,7 @@
 /*   By: vbraband <vbraband@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/02 13:55:08 by vbraband          #+#    #+#             */
-/*   Updated: 2024/09/02 14:55:18 by vbraband         ###   ########.fr       */
+/*   Updated: 2024/09/03 14:32:00 by vbraband         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,8 @@ void	flooder(t_game *game, t_map size, t_character charpos, char filler)
 			|| charpos.x_char < 0 || charpos.x_char >= size.x_map)
 		|| ((game->map.map[charpos.y_char][charpos.x_char] != filler
 			&& game->map.map[charpos.y_char][charpos.x_char] != 'C'
-			&& game->map.map[charpos.y_char][charpos.x_char] != 'E'
-			&& game->map.map[charpos.y_char][charpos.x_char] != 'G')))
+		&& game->map.map[charpos.y_char][charpos.x_char] != 'E'
+				&& game->map.map[charpos.y_char][charpos.x_char] != 'G')))
 		return ;
 	if (game->map.map[charpos.y_char][charpos.x_char] == 'C'
 		|| game->map.map[charpos.y_char][charpos.x_char] == 'E')
@@ -80,11 +80,25 @@ int	flood_it(t_game *game)
 	exity = game->map.exit_count;
 	game->map.item_count = 0;
 	game->map.exit_count = 0;
-	charpos = (t_character){.x_char = game->player.x_char, \
+	charpos = (t_character){.x_char = game->player.x_char,
 		.y_char = game->player.y_char};
 	size = (t_map){.x_map = game->map.line_size, .y_map = game->map.col_size};
 	dam(game, size, charpos);
 	if (!check_collect(game, itemy, exity))
 		return (0);
+	return (1);
+}
+
+int	init_window(t_game *game)
+{
+	game->window.mlx_ptr = 0;
+	game->window.win_ptr = 0;
+	game->window.img = "";
+	game->window.addr = "";
+	game->window.bpp = 0;
+	game->window.size_line = 0;
+	game->window.endian = 0;
+	game->window.x_win = 0;
+	game->window.y_win = 0;
 	return (1);
 }

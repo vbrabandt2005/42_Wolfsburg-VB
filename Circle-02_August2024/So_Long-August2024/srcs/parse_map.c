@@ -6,7 +6,7 @@
 /*   By: vbraband <vbraband@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/02 13:58:32 by vbraband          #+#    #+#             */
-/*   Updated: 2024/09/02 15:03:31 by vbraband         ###   ########.fr       */
+/*   Updated: 2024/09/03 14:26:44 by vbraband         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,28 +24,28 @@ int	check_type(char *map)
 		free(type);
 		return (0);
 	}
-	free (type);
+	free(type);
 	return (1);
 }
 
 t_game	*valid_map(char *mappy, t_game *game)
 {
-    if (!check_type(mappy))
-    {
-        ft_nomap(game, "Please provide a map with a valid extension");
-        return (0);
-    }
-    if (!map_init(mappy, game))
-    {
-        ft_nomap(game, "This map is invalid! Please provide a valid map");
-        return (0);
-    }
-    if (!check_map(game))
-        return (0);
-    if (!flood_it(game))
-        return (0);
-    if (game->map.map)
-        map_destroyer(game);
-    map_init(mappy, game);
-    return (game);
+	if (!check_type(mappy))
+	{
+		ft_nomap(game, "Please provide a map with a valid extension");
+		return (0);
+	}
+	if (!map_init(mappy, game))
+	{
+		ft_nomap(game, "This map is invalid! Please provide a valid map");
+		return (0);
+	}
+	if (!check_map(game))
+		return (0);
+	if (!flood_it(game))
+		return (0);
+	if (game->map.map)
+		map_destroyer(game);
+	map_init(mappy, game);
+	return (game);
 }

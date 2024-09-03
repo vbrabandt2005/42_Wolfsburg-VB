@@ -6,7 +6,7 @@
 /*   By: vbraband <vbraband@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/02 13:57:27 by vbraband          #+#    #+#             */
-/*   Updated: 2024/09/02 18:00:00 by vbraband         ###   ########.fr       */
+/*   Updated: 2024/09/03 14:10:30 by vbraband         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,11 +62,9 @@ t_game	*xpm_load(t_game *game)
 			"assets/P_Player_rigt.xpm", &game->hero.bpp, &game->hero.size_line);
 	game->enemy_sprite = mlx_xpm_file_to_image(game->window.mlx_ptr,
 			"assets/G_Guardian.xpm", &game->hero.bpp, &game->hero.size_line);
-	if (!xpm_check(game))
-		return (0);
-	if (!xpm_addr(game))
+	if (!xpm_check(game) || !xpm_addr(game))
 	{
-		ft_error(game, "Could not find XPM adress");
+		ft_error(game, "Could not load XPM files or find XPM address");
 		return (0);
 	}
 	return (game);
