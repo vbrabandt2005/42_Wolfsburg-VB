@@ -6,7 +6,7 @@
 /*   By: vbraband <vbraband@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/02 13:57:36 by vbraband          #+#    #+#             */
-/*   Updated: 2024/09/03 14:24:08 by vbraband         ###   ########.fr       */
+/*   Updated: 2024/09/05 18:56:19 by vbraband         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	load_tiles(t_game *game, int x_map, int y_map)
 {
 	char	tile;
 	void	*sprite_to_use;
-		void *sprites[4] = {game->sprite_up, game->sprite_down,
+	void	*sprites[4] = {game->sprite_up, game->sprite_down,
 			game->sprite_left, game->sprite_right};
 
 	tile = game->map.map[y_map][x_map];

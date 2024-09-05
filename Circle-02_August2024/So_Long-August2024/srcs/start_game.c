@@ -6,7 +6,7 @@
 /*   By: vbraband <vbraband@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/02 13:58:22 by vbraband          #+#    #+#             */
-/*   Updated: 2024/09/03 15:38:32 by vbraband         ###   ########.fr       */
+/*   Updated: 2024/09/05 18:56:00 by vbraband         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,7 @@ int	start_game(t_game *game)
 	game->window.x_win = game->map.line_size * TILE_SIZE;
 	game->window.y_win = game->map.col_size * TILE_SIZE;
 	game->window.win_ptr = mlx_new_window(game->window.mlx_ptr,
-		game->window.x_win, game->window.y_win, "Free Capybara!");
+			game->window.x_win, game->window.y_win, "Free Capybara!");
 	if (!game->window.win_ptr)
 	{
 		mlx_destroy_window(game->window.mlx_ptr, game->window.win_ptr);
