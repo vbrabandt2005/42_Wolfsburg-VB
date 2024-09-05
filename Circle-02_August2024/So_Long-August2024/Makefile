@@ -6,7 +6,7 @@
 #    By: vbraband <vbraband@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/08/16 17:11:28 by vbrabandt         #+#    #+#              #
-#    Updated: 2024/09/05 15:45:37 by vbraband         ###   ########.fr        #
+#    Updated: 2024/09/05 16:46:58 by vbraband         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -63,7 +63,7 @@ $(obj_dir):
 clean:
 						$(MAKE) -C $(libft_path) clean
 						$(rm) $(obj_dir)
-						@echo "\033[33m[things has been cleaned up]\033[0m"
+						@echo "\033[33m[Things have been cleaned up]\033[0m"
 
 fclean:					clean
 						$(MAKE) -C $(libft_path) fclean
