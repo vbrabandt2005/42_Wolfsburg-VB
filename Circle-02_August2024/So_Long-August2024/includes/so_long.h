@@ -6,7 +6,7 @@
 /*   By: vbraband <vbraband@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/13 13:04:32 by bjbogisc          #+#    #+#             */
-/*   Updated: 2024/09/03 14:42:40 by vbraband         ###   ########.fr       */
+/*   Updated: 2024/09/05 15:45:04 by vbraband         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,7 @@
 # endif
 
 # ifndef TILE_SIZE
-#  define TILE_SIZE 64
+#  define TILE_SIZE 120
 # endif
 
 /* --- check_map.c --- */
