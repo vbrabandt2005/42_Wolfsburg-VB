@@ -6,7 +6,7 @@
 /*   By: vbraband <vbraband@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/10 09:53:42 by vbraband          #+#    #+#             */
-/*   Updated: 2024/08/26 14:03:05 by vbraband         ###   ########.fr       */
+/*   Updated: 2024/09/05 16:41:38 by vbraband         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,6 +46,7 @@ void			*ft_memmove(void *dest, const void *src, size_t len);
 void			*ft_memset(void *dest, int val, size_t len);
 char			*ft_strdup(const char *s);
 unsigned int	ft_strlcat(char *dest, char *src, unsigned int size);
+char			*ft_strcpy(char *dest, char *src);
 size_t			ft_strlcpy(char *dest, char const *src, size_t n);
 size_t			ft_strlen(char const *str);
 int				ft_strncmp(char const *s1, char const *s2, size_t n);
