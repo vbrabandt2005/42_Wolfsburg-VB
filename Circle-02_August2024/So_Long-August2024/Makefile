@@ -6,7 +6,7 @@
 #    By: vbraband <vbraband@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/08/16 17:11:28 by vbrabandt         #+#    #+#              #
-#    Updated: 2024/09/02 18:02:51 by vbraband         ###   ########.fr        #
+#    Updated: 2024/09/05 15:28:32 by vbraband         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -67,7 +67,7 @@ clean:
 
 fclean:					clean
 						$(MAKE) -C $(libft_path) fclean
-						$(rm) $(name)
+						$(rm) $(NAME)
 						@echo "\033[33m[Everything has been fully cleaned up]\033[0m"
 
 re:						fclean 
