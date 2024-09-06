@@ -6,7 +6,7 @@
 /*   By: vbraband <vbraband@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/02 13:57:36 by vbraband          #+#    #+#             */
-/*   Updated: 2024/09/05 18:56:19 by vbraband         ###   ########.fr       */
+/*   Updated: 2024/09/06 14:44:17 by vbraband         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,11 @@ void	load_tiles(t_game *game, int x_map, int y_map)
 		sprite_to_use = game->exit.img;
 	else if (tile == 'C')
 		sprite_to_use = game->item.img;
+	load_tiles2(sprite_to_use, game, x_map, y_map);
+}
+
+void	load_tiles2(void *sprite_to_use, t_game *game, int x_map, int y_map)
+{
 	if (sprite_to_use)
 		mlx_put_image_to_window(game->window.mlx_ptr, game->window.win_ptr,
 			sprite_to_use, x_map * TILE_SIZE, y_map * TILE_SIZE);

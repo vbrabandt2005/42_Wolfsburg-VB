@@ -6,7 +6,7 @@
 #    By: vbraband <vbraband@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/08/16 17:11:28 by vbrabandt         #+#    #+#              #
-#    Updated: 2024/09/05 16:46:58 by vbraband         ###   ########.fr        #
+#    Updated: 2024/09/06 14:34:52 by vbraband         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,8 +18,8 @@ rm						=	rm -rf
 
 srcs					=	main.c error.c start_game.c end_game.c closing.c \
 							tiles.c xpm_assets.c \
-							check_map.c parse_map.c init_map.c init_tiles.c init_game.c fill_window.c \
-							events.c movement.c move_count.c check_pos.c
+							check_map.c parse_map.c init_map.c init_tiles.c init_game.c init_window.c fill_window.c \
+							events.c move_up-down.c move_left-right.c move_count.c check_pos.c
                
 src_dir					=	srcs
 srcs_full				=	$(addprefix $(src_dir)/, $(srcs))

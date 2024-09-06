@@ -6,7 +6,7 @@
 /*   By: vbraband <vbraband@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/13 13:04:32 by bjbogisc          #+#    #+#             */
-/*   Updated: 2024/09/05 15:45:04 by vbraband         ###   ########.fr       */
+/*   Updated: 2024/09/06 14:43:44 by vbraband         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,6 +88,7 @@ void	flooder(t_game *game, t_map size, t_character charpos, char filler);
 void	dam(t_game *game, t_map size, t_character charpos);
 int		check_collect(t_game *game, int item, int exit);
 int		flood_it(t_game *game);
+void	flood_fill(t_game *game, t_map size, t_character charpos, char filler);
 
 /* --- init_game.c --- */
 int		init_window(t_game *game);
@@ -110,14 +111,18 @@ int		init_floor(t_game *game);
 int		init_wall(t_game *game);
 
 /* --- movement.c --- */
-void	move_up(t_game *game);
-void	move_down(t_game *game);
-void	move_left(t_game *game);
-void	move_right(t_game *game);
-void	move_counter(t_game *game, int steps);
+void move_up(t_game *game);
+void move_up2(t_game *game, int next_y, int next_x);
+void move_down(t_game *game);
+void move_down2(t_game *game, int next_y, int next_x);
+void move_left(t_game *game);
+void move_left2(t_game *game, int next_y, int next_x);
+void move_right(t_game *game);
+void move_right2(t_game *game, int next_y, int next_x);
+void move_counter(t_game *game, int steps);
 
 /* --- parse_map.c --- */
-int		check_type(char *map);
+int check_type(char *map);
 t_game	*valid_map(char *mappy, t_game *game);
 
 /* --- start_game.c --- */
@@ -126,10 +131,12 @@ void	display_game(t_game *game);
 int		start_game(t_game *game);
 
 /* --- tiles.c --- */
-void	load_tiles(t_game *game, int x_map, int y_map);
-void	load_exit(t_game *game);
-void	check_next_tile(t_game *game, int tilechar, char mod);
-void	update_display(t_game *game, int next_y, int next_x);
+void load_tiles(t_game *game, int x_map, int y_map);
+void load_tiles2(void *sprite_to_use, t_game *game, int x_map, int y_map);
+void load_tiles2(void *sprite_to_use, t_game *game, int x_map, int y_map);
+void load_exit(t_game *game);
+void check_next_tile(t_game *game, int tilechar, char mod);
+void update_display(t_game *game, int next_y, int next_x);
 
 /* --- xpm_assets.c --- */
 int		xpm_check(t_game *game);
