@@ -6,7 +6,7 @@
 /*   By: vbraband <vbraband@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/02 13:57:36 by vbraband          #+#    #+#             */
-/*   Updated: 2024/09/06 15:03:22 by vbraband         ###   ########.fr       */
+/*   Updated: 2024/09/06 15:25:37 by vbraband         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,36 +15,44 @@
 void	load_tiles(t_game *game, int x_map, int y_map)
 {
 	char	tile;
-	void	*sprite_to_use;
-	void	*sprites[4] = {game->sprite_up, game->sprite_down,
-			game->sprite_left, game->sprite_right};
 
 	tile = game->map.map[y_map][x_map];
-	sprite_to_use = NULL;
 	if (tile == '1')
-		sprite_to_use = game->wall.img;
+		mlx_put_image_to_window(game->window.mlx_ptr, game->window.win_ptr,
+			game->wall.img, x_map * TILE_SIZE, y_map * TILE_SIZE);
 	else if (tile == '0')
-		sprite_to_use = game->floor.img;
+		mlx_put_image_to_window(game->window.mlx_ptr, game->window.win_ptr,
+			game->floor.img, x_map * TILE_SIZE, y_map * TILE_SIZE);
 	else if (tile == 'P')
-	{
-		sprite_to_use = sprites[game->player.current_direction < 0
-			|| game->player.current_direction > 3 ? DOWN : game->player.current_direction];
-		game->map.map[y_map][x_map] = '0';
-	}
+		load_player_tile(game, x_map, y_map);
 	else if (tile == 'G')
-		sprite_to_use = game->enemy_sprite;
+		mlx_put_image_to_window(game->window.mlx_ptr, game->window.win_ptr,
+			game->enemy_sprite, x_map * TILE_SIZE, y_map * TILE_SIZE);
 	else if (tile == 'E')
-		sprite_to_use = game->exit.img;
+		mlx_put_image_to_window(game->window.mlx_ptr, game->window.win_ptr,
+			game->exit.img, x_map * TILE_SIZE, y_map * TILE_SIZE);
 	else if (tile == 'C')
-		sprite_to_use = game->item.img;
-	load_tiles2(sprite_to_use, game, x_map, y_map);
+		mlx_put_image_to_window(game->window.mlx_ptr, game->window.win_ptr,
+			game->item.img, x_map * TILE_SIZE, y_map * TILE_SIZE);
 }
 
-void	load_tiles2(void *sprite_to_use, t_game *game, int x_map, int y_map)
+void	load_player_tile(t_game *game, int x_map, int y_map)
 {
-	if (sprite_to_use)
-		mlx_put_image_to_window(game->window.mlx_ptr, game->window.win_ptr,
-			sprite_to_use, x_map * TILE_SIZE, y_map * TILE_SIZE);
+	void	*sprites[4];
+	void	*sprite_to_use;
+
+	sprites[0] = game->sprite_up;
+	sprites[1] = game->sprite_down;
+	sprites[2] = game->sprite_left;
+	sprites[3] = game->sprite_right;
+	if (game->player.current_direction < 0
+		|| game->player.current_direction > 3)
+		game->player.current_direction = DOWN;
+	sprite_to_use = sprites[game->player.current_direction];
+	mlx_put_image_to_window(game->window.mlx_ptr, game->window.win_ptr,
+		sprite_to_use, game->player.x_char * TILE_SIZE,
+		game->player.y_char * TILE_SIZE);
+	game->map.map[y_map][x_map] = '0';
 }
 
 void	load_exit(t_game *game)
