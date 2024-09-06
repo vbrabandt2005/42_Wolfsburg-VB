@@ -6,7 +6,7 @@
 /*   By: vbraband <vbraband@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/02 13:57:36 by vbraband          #+#    #+#             */
-/*   Updated: 2024/09/06 14:44:17 by vbraband         ###   ########.fr       */
+/*   Updated: 2024/09/06 15:03:22 by vbraband         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -93,10 +93,13 @@ void	check_next_tile(t_game *game, int tilechar, char mod)
 
 void	update_display(t_game *game, int next_y, int next_x)
 {
-	void	*sprites[4] = {game->sprite_up, game->sprite_down,
-			game->sprite_left, game->sprite_right};
+	void	*sprites[4];
 	void	*sprite_to_use;
 
+	sprites[0] = game->sprite_up;
+	sprites[1] = game->sprite_down;
+	sprites[2] = game->sprite_left;
+	sprites[3] = game->sprite_right;
 	mlx_put_image_to_window(game->window.mlx_ptr, game->window.win_ptr,
 		game->floor.img, (game->player.x_char) * TILE_SIZE,
 		(game->player.y_char) * TILE_SIZE);

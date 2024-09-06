@@ -23,6 +23,6 @@ Worked with [Grumpyx3](https://github.com/Grumpyx3)
 ### Assets
 
 - Me for Pelican, Exit (Pool) and Editing
-- [NiffirgGames](https://niffirggames.itch.io/) for the [Charlie the Capybara](https://niffirggames.itch.io/charliethecapybara) textures
+- [NiffirgGames](https://niffirggames.itch.io/) for [Charlie the Capybara](https://niffirggames.itch.io/charliethecapybara) textures
 - [Cainos](https://cainos.itch.io/) for his godly amazing [Pixel-Art-Top-Down](https://cainos.itch.io/pixel-art-top-down-basic) textures (which I took the walls from)
 - [Cup Nooble](https://cupnooble.itch.io/) for there very nice pastel [Sprout-lands asset pack](https://cupnooble.itch.io/sprout-lands-asset-pack) (which I took the grass from)
