@@ -2,6 +2,28 @@
 
 # Directory containing the maps
 MAP_DIR="maps"
+GAME_EXECUTABLE="./so_long"
+
+# Function to check if required files exist
+check_files() {
+  if [ ! -d "$MAP_DIR" ]; then
+    echo "Error: Directory '$MAP_DIR' does not exist."
+    exit 1
+  fi
+
+  if [ ! -x "$GAME_EXECUTABLE" ]; then
+    echo "Error: Game executable '$GAME_EXECUTABLE' is missing or not executable."
+    exit 1
+  fi
+
+  if [ -z "$(ls -A "$MAP_DIR"/*.ber 2>/dev/null)" ]; then
+    echo "Error: No map files found in '$MAP_DIR'."
+    exit 1
+  fi
+}
+
+# Check required files
+check_files
 
 printf "\n\e[1;92mWelcome to Operation Capybara freedom (So_Long)!\e[0m\n\n"
 
@@ -23,4 +45,4 @@ if [[ ! $map_index =~ ^[0-9]+$ ]] || [ "$map_index" -ge ${#maps[@]} ]; then
 fi
 
 # Run the game with the selected map
-./so_long "${maps[$map_index]}"
+"$GAME_EXECUTABLE" "${maps[$map_index]}"
