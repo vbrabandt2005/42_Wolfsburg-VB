@@ -5,51 +5,85 @@
 #                                                     +:+ +:+         +:+      #
 #    By: vbraband <vbraband@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2024/08/12 14:33:57 by vbraband          #+#    #+#              #
-#    Updated: 2024/08/15 12:05:44 by vbraband         ###   ########.fr        #
+#    Created: 2024/08/16 17:11:28 by vbrabandt         #+#    #+#              #
+#    Updated: 2024/09/06 14:34:52 by vbraband         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME 		= so_long
-NAME_BONUS	= so_long_bonus
+NAME					=	so_long
 
-cc 			= cc
-srcs 		= 
-objects		= $(srcs:.c=.o)
-CFLAGS		= -Wall -Wextra -Werror
-rm			= rm -rf
+cc						=	gcc
+CFLAGS					=	-Wall -Wextra -Werror -g3 -MMD
+rm						=	rm -rf
 
-ifeq ($(shell uname), Linux)
-	INCLUDES = -I/usr/include -Imlx
-else
-	INCLUDES = -I/opt/X11/include -Imlx
-endif
- 
-MLX_DIR = ./mlx
-MLX_LIB = $(MLX_DIR)/libmlx_$(UNAME).a
-ifeq ($(shell uname), Linux)
-	MLX_FLAGS = -Lmlx -lmlx -L/usr/lib/X11 -lXext -lX11
-else
-	MLX_FLAGS = -Lmlx -lmlx -L/usr/X11/lib -lXext -lX11 -framework OpenGL -framework AppKit
-endif
+srcs					=	main.c error.c start_game.c end_game.c closing.c \
+							tiles.c xpm_assets.c \
+							check_map.c parse_map.c init_map.c init_tiles.c init_game.c init_window.c fill_window.c \
+							events.c move_up-down.c move_left-right.c move_count.c check_pos.c
+               
+src_dir					=	srcs
+srcs_full				=	$(addprefix $(src_dir)/, $(srcs))
+
+obj_dir					=	obj
+obj						=	$(srcs:%.c=$(obj_dir)/%.o)
+
+includes				=	-I ./includes/
+
+libft_path				=	./lib/Libft_Modified-2024
+libft					=	$(libft_path)/libft.a
+libinclude				=	-L $(libft_path) -lft
+
+mlx_path				=	./lib/MiniLibX
+mlx						=	$(mlx_path)/libmlx_Linux.a
+mlxflags				=	-L $(mlx_path) -lmlx -lXext -lX11
+
+DEPS					=	$(OBJ:%.o=%.d)
+
+$(obj_dir)/%.o:			srcs/%.c
+						$(cc) $(CFLAGS) -I libft/srcs -I mlx -I srcs  -c $< -o $@ $(includes)
+
+all:					$(NAME) 
+						@echo "\033[32m[The Game is ready to be played]\033[0m"
 
 
-all: $(NAME)
+$(NAME):				$(libft) $(obj_dir) $(obj)
+						$(cc) $(CFLAGS) $(obj) -o $(NAME) $(libinclude) $(mlxflags)
+						@echo "\033[32m[So_Long has been created]\033[0m"					
+						
 
-$(NAME): $(objects)
-	ar -rcs $(NAME) $(objects)
+$(libft):
+						$(MAKE) -C $(libft_path) all -s
+						@echo "\033[32m[Libft has been created]\033[0m"
+
+$(obj_dir):
+						mkdir -p $(obj_dir)
+
+-include $(DEPS)
 
 clean:
-	$(rm) $(objects)
+						$(MAKE) -C $(libft_path) clean
+						$(rm) $(obj_dir)
+						@echo "\033[33m[Things have been cleaned up]\033[0m"
 
-fclean: clean
-	$(rm) $(NAME)
+fclean:					clean
+						$(MAKE) -C $(libft_path) fclean
+						$(rm) $(NAME)
+						@echo "\033[33m[Everything has been fully cleaned up]\033[0m"
 
-re: fclean $(NAME)
+re:						fclean 
+						make all
 
-auto: all clean
+run:					all
+						./choose_map.sh
 
-fuck: fclean
-	$(rm) a.out
+auto:					fclean 
+						make all 
+						make clean
+						./choose_map.sh
 
-.PHONY: all clean fclean re
+debug:					fclean 
+						make all 
+						make clean
+						valgrind --leak-check=full ./so_long ./maps/ex03.ber
+
+.PHONY:	all clean fclean re libft

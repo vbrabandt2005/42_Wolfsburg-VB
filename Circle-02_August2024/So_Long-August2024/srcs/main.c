@@ -1,27 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar.c                                       :+:      :+:    :+:   */
+/*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vbraband <vbraband@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/01 15:15:16 by vbrabandt         #+#    #+#             */
-/*   Updated: 2024/09/05 14:34:04 by vbraband         ###   ########.fr       */
+/*   Created: 2024/09/02 13:58:51 by vbraband          #+#    #+#             */
+/*   Updated: 2024/09/06 14:32:50 by vbraband         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include "so_long.h"
 
-void	ft_putchar(char c)
+int	main(int argc, char **argv)
 {
-	write(1, &c, 1);
-}
+	t_game	*game;
 
-/*
-int main(void)
-{
-	ft_putchar('c');
-	ft_putchar('\n');
+	game = malloc(sizeof(t_game));
+	if (!game)
+	{
+		ft_nomap(game, "Malloc error.");
+		game_over();
+	}
+	if (argc != 2)
+	{
+		ft_nomap(game, "Please do: ./so_long maps/<map.ber>");
+		game_over();
+		return (2);
+	}
+	if (init_game_structs(game) && valid_map(argv[1], game))
+		start_game(game);
+	free(game);
 	return (0);
 }
-*/

@@ -1,27 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar.c                                       :+:      :+:    :+:   */
+/*   init_window.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vbraband <vbraband@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/01 15:15:16 by vbrabandt         #+#    #+#             */
-/*   Updated: 2024/09/05 14:34:04 by vbraband         ###   ########.fr       */
+/*   Created: 2024/09/06 14:33:00 by vbraband          #+#    #+#             */
+/*   Updated: 2024/09/06 14:33:09 by vbraband         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include "so_long.h"
 
-void	ft_putchar(char c)
+int	init_window(t_game *game)
 {
-	write(1, &c, 1);
+	game->window.mlx_ptr = 0;
+	game->window.win_ptr = 0;
+	game->window.img = "";
+	game->window.addr = "";
+	game->window.bpp = 0;
+	game->window.size_line = 0;
+	game->window.endian = 0;
+	game->window.x_win = 0;
+	game->window.y_win = 0;
+	return (1);
 }
-
-/*
-int main(void)
-{
-	ft_putchar('c');
-	ft_putchar('\n');
-	return (0);
-}
-*/

@@ -30,6 +30,6 @@ Repository/Archive of everything I've done at [42WOB](https://42wolfsburg.de/).
 
 ### Milestone/Circle. 2
 
-- So_Long (WIP - August 2024)
+- So_Long (WIP - August-September 2024)
 - MiniTalk (WIP - August 2024)
 - Push_Swap (WIP - August 2024)
