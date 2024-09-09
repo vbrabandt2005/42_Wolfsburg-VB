@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: vbraband <vbraband@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/02 11:51:36 by acloos            #+#    #+#             */
-/*   Updated: 2024/09/02 13:12:10 by vbraband         ###   ########.fr       */
+/*   Created: 2024/09/09 13:49:11 by vbraband          #+#    #+#             */
+/*   Updated: 2024/09/09 13:49:13 by vbraband         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,27 +51,9 @@
 # define OFF_HIDDEN_CROSSED "\033[29m" //crossed off OR deletion off
 # define OFF_OVERLINE "\033[55m" //overlined off
 
-//fonts
-# define ALT_FONT01 "\033[11m" //alternate font, NWS
-# define ALT_FONT02 "\033[12m" //alternate font, NWS
-# define ALT_FONT03 "\033[13m" //alternate font, NWS
-# define ALT_FONT04 "\033[14m" //alternate font, NWS
-# define ALT_FONT05 "\033[15m" //alternate font, NWS
-# define ALT_FONT06 "\033[16m" //alternate font, NWS
-# define ALT_FONT07 "\033[17m" //alternate font, NWS
-# define ALT_FONT08 "\033[18m" //alternate font, NWS
-# define ALT_FONT09 "\033[19m" //alternate font, NWS
-# define FRAKTUR "\033[20m" //fraktur font, NWS
-
 //set Foregroung or Background color with 256-bits codes or RGB model
 # define F_SETNBR "\033[38m" //set foreground color
 # define B_SETNBR "\033[48m" //set background color
-//next arguments are 5;n (where n is the color number from 256 colors)
-//or 2;r;g;b
-//for instance, for orchid color : \033[38;5;170m OR \033[38;2;215;95;215m
-
-//to combine foreground and background colors in one line, do (for instance):
-//	\033[31m\033[44m
 
 //foreground darker colors
 # define F_D_BLACK "\033[30m" //foreground dark black
