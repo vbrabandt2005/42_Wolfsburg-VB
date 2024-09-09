@@ -3,9 +3,8 @@
 Repository/Archive of everything I've done at [42WOB](https://42wolfsburg.de/).
 
 ## Piscine
-
+- [Wolfsburg, I accept](https://github.com/vbrabandt2005/42_Wolfsburg-VB/tree/main/42-Piscine_February2024/Piscine_00WolfsburgIAcceptThing) (Guide-only - RANT & WIP)
 - [C-Piscine](https://github.com/vbrabandt2005/42_Wolfsburg-VB/tree/main/42-Piscine_February2024) (February 2024)
-  - [Wolfsburg, I accept](https://github.com/vbrabandt2005/42_Wolfsburg-VB/tree/main/42-Piscine_February2024/Piscine_00WolfsburgIAcceptThing) (Guide-only - RANT & WIP)
   - [Piscine C00](https://github.com/vbrabandt2005/42_Wolfsburg-VB/tree/main/42-Piscine_February2024/Piscine_C00) (ex00 - ex04)
   - [Piscine C01](https://github.com/vbrabandt2005/42_Wolfsburg-VB/tree/main/42-Piscine_February2024/Piscine_C01) (ex00 - ex06)
   - [Piscine C02](https://github.com/vbrabandt2005/42_Wolfsburg-VB/tree/main/42-Piscine_February2024/Piscine_C02) (ex00 - ex09)
