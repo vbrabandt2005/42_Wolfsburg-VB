@@ -6,7 +6,7 @@
 /*   By: vbraband <vbraband@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/13 13:04:32 by bjbogisc          #+#    #+#             */
-/*   Updated: 2024/09/09 13:58:53 by vbraband         ###   ########.fr       */
+/*   Updated: 2024/09/09 14:39:22 by vbraband         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,21 +29,11 @@
 # include "linux_keys.h"
 # include "structs.h"
 
-# define NUM_ANIMATIONS 4
-# define WIN_NAM "Capy vs. Pelican"
 # define WALL '1'
 # define FLOOR '0'
 # define START 'P'
 # define EXIT 'E'
 # define COLLECT 'C'
-
-# ifndef WIN_W
-#  define WIN_W 480
-# endif
-
-# ifndef WIN_H
-#  define WIN_H 640
-# endif
 
 # ifndef TILE_SIZE
 #  define TILE_SIZE 120
