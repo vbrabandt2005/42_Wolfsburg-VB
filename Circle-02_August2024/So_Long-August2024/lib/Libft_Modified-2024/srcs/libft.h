@@ -6,7 +6,7 @@
 /*   By: vbraband <vbraband@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/10 09:53:42 by vbraband          #+#    #+#             */
-/*   Updated: 2024/09/11 14:33:59 by vbraband         ###   ########.fr       */
+/*   Updated: 2024/09/11 15:09:34 by vbraband         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,8 +71,6 @@ char				*ft_substr(char const *s, unsigned int start, size_t len);
 /* lst things idk */
 t_list				*ft_lstget(t_list *l, int n);
 void				ft_lstiter(t_list *lst, void (*f)(t_list *elem));
-t_list				*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
-t_list				*ft_lstnew(void const *content, size_t content_size);
 
 /* Printf functions */
 int					ft_print_percent(void);

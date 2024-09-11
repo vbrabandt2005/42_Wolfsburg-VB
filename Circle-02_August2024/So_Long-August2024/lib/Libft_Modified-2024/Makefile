@@ -6,7 +6,7 @@
 #    By: vbraband <vbraband@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/06/10 09:38:04 by vbraband          #+#    #+#              #
-#    Updated: 2024/09/05 16:30:06 by vbraband         ###   ########.fr        #
+#    Updated: 2024/09/11 15:09:55 by vbraband         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,7 +22,7 @@ SRCS    = $(SRC_DIR)/ft_atoi.c $(SRC_DIR)/ft_bzero.c $(SRC_DIR)/ft_calloc.c $(SR
 		  $(SRC_DIR)/ft_strdup.c $(SRC_DIR)/ft_striteri.c $(SRC_DIR)/ft_strjoin.c $(SRC_DIR)/ft_strlcat.c $(SRC_DIR)/ft_strlcpy.c $(SRC_DIR)/ft_strcpy.c $(SRC_DIR)/ft_strlen.c \
 		  $(SRC_DIR)/ft_strmapi.c $(SRC_DIR)/ft_strncmp.c $(SRC_DIR)/ft_strnstr.c $(SRC_DIR)/ft_strrchr.c $(SRC_DIR)/ft_strtrim.c $(SRC_DIR)/ft_substr.c $(SRC_DIR)/ft_tolower.c $(SRC_DIR)/ft_toupper.c \
 		  $(SRC_DIR)/ft_printf.c $(SRC_DIR)/ft_printf-num.c $(SRC_DIR)/ft_printf-char.c \
-		  $(SRC_DIR)/ft_lstget.c $(SRC_DIR)/ft_lstiter.c $(SRC_DIR)/ft_lstmap.c $(SRC_DIR)/ft_lstnew.c \
+		  $(SRC_DIR)/ft_lstget.c $(SRC_DIR)/ft_lstiter.c \
 		  $(SRC_DIR)/ft_memalloc.c \
 		  $(SRC_DIR)/get_next_line.c
 
