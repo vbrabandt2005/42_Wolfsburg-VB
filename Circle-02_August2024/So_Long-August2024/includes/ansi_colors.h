@@ -6,17 +6,17 @@
 /*   By: vbraband <vbraband@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/09 13:49:11 by vbraband          #+#    #+#             */
-/*   Updated: 2024/09/09 13:49:13 by vbraband         ###   ########.fr       */
+/*   Updated: 2024/09/11 14:31:22 by vbraband         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef ANSI_COLORS_H
 # define ANSI_COLORS_H
 
-# include<signal.h>
-# include<unistd.h>
-# include<stdlib.h>
-# include<sys/types.h>
+# include <signal.h>
+# include <unistd.h>
+# include <stdlib.h>
+# include <sys/types.h>
 # include "../lib/Libft_Modified-2024/srcs/libft.h"
 
 //reset & defaults
