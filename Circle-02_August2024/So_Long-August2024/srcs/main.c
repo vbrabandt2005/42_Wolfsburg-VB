@@ -6,7 +6,7 @@
 /*   By: vbraband <vbraband@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/02 13:58:51 by vbraband          #+#    #+#             */
-/*   Updated: 2024/09/06 14:32:50 by vbraband         ###   ########.fr       */
+/*   Updated: 2024/09/11 13:27:32 by vbraband         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,5 @@ int	main(int argc, char **argv)
 	}
 	if (init_game_structs(game) && valid_map(argv[1], game))
 		start_game(game);
-	free(game);
 	return (0);
 }
