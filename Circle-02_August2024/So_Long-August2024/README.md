@@ -4,6 +4,8 @@ A 2D game utilising [MiniLibX](https://github.com/42Paris/minilibx-linux)
 
 Worked with [Grumpyx3](https://github.com/Grumpyx3)
 
+(Note: **`choose_map.sh`** is not required by the project, it's just a fancy extra script I wrote to make my life easier)
+
 ## What we implemented
 
 - Character turning depending on direction
