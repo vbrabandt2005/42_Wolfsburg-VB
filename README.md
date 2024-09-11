@@ -29,6 +29,6 @@ Repository/Archive of everything I've done at [42WOB](https://42wolfsburg.de/).
 
 ### Milestone/Circle. 2
 
-- [So_Long (WIP - August-September 2024)](https://github.com/vbrabandt2005/42_Wolfsburg-VB/tree/main/Circle-02_August2024/So_Long-August2024)
-- MiniTalk (WIP - August 2024)
-- Push_Swap (WIP - August 2024)
+- [So_Long (August-September 2024)](https://github.com/vbrabandt2005/42_Wolfsburg-VB/tree/main/Circle-02_August2024/So_Long-August2024)
+- MiniTalk (WIP - September 2024)
+- Push_Swap (WIP - September 2024)
