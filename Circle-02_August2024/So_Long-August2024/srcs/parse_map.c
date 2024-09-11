@@ -6,7 +6,7 @@
 /*   By: vbraband <vbraband@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/02 13:58:32 by vbraband          #+#    #+#             */
-/*   Updated: 2024/09/11 12:56:03 by vbraband         ###   ########.fr       */
+/*   Updated: 2024/09/11 14:23:45 by vbraband         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ t_game	*valid_map(char *mappy, t_game *game)
 	}
 	if (!map_init(mappy, game))
 	{
-		ft_nomap(game, "This map is invalid! Please provide a valid map");
+		ft_nomap(game, "This map is invalid! Please provide a valid map.");
 		return (0);
 	}
 	if (!check_map(game))
