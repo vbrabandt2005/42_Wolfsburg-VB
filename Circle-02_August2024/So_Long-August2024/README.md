@@ -1,6 +1,8 @@
-# So Long
+# Operation Capybara Freedom (So_Long)
 
-A 2D game utilising [MiniLibX](https://github.com/42Paris/minilibx-linux)
+![Alt Text](./screenshots/FreeCapybara!.gif)
+
+A 2D capybara game utilising [MiniLibX](https://github.com/42Paris/minilibx-linux)
 
 Worked with [Grumpyx3](https://github.com/Grumpyx3)
 
@@ -11,7 +13,7 @@ Worked with [Grumpyx3](https://github.com/Grumpyx3)
 - Character turning depending on direction
 - Enemies (They don't move but yeah they still kill you so still counts)
 - Increased Tile size to 120
-- Beutiful assets
+- Beutiful capybara assets
 
 ## Credits
 
@@ -28,3 +30,10 @@ Worked with [Grumpyx3](https://github.com/Grumpyx3)
 - [NiffirgGames](https://niffirggames.itch.io/) for [Charlie the Capybara](https://niffirggames.itch.io/charliethecapybara) textures
 - [Cainos](https://cainos.itch.io/) for his godly amazing [Pixel-Art-Top-Down](https://cainos.itch.io/pixel-art-top-down-basic) textures (which I took the walls from)
 - [Cup Nooble](https://cupnooble.itch.io/) for there very nice pastel [Sprout-lands asset pack](https://cupnooble.itch.io/sprout-lands-asset-pack) (which I took the grass from)
+
+### Tools used
+
+- [VScode](https://code.visualstudio.com/) - IDE
+- [GIMP](https://www.gimp.org/) - Photo-editor
+- [Krita](https://krita.org/en/) - Some drawings
+- [Libresprite](https://libresprite.github.io/#!/) (FOSS fork of Aesprite) - Pixel-art drawings
