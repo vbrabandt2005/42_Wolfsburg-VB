@@ -6,7 +6,7 @@
 #    By: vbraband <vbraband@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/08/16 17:11:28 by vbrabandt         #+#    #+#              #
-#    Updated: 2024/09/06 14:34:52 by vbraband         ###   ########.fr        #
+#    Updated: 2024/09/12 16:30:49 by vbraband         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -84,6 +84,6 @@ auto:					fclean
 debug:					fclean 
 						make all 
 						make clean
-						valgrind --leak-check=full ./so_long ./maps/ex03.ber
+						valgrind --leak-check=full ./so_long ./maps/custom_map.ber
 
 .PHONY:	all clean fclean re libft

@@ -15,6 +15,23 @@ Worked with [Grumpyx3](https://github.com/Grumpyx3)
 - Increased Tile size to 120
 - Beutiful capybara assets
 
+## Usage
+
+### Dependencies
+
+#### Linux
+
+```bash
+sudo apt-get update && sudo apt-get install xorg libxext-dev zlib1g-dev libbsd-dev
+```
+
+### Running
+
+Normal Compile: `make`
+Normal Run: `./so_long maps/[map]`
+Auto Run: `make auto` (redirects to `./choose_map.sh`)
+Valgrind Run: `make debug` (Runs with Valgrind)
+
 ## Credits
 
 ### Coding
