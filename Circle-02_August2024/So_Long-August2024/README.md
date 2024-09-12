@@ -20,7 +20,7 @@ Worked with [Grumpyx3](https://github.com/Grumpyx3)
 - [Grumpyx3](https://github.com/Grumpyx3) for helping
 - [Acloos](https://gitlab.com/42_cursus1/so_long/) for honestly main inspiration for the code really
 - [Pulgamecanica](https://github.com/pulgamecanica)'s amazing [blog/guide to MLX animations](https://pulgamecanica.herokuapp.com/posts/mlx-animations) (We ended up not going as extreme has he did, but was still a good read)
-- [42Paris](https://github.com/42Paris) for actually writing the fricking [MiniLibX](https://github.com/42Paris/minilibx-linux)
+- [42Paris](https://github.com/42Paris) for actually writing the bloody [MiniLibX](https://github.com/42Paris/minilibx-linux)
 
 ### Assets
 
