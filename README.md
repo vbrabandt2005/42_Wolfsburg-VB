@@ -3,6 +3,7 @@
 Repository/Archive of everything I've done at [42WOB](https://42wolfsburg.de/).
 
 ## Piscine
+
 - [Wolfsburg, I accept](https://github.com/vbrabandt2005/42_Wolfsburg-VB/tree/main/42-Piscine_February2024/Piscine_00WolfsburgIAcceptThing) (Guide-only - RANT & WIP)
 - [C-Piscine](https://github.com/vbrabandt2005/42_Wolfsburg-VB/tree/main/42-Piscine_February2024) (February 2024)
   - [Piscine C00](https://github.com/vbrabandt2005/42_Wolfsburg-VB/tree/main/42-Piscine_February2024/Piscine_C00) (ex00 - ex04)
@@ -29,6 +30,6 @@ Repository/Archive of everything I've done at [42WOB](https://42wolfsburg.de/).
 
 ### Milestone/Circle. 2
 
-- [So_Long (August-September 2024)](https://github.com/vbrabandt2005/42_Wolfsburg-VB/tree/main/Circle-02_August2024/So_Long-August2024)
+- [So_Long](https://github.com/vbrabandt2005/42_Wolfsburg-VB/tree/main/Circle-02_August2024/So_Long-August2024) (125% - August-September 2024)
+- [Push_Swap](https://github.com/vbrabandt2005/42_Wolfsburg-VB/tree/main/Circle-02_August2024/Push_Swap-September2024) (WIP - September 2024)
 - MiniTalk (WIP - September 2024)
-- Push_Swap (WIP - September 2024)
