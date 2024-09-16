@@ -6,7 +6,15 @@
 /*   By: vbraband <vbraband@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/16 13:25:38 by vbraband          #+#    #+#             */
-/*   Updated: 2024/09/16 13:26:56 by vbraband         ###   ########.fr       */
+/*   Updated: 2024/09/16 15:01:48 by vbraband         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "push_swap.h"
+
+
+int main(void)
+{
+    printf("Push_Swap CRY!\n");
+    return (0);
+}
