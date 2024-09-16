@@ -2,9 +2,9 @@
 
 ![Alt Text](./screenshots/FreeCapybara!.gif)
 
-A 2D capybara game utilising [MiniLibX](https://github.com/42Paris/minilibx-linux)
+A 2D capybara game utilising [MiniLibX](https://github.com/42Paris/minilibx-linux).
 
-Worked with [Grumpyx3](https://github.com/Grumpyx3)
+Worked with [Grumpyx3](https://github.com/Grumpyx3).
 
 (Note: **`choose_map.sh`** is not required by the project, it's just a fancy extra script I wrote to make my life easier)
 
@@ -27,10 +27,10 @@ sudo apt-get update && sudo apt-get install xorg libxext-dev zlib1g-dev libbsd-d
 
 ### Running
 
-Normal Compile: `make`
-Normal Run: `./so_long maps/[map]`
-Auto Run: `make auto` (redirects to `./choose_map.sh`)
-Valgrind Run: `make debug` (Runs with Valgrind)
+- Normal Compile: `make`
+- Normal Run: `./so_long maps/[map]`
+- Auto Run: `make auto` (redirects to `./choose_map.sh`)
+- Valgrind Run: `make debug` (Runs with Valgrind) 
 
 ## Credits
 
