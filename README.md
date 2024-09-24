@@ -45,4 +45,4 @@ As you can see I like open-source and decided to use the GPL-3.0 license on this
 
 > Note: Not everything in this repository is GPL-3.0. Some third-party libraries (e.g., MiniLibX) and custom Sprites (which I used in So_Long) might have their own different licenses.
 
-I do have to remind you that even though I allow my code to be used and copied, It is in your (& 42) best interest to try writing your own code.
+I do have to remind you that even though I allow my code to be used and copied, It is in your best interest to try writing your own code.
