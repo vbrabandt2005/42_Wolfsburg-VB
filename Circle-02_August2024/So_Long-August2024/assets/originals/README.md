@@ -17,3 +17,7 @@ Was also drawn in Libresprite just for fun but was later replaced by Charlie the
 ![Pelican](Pelican.webp)
 
 Was also drawn using Libresprite, people thinks it looks like a goose but I think it's perfect.
+
+# LICENSE
+
+Do whatever, I'm not even sure it looks that much like a pelican. Credit would be cool though.
