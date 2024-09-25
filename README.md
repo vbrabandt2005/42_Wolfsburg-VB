@@ -38,3 +38,11 @@ Repository/Archive of everything I've done at [42WOB](https://42wolfsburg.de/).
 
 - Philosophers (TODO)
 - MiniShell (TODO)
+
+## Licence
+
+As you can see I like open-source and decided to use the GPL-3.0 license for this repository, I'm pretty sure no one would make pull requests here, but I wanted to make it clear if anyone wants to use my work as inspiration or whatever that's fine.
+
+> Note: Not everything in this repository is GPL-3.0 licensed. Some third-party libraries (e.g., MiniLibX) and custom Sprites (which I used in So_Long) might have their own different licenses.
+
+I do have to remind you that even though I allow my code to be used and copied, It is in your best interest to try writing your own code.
