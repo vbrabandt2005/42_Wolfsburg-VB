@@ -1,6 +1,6 @@
 # Operation Capybara Freedom (So_Long)
 
-![Alt Text](./screenshots/FreeCapybara!.gif)
+![Capybara Free!](./screenshots/FreeCapybara!.gif)
 
 A 2D capybara game utilising [MiniLibX](https://github.com/42Paris/minilibx-linux).
 
