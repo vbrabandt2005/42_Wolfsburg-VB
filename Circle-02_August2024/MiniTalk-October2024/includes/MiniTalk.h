@@ -6,16 +6,18 @@
 /*   By: vbrabandt <vbrabandt@proton.me>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/25 16:23:26 by vbrabandt         #+#    #+#             */
-/*   Updated: 2024/09/25 16:30:08 by vbrabandt        ###   ########.fr       */
+/*   Updated: 2024/09/25 16:42:14 by vbrabandt        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef MINITALK_H
 # define MINITALK_H
 
+#include "../lib/Libft_Modified-2024/srcs/libft.h"
 #include <signal.h>
 #include <stdio.h>
 #include <string.h>
+#include <unistd.h>
 
 #endif
 
