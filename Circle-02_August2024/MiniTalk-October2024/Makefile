@@ -6,7 +6,7 @@
 #    By: vbrabandt <vbrabandt@proton.me>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/09/25 13:38:48 by vbraband          #+#    #+#              #
-#    Updated: 2024/09/25 16:32:42 by vbrabandt        ###   ########.fr        #
+#    Updated: 2024/09/25 17:06:58 by vbrabandt        ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,17 +17,17 @@ CFLAGS		=	-Wall -Wextra -Werror
 rm			=	rm -rf
 
 client_name	=	client
-client_srcs	=	../srcs/client.c
+client_srcs	=	./srcs/client.c
 
 server_name	=	server
-server_srcs	=	../srcs/server.c
+server_srcs	=	./srcs/server.c
 
 obj_dir		=	obj
 obj			=	$(srcs:%.c=$(src_dir)/%.o)
 
 includes	=	-I ./includes/
 
-libft_path	=	../lib/Libft_Modified-2024
+libft_path	=	./lib/Libft_Modified-2024
 libft		=	$(libft_path)/libft.a
 libinclude	=	-L $(libft_path) -lft
 

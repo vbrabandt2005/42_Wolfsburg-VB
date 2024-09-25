@@ -6,8 +6,13 @@
 /*   By: vbrabandt <vbrabandt@proton.me>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/25 14:49:41 by vbraband          #+#    #+#             */
-/*   Updated: 2024/09/25 16:43:26 by vbrabandt        ###   ########.fr       */
+/*   Updated: 2024/09/25 17:06:11 by vbrabandt        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "MiniTalk.h"
+#include "../includes/MiniTalk.h"
+
+int main(void)
+{
+    ft_printf("hello client\n");
+}
