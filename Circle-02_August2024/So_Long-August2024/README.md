@@ -6,7 +6,7 @@ A 2D capybara game utilising [MiniLibX](https://github.com/42Paris/minilibx-linu
 
 Worked with [Grumpyx3](https://github.com/Grumpyx3).
 
-(Note: **`choose_map.sh`** is not required by the project, it's just a fancy extra script I wrote to make my life easier)
+> Note: **`choose_map.sh`** is not required by the project, it's just a fancy extra script I wrote to make my life easier
 
 ## What we implemented
 
