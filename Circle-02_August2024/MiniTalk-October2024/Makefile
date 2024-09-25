@@ -6,14 +6,15 @@
 #    By: vbrabandt <vbrabandt@proton.me>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/09/25 13:38:48 by vbraband          #+#    #+#              #
-#    Updated: 2024/09/25 15:59:43 by vbrabandt        ###   ########.fr        #
+#    Updated: 2024/09/25 16:09:07 by vbrabandt        ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 # MiniTalk Makefile #
 
-cc		=	gcc
-CFLAGS	=	-Wall -Wextra -Werror
+cc			=	gcc
+CFLAGS		=	-Wall -Wextra -Werror
+rm			=	rm -rf
 
 client_name	=	client
 client_srcs	=	../srcs/client.c
@@ -34,4 +35,18 @@ all: $(client_name) $(server_name)
 
 $(client_name): $(client_srcs) $(libft)
 	$(cc) $(CFLAGS) -o $@ $(client_srcs) $(libinclude)
+	@echo "\033[32m[Client executable has been compiled]\033[0m"
 
+$(server_name): $(server_srcs) $(libft)
+	$(cc) $(CFLAGS) -o $@ $(server_srcs) $(libinclude)
+	@echo "\033[32m[Server executable has been compiled]\033[0m"
+
+$(libft):
+	$(MAKE) -C $(libft_path) all -s
+	@echo "\033[32m[Libft has been created]\033[0m"
+
+$(obj_dir):
+	mkdir -p $(obj_dir)
+
+clean:
+	$(MAKE) -C $(libft_path) clean
