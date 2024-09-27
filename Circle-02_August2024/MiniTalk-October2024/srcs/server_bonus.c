@@ -6,11 +6,12 @@
 /*   By: vbrabandt <vbrabandt@proton.me>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/27 14:13:15 by vbrabandt         #+#    #+#             */
-/*   Updated: 2024/09/27 14:40:04 by vbrabandt        ###   ########.fr       */
+/*   Updated: 2024/09/27 16:01:40 by vbrabandt        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/MiniTalk.h"
+
 void	handle_signal(int signal, siginfo_t *info, void *context)
 {
 	static unsigned char	current_char;
@@ -41,7 +42,7 @@ void	handle_signal(int signal, siginfo_t *info, void *context)
  */
 int	main(void)
 {
-	struct sigaction	sa;
+	struct sigaction sa;
 
 	sa.sa_sigaction = &handle_signal;
 	sa.sa_flags = SA_SIGINFO;
