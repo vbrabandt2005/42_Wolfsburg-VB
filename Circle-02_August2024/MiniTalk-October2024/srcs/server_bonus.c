@@ -6,14 +6,11 @@
 /*   By: vbrabandt <vbrabandt@proton.me>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/27 14:13:15 by vbrabandt         #+#    #+#             */
-/*   Updated: 2024/09/27 14:18:48 by vbrabandt        ###   ########.fr       */
+/*   Updated: 2024/09/27 14:40:04 by vbrabandt        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/MiniTalk.h"
-#include <signal.h>
-#include <unistd.h>
-
 void	handle_signal(int signal, siginfo_t *info, void *context)
 {
 	static unsigned char	current_char;
