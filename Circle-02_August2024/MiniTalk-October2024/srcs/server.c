@@ -6,7 +6,7 @@
 /*   By: vbrabandt <vbrabandt@proton.me>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/25 14:49:39 by vbraband          #+#    #+#             */
-/*   Updated: 2024/09/27 13:10:24 by vbrabandt        ###   ########.fr       */
+/*   Updated: 2024/09/27 13:27:57 by vbrabandt        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,10 +24,10 @@ void    handler(int sig)
     {
         if (current_char == END_TRANSMISSION)
         {
-            ft_putchar('\n');
+            ft_printf("\n");
         }
         else
-            ft_putchar("%c", current_char);
+            ft_printf("%c", current_char);
         current_char = 0;
         current_bit = 0;
     }

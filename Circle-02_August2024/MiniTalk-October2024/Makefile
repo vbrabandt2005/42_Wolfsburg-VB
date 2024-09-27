@@ -6,7 +6,7 @@
 #    By: vbrabandt <vbrabandt@proton.me>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/09/25 13:38:48 by vbraband          #+#    #+#              #
-#    Updated: 2024/09/27 12:11:36 by vbrabandt        ###   ########.fr        #
+#    Updated: 2024/09/27 13:34:57 by vbrabandt        ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -39,15 +39,15 @@ all: $(client_name) $(server_name)
 
 $(client_name): $(client_srcs) $(libft)
 	@$(cc) $(CFLAGS) -o $@ $(client_srcs) $(libinclude) $(silent)
-	@echo "\033[32m[Client executable has been compiled]\033[0m"
+	@echo -e "\033[32m[Client executable has been compiled]\033[0m"
 
 $(server_name): $(server_srcs) $(libft)
 	@$(cc) $(CFLAGS) -o $@ $(server_srcs) $(libinclude) $(silent)
-	@echo "\033[32m[Server executable has been compiled]\033[0m"
+	@echo -e "\033[32m[Server executable has been compiled]\033[0m"
 
 $(libft):
 	@$(MAKE) -C $(libft_path) all -s $(silent)
-	@echo "\033[32m[Libft has been created]\033[0m"
+	@echo -e "\033[32m[Libft has been created]\033[0m"
 
 $(obj_dir):
 	@mkdir -p $(obj_dir) $(silent)
@@ -55,20 +55,18 @@ $(obj_dir):
 clean:
 	@$(MAKE) -C $(libft_path) clean $(silent)
 	@$(rm) $(obj_dir) $(silent)
-	@echo "\033[33m[Object files have been deleted]\033[0m"
+	@echo -e "\033[33m[Object files have been deleted]\033[0m"
 
 fclean: clean
 	@$(MAKE) -C $(libft_path) fclean $(silent)
 	@$(rm) $(client_name) $(server_name) $(silent)
-	@echo "\033[33m[Object files and executables have been deleted]\033[0m"
+	@echo -e "\033[33m[Object files and executables have been deleted]\033[0m"
 
 re:		fclean
 	@$(MAKE) all -s
 
 auto:	re
 	@$(MAKE) clean -s
-	@./server
-	@./client
 
 debug:	re
 	@$(MAKE) clean -s
