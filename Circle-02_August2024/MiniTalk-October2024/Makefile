@@ -6,7 +6,7 @@
 #    By: vbrabandt <vbrabandt@proton.me>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/09/25 13:38:48 by vbraband          #+#    #+#              #
-#    Updated: 2024/09/26 01:17:58 by vbrabandt        ###   ########.fr        #
+#    Updated: 2024/09/27 11:53:21 by vbrabandt        ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -62,14 +62,12 @@ fclean: clean
 re:		fclean
 		make all
 
-auto:	fclean
-		make all
+auto:	re
 		make clean
 		./server
 		./client
 
-debug:	fclean
-		make all
+debug:	re
 		make clean
 		valgrind --leak-check=full ./server
 		valgrind --leak-check=full ./client
