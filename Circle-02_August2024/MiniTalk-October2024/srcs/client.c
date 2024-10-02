@@ -6,48 +6,81 @@
 /*   By: vbrabandt <vbrabandt@proton.me>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/25 14:49:41 by vbraband          #+#    #+#             */
-/*   Updated: 2024/09/27 13:52:02 by vbrabandt        ###   ########.fr       */
+/*   Updated: 2024/10/02 13:46:23 by vbrabandt        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/MiniTalk.h"
 
-void	send_char(int pid, unsigned char c)
+void	send_null_terminator(int server_id, int result)
 {
-	int				i;
-	unsigned char	temp;
+	int	i;
 
 	i = 8;
 	while (i > 0)
 	{
-		i--;
-		temp = c >> i;
-		if (temp & 1)
-			kill(pid, SIGUSR1);
+		if (((unsigned char)('\0' >> (i - 1)) & 1))
+			result = kill(server_id, SIGUSR2);
 		else
-			kill(pid, SIGUSR2);
+			result = kill(server_id, SIGUSR1);
+		if (result == -1)
+		{
+			ft_printf("Error sending signal (PID might be incorrect)\n");
+			return ;
+		}
+		usleep(300); // Increased sleep duration
+		i--;
 	}
 }
 
-int	main(int argc, char *argv[])
+void	send_message(int server_id, char *message)
 {
-	pid_t server_pid;
-	const char *message;
-	int i;
+	int	letter;
+	int	i;
+	int	result;
 
-	if (argc != 3)
+	letter = 0;
+	while (message[letter])
 	{
-		ft_printf("Usage: %s <server_pid> <message>\n", argv[0]);
-		return (1);
+		i = 8;
+		while (i > 0)
+		{
+			if (((unsigned char)(message[letter] >> (i - 1)) & 1))
+				result = kill(server_id, SIGUSR2);
+			else
+				result = kill(server_id, SIGUSR1);
+			if (result == -1)
+			{
+				ft_printf("Error sending signal (PID might be incorrect)\n");
+				return ;
+			}
+			usleep(300); // Increased sleep duration
+			i--;
+		}
+		letter++;
 	}
-	server_pid = ft_atoi(argv[1]);
-	message = argv[2];
-	i = 0;
-	while (message[i] != '\0')
+	send_null_terminator(server_id, result);
+}
+
+int	main(int ac, char **av)
+{
+	int		server_id;
+	char	*message;
+
+	if (ac == 3)
 	{
-		send_char(server_pid, message[i]);
-		i++;
+		server_id = ft_atoi(av[1]);
+		if (!server_id)
+			ft_printf("Error: Wrong server id.\n");
+		message = av[2];
+		if (message[0] == 0)
+		{
+			ft_printf("Error: No message given...Please offer message!\n");
+			return (0);
+		}
+		send_message(server_id, message);
 	}
-	send_char(server_pid, END_TRANSMISSION);
+	else
+		ft_printf("Error: Incorect number of arguments!\n");
 	return (0);
 }

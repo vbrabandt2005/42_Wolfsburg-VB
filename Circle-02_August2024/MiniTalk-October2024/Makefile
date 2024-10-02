@@ -6,7 +6,7 @@
 #    By: vbrabandt <vbrabandt@proton.me>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/09/25 13:38:48 by vbraband          #+#    #+#              #
-#    Updated: 2024/09/27 15:43:41 by vbrabandt        ###   ########.fr        #
+#    Updated: 2024/10/02 13:27:28 by vbrabandt        ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -43,7 +43,7 @@ silent				=	> /dev/null 2>&1
 all: $(client_name) $(server_name)
 
 $(client_name): $(client_srcs) $(libft)
-	@$(cc) $(CFLAGS) -o $@ $(client_srcs) $(libinclude) $(silent)
+	$(cc) $(CFLAGS) -o $@ $(client_srcs) $(libinclude)
 	@echo -e "\033[32m[Client executable has been compiled]\033[0m"
 
 $(client_bonus_name): $(client_bonus_srcs) $(libft)
