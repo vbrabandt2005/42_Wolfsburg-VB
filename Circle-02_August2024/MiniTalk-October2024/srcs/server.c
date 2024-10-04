@@ -6,7 +6,7 @@
 /*   By: vbrabandt <vbrabandt@proton.me>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/25 14:49:39 by vbraband          #+#    #+#             */
-/*   Updated: 2024/10/04 15:39:05 by vbrabandt        ###   ########.fr       */
+/*   Updated: 2024/10/04 16:16:51 by vbrabandt        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ void	server(void)
 	int	pid;
 
 	pid = getpid();
-	ft_putnbr(pid);
+	ft_print_nbr(pid);
 	write(1, "\n", 1);
 }
 

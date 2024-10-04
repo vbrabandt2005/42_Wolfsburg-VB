@@ -6,7 +6,7 @@
 #    By: vbrabandt <vbrabandt@proton.me>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/09/25 13:38:48 by vbraband          #+#    #+#              #
-#    Updated: 2024/10/04 15:03:41 by vbrabandt        ###   ########.fr        #
+#    Updated: 2024/10/04 16:08:19 by vbrabandt        ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -53,7 +53,7 @@ $(client_bonus_name): $(client_bonus_srcs) $(libft)
 bonus: $(client_bonus_name) $(server_bonus_name)
 
 $(server_name): $(server_srcs) $(libft)
-	@$(cc) $(CFLAGS) -o $@ $(server_srcs) $(libinclude) $(silent)
+	$(cc) $(CFLAGS) -o $@ $(server_srcs) $(libinclude)
 	@echo -e "\033[32m[Server executable has been compiled]\033[0m"
 
 $(server_bonus_name): $(server_bonus_srcs) $(libft)
