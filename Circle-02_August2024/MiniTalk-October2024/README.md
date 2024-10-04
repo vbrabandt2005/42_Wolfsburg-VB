@@ -19,7 +19,7 @@ Our goal was to make a messaging server and client in C using the internal UNIX 
 
 - Unicode support
 
-#### Bonus (WIP)
+### Bonus (WIP)
 
 - Server returns a signal as confirmation that signal has been recieved
 
