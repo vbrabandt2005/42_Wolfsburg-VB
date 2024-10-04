@@ -2,7 +2,7 @@
 
 ## A UNIX Signals-based messaging Server and Client
 
-![Screenshot of MiniTalk](./screenshots/Screenshot-MiniTalk.webp)
+![Screenshot of MiniTalk](./screenshots/MiniTalk.webp)
 
 Our goal was to make a messaging server and client in C using the internal UNIX signal protocol.
 
@@ -15,9 +15,13 @@ Our goal was to make a messaging server and client in C using the internal UNIX 
 
 ## Features
 
-- Bonus to be made (WIP)
+![MiniTalk but it's turtles](./screenshots/MiniTalk_Unicode.webp)
 
-> yeah just that
+- Unicode support
+
+### Bonus (WIP)
+
+- Server returns a signal as confirmation that signal has been recieved
 
 ## Usage
 
