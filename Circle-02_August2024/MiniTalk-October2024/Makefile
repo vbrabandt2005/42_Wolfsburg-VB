@@ -6,7 +6,7 @@
 #    By: vbrabandt <vbrabandt@proton.me>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/09/25 13:38:48 by vbraband          #+#    #+#              #
-#    Updated: 2024/10/02 13:27:28 by vbrabandt        ###   ########.fr        #
+#    Updated: 2024/10/04 15:03:41 by vbrabandt        ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -91,8 +91,8 @@ auto_bonus: re_bonus
 
 debug:	re
 	@$(MAKE) clean -s
-	@valgrind --leak-check=full ./server
-	@valgrind --leak-check=full ./client
+	@valgrind --leak-check=full --show-leak-kinds=all ./server
+	@valgrind --leak-check=full --show-leak-kinds=all ./client
 
 .PHONY: all bonus clean fclean re re_bonus auto auto_bonus debug
 

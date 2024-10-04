@@ -6,47 +6,62 @@
 /*   By: vbrabandt <vbrabandt@proton.me>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/25 14:49:39 by vbraband          #+#    #+#             */
-/*   Updated: 2024/10/02 13:46:49 by vbrabandt        ###   ########.fr       */
+/*   Updated: 2024/10/04 15:39:05 by vbrabandt        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/MiniTalk.h"
 
-void	handle_signal(int signum)
-{
-	static int				bit_count = 0;
-	static unsigned char	current_char = 0;
+pid_t	g_clientpid = -1;
 
-	current_char <<= 1;
-	if (signum == SIGUSR2)
-		current_char |= 1;
-	bit_count++;
-	if (bit_count == 8)
+void	rec(int n, int pid)
+{
+	int				shift;
+	static int		i = 7;
+	static char		c;
+
+	if (i == -1 || pid != g_clientpid)
 	{
-		if (current_char == '\0')
-		{
-			write(1, "\n", 1);
-		}
-		else
-			write(1, &current_char, 1);
-		bit_count = 0;
-		current_char = 0;
+		i = 7;
+		c = 0;
+		g_clientpid = pid;
 	}
+	shift = 1 << (i);
+	if (n != 0)
+		c = (c | shift);
+	i--;
+	if (i == -1)
+		write (1, &c, 1);
+}
+
+void	server(void)
+{
+	int	pid;
+
+	pid = getpid();
+	ft_putnbr(pid);
+	write(1, "\n", 1);
+}
+
+void	sig_handler(int sig, siginfo_t *info, void *ptr)
+{
+	(void)ptr;
+	if (sig == SIGUSR1)
+		rec(1, info->si_pid);
+	else
+		rec(0, info->si_pid);
 }
 
 int	main(void)
 {
-	struct sigaction	sa_msg;
+	struct sigaction	act;
 
-	ft_printf("\033[0;32m** MiniTalk Server **\033[0m\n");
-	ft_printf("PID: %d\n", getpid());
-	sa_msg.sa_handler = handle_signal;
-	sa_msg.sa_flags = 0;
-	sigaction(SIGUSR1, &sa_msg, NULL);
-	sigaction(SIGUSR2, &sa_msg, NULL);
+	act.sa_flags = 0;
+	act.sa_sigaction = sig_handler;
+	sigaction(SIGUSR1, &act, 0);
+	sigaction(SIGUSR2, &act, 0);
+	server();
 	while (1)
-	{
 		pause();
-	}
 	return (0);
 }
