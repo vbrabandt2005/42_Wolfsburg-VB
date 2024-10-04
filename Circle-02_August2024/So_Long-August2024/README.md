@@ -13,7 +13,7 @@ Worked with [Grumpyx3](https://github.com/Grumpyx3).
 - Character turning depending on direction
 - Enemies (They don't move but yeah they still kill you so still counts)
 - Increased Tile size to 120
-- Beutiful capybara assets
+- Beautiful capybara assets and story
 
 ## Usage
 
