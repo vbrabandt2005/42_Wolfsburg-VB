@@ -27,10 +27,10 @@ sudo apt-get update && sudo apt-get install xorg libxext-dev zlib1g-dev libbsd-d
 
 ### Running
 
-- Normal Compile: `make`
-- Normal Run: `./so_long maps/[map]`
-- Auto Run: `make auto` ((re)compiles and then redirects to `./choose_map.sh`)
-- Valgrind Run: `make debug` ((re)compiles and then runs with Valgrind)
+- Normal Compile:   `make`
+- Normal Run:       `./so_long maps/[map]`
+- Auto Run:         `make auto` ((re)compiles and then redirects to `./choose_map.sh`)
+- Valgrind Run:     `make debug` ((re)compiles and then runs with Valgrind)
 
 ## Credits
 
