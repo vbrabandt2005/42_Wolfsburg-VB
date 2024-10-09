@@ -6,32 +6,30 @@
 /*   By: vbrabandt <vbrabandt@proton.me>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/25 14:49:39 by vbraband          #+#    #+#             */
-/*   Updated: 2024/10/04 16:16:51 by vbrabandt        ###   ########.fr       */
+/*   Updated: 2024/10/09 14:26:52 by vbrabandt        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/MiniTalk.h"
 
-pid_t	g_clientpid = -1;
-
-void	rec(int n, int pid)
+void	rec(int n, int pid, int *clientpid)
 {
-	int				shift;
-	static int		i = 7;
-	static char		c;
+	int			shift;
+	static int	i = 7;
+	static char	c;
 
-	if (i == -1 || pid != g_clientpid)
+	if (i == -1 || pid != *clientpid)
 	{
 		i = 7;
 		c = 0;
-		g_clientpid = pid;
+		*clientpid = pid;
 	}
 	shift = 1 << (i);
 	if (n != 0)
 		c = (c | shift);
 	i--;
 	if (i == -1)
-		write (1, &c, 1);
+		write(1, &c, 1);
 }
 
 void	server(void)
@@ -39,17 +37,18 @@ void	server(void)
 	int	pid;
 
 	pid = getpid();
-	ft_print_nbr(pid);
-	write(1, "\n", 1);
+	ft_printf("Your lovely PID: %d\n", pid);
 }
 
 void	sig_handler(int sig, siginfo_t *info, void *ptr)
 {
+	static int	clientpid = -1;
+
 	(void)ptr;
 	if (sig == SIGUSR1)
-		rec(1, info->si_pid);
+		rec(1, info->si_pid, &clientpid);
 	else
-		rec(0, info->si_pid);
+		rec(0, info->si_pid, &clientpid);
 }
 
 int	main(void)
