@@ -6,7 +6,7 @@
 #    By: vbrabandt <vbrabandt@proton.me>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/09/25 13:38:48 by vbraband          #+#    #+#              #
-#    Updated: 2024/10/09 14:27:38 by vbrabandt        ###   ########.fr        #
+#    Updated: 2024/10/11 17:33:25 by vbrabandt        ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -41,16 +41,15 @@ silent				=	> /dev/null 2>&1
 # Silencing requires $(silent) at the end of the command for some reason 
 
 all: $(client_name) $(server_name)
+bonus: $(client_bonus_name) $(server_bonus_name)
 
 $(client_name): $(client_srcs) $(libft)
 	@$(cc) $(CFLAGS) -o $@ $(client_srcs) $(libinclude) $(silent)
 	@echo -e "\033[32m[Client executable has been compiled]\033[0m"
 
 $(client_bonus_name): $(client_bonus_srcs) $(libft)
-	$(cc) $(CFLAGS) -o $@ $(client_bonus_srcs) $(libinclude)
+	@$(cc) $(CFLAGS) -o $@ $(client_bonus_srcs) $(libinclude) $(silent)
 	@echo -e "\033[32m[Bonus client executable has been compiled]\033[0m"
-
-bonus: $(client_bonus_name) $(server_bonus_name)
 
 $(server_name): $(server_srcs) $(libft)
 	@$(cc) $(CFLAGS) -o $@ $(server_srcs) $(libinclude) $(silent)

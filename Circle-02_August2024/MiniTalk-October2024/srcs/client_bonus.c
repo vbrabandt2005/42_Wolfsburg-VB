@@ -6,7 +6,7 @@
 /*   By: vbrabandt <vbrabandt@proton.me>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/27 13:04:39 by vbrabandt         #+#    #+#             */
-/*   Updated: 2024/10/09 15:15:45 by vbrabandt        ###   ########.fr       */
+/*   Updated: 2024/10/10 15:49:49 by vbrabandt        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,18 +43,24 @@ void	send_message(int pid, char *str)
 	send_char(pid, str[i]);
 }
 
+void	sighandler(int sig)
+{
+	(void)sig;
+	ft_print_str("message reseved succasfuly!!\n");
+}
+
 int	send(int pid, char *str)
 {
 	if (kill(pid, 0) == -1)
 	{
-		ft_printf("Invalid PID\n");
+		ft_print_str("Invalid PID\n");
 		return (1);
 	}
 	else
 	{
 		if (pid == 0)
 		{
-			ft_printf("Invalid PID\n");
+			ft_print_str("Invalid PID\n");
 			return (1);
 		}
 		send_message(pid, str);
@@ -68,9 +74,10 @@ int	main(int ac, char **av)
 
 	if (ac != 3)
 		return (1);
+	signal(SIGUSR1, sighandler);
 	if (ft_atoi(av[1], &pid) == 0)
 	{
-		ft_printf("invalid argument");
+		ft_print_str("invalid argument");
 		return (1);
 	}
 	else

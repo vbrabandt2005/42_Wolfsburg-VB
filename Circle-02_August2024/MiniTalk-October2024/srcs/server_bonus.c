@@ -6,30 +6,38 @@
 /*   By: vbrabandt <vbrabandt@proton.me>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/27 14:13:15 by vbrabandt         #+#    #+#             */
-/*   Updated: 2024/10/09 15:16:11 by vbrabandt        ###   ########.fr       */
+/*   Updated: 2024/10/10 15:27:38 by vbrabandt        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/MiniTalk.h"
 
-void	rec(int n, int pid, int *clientpid)
-{
-	int			shift;
-	static int	i = 7;
-	static char	c;
+pid_t	getpid(void);
 
-	if (i == -1 || pid != *clientpid)
+pid_t	g_clientpid = -1;
+
+void	rec(int n, int pid)
+{
+	int				shift;
+	static int		i = 7;
+	static char		c;
+
+	if (i == -1 || pid != g_clientpid)
 	{
 		i = 7;
 		c = 0;
-		*clientpid = pid;
+		g_clientpid = pid;
 	}
 	shift = 1 << (i);
 	if (n != 0)
 		c = (c | shift);
 	i--;
 	if (i == -1)
-		write(1, &c, 1);
+	{
+		write (1, &c, 1);
+		if (c == 0)
+			kill(g_clientpid, SIGUSR1);
+	}
 }
 
 void	server(void)
@@ -37,18 +45,18 @@ void	server(void)
 	int	pid;
 
 	pid = getpid();
-	ft_printf("Your lovely PID: %d\n", pid);
+    ft_printf("Your lovely bonus UwU Server PID: ");
+	ft_print_nbr(pid);
+	write(1, "\n", 1);
 }
 
 void	sig_handler(int sig, siginfo_t *info, void *ptr)
 {
-	static int	clientpid = -1;
-
 	(void)ptr;
 	if (sig == SIGUSR1)
-		rec(1, info->si_pid, &clientpid);
+		rec(1, info->si_pid);
 	else
-		rec(0, info->si_pid, &clientpid);
+		rec(0, info->si_pid);
 }
 
 int	main(void)
