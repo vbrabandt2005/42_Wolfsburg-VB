@@ -13,7 +13,7 @@ Worked with [Grumpyx3](https://github.com/Grumpyx3).
 - Character turning depending on direction
 - Enemies (They don't move but yeah they still kill you so still counts)
 - Increased Tile size to 120
-- Beutiful capybara assets
+- Beautiful capybara assets and story
 
 ## Usage
 
@@ -27,10 +27,10 @@ sudo apt-get update && sudo apt-get install xorg libxext-dev zlib1g-dev libbsd-d
 
 ### Running
 
-- Normal Compile: `make`
-- Normal Run: `./so_long maps/[map]`
-- Auto Run: `make auto` ((re)compiles and then redirects to `./choose_map.sh`)
-- Valgrind Run: `make debug` ((re)compiles and then runs with Valgrind)
+- Normal Compile:   `make`
+- Normal Run:       `./so_long maps/[map]`
+- Auto Run:         `make auto` ((re)compiles and then redirects to `./choose_map.sh`)
+- Valgrind Run:     `make debug` ((re)compiles and then runs with Valgrind)
 
 ## Credits
 
