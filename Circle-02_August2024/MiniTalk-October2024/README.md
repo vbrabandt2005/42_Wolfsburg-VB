@@ -13,13 +13,15 @@ Our goal was to make a messaging server and client in C using the internal UNIX 
 
 **TLDR;** You know when you want to kill a process in the **System Monitor** (Task Manager) on linux, when you press to kill a process, the task manager sends a **"Signal"** to the process telling it to die, well we are basically recycling this Signal system to create an internal text massaging server and client written in C.
 
+> This code technically works, but it is very sensitive to other system processes, I found my MiniTalk can manage up to 66,000 charecters (12,000 words) Lorum Ipsum when no other programs/processes are opened, so if you wondering why it's outputing garbage output when using a 2000+ words text, then yeah it's kinda a system issue (Kinda because I believe Signals aren't designed for these types of uses), this project was made when MacOS (Unix) was the standard at 42, but now with Ubuntu (Linux), the way these
+
 ## Features
 
 ![MiniTalk but it's turtles](./screenshots/MiniTalk_Unicode.webp)
 
 - Unicode support
 
-### Bonus (WIP)
+### Bonus (WIP - Incomplete)
 
 - Server returns a signal as confirmation that signal has been recieved
 
