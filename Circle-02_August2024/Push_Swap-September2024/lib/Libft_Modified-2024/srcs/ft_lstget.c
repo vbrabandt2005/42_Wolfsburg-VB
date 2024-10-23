@@ -1,20 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_lstget.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vbrabandt <vbrabandt@proton.me>            +#+  +:+       +#+        */
+/*   By: vbraband <vbraband@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/16 13:25:38 by vbraband          #+#    #+#             */
-/*   Updated: 2024/10/11 20:49:34 by vbrabandt        ###   ########.fr       */
+/*   Created: 2024/08/26 13:56:18 by vbraband          #+#    #+#             */
+/*   Updated: 2024/08/26 13:56:20 by vbraband         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "libft.h"
 
-
-int main(void)
+t_list	*ft_lstget(t_list *l, int n)
 {
-    printf("Push_Swap CRY!\n");
-    return (0);
+	while (n-- && l)
+		l = l->next;
+	return (l);
 }

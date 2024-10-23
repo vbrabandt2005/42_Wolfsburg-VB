@@ -1,19 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.c                                        :+:      :+:    :+:   */
+/*   ft_lstiter.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vbrabandt <vbrabandt@proton.me>            +#+  +:+       +#+        */
+/*   By: vbraband <vbraband@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/16 13:25:51 by vbraband          #+#    #+#             */
-/*   Updated: 2024/10/11 20:49:53 by vbrabandt        ###   ########.fr       */
+/*   Created: 2024/08/26 13:56:25 by vbraband          #+#    #+#             */
+/*   Updated: 2024/08/26 13:56:27 by vbraband         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "libft.h"
 
-int push_swap(void)
+void	ft_lstiter(t_list *lst, void (*f)(t_list *elem))
 {
-    printf("Push_Swap CRY!\n");
-    return (0);
+	while (lst)
+	{
+		f(lst);
+		lst = lst->next;
+	}
 }
