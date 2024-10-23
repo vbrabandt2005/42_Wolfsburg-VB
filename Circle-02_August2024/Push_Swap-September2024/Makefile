@@ -6,7 +6,7 @@
 #    By: vbrabandt <vbrabandt@proton.me>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/10/23 12:31:12 by vbrabandt         #+#    #+#              #
-#    Updated: 2024/10/23 12:49:59 by vbrabandt        ###   ########.fr        #
+#    Updated: 2024/10/23 12:53:03 by vbrabandt        ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,7 +17,7 @@ CFLAGS					=	-Wall -Werror -Wextra -g3 -MMD
 rm						=	rm -rf
 mkdir					=	mkdir -p
 
-src_dir					=	srcs/
+src_dir					=	srcs
 obj_dir					=	obj
 includes				=	-I ./includes
 
@@ -26,9 +26,9 @@ libft					=	$(libft_dir)/libft.a
 libinclude				=	-L $(libft_dir) -lft
 
 commands_dir			=	$(src_dir)commands/push.c \
-                        		$(src_dir)commands/rev_rotate.c \
-                            	$(src_dir)commands/rotate.c \
-                            	$(src_dir)commands/swap.c
+                        	$(src_dir)commands/rev_rotate.c \
+                            $(src_dir)commands/rotate.c \
+                            $(src_dir)commands/swap.c
 
 main_dir				= 	$(src_dir)main/split.c
 
