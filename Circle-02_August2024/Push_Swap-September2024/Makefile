@@ -10,83 +10,76 @@
 #                                                                              #
 # **************************************************************************** #
 
-NAME					= push_swap
+NAME        = push_swap
 
-cc						=	gcc
-CFLAGS					=	-Wall -Werror -Wextra -g3 -MMD
-rm						=	rm -rf
-mkdir					=	mkdir -p
+CC          = gcc
+CFLAGS      = -Wall -Werror -Wextra -g3 -MMD
+RM          = rm -rf
+MKDIR       = mkdir -p
 
-src_dir					=	srcs
-obj_dir					=	obj
-includes				=	-I ./includes
+SRC_DIR     = srcs
+OBJ_DIR     = obj
+INCLUDES    = -I ./includes
 
-libft_dir				=	./Libft_Modified-2024
-libft					=	$(libft_dir)/libft.a
-libinclude				=	-L $(libft_dir) -lft
+LIBFT_DIR   = ./Libft_Modified-2024
+LIBFT       = $(LIBFT_DIR)/libft.a
+LIBINCLUDE  = -L $(LIBFT_DIR) -lft
 
-commands_dir			=	$(src_dir)commands/push.c \
-                        					$(src_dir)commands/rev_rotate.c \
-                            				$(src_dir)commands/rotate.c \
-											$(src_dir)commands/sort_stacks.c \
-											$(src_dir)commands/sort_three.c \
-                            				$(src_dir)commands/swap.c
+COMMANDS_DIR = $(SRC_DIR)/commands/push.c \
+               $(SRC_DIR)/commands/rev_rotate.c \
+               $(SRC_DIR)/commands/rotate.c \
+               $(SRC_DIR)/commands/sort_stacks.c \
+               $(SRC_DIR)/commands/sort_three.c \
+               $(SRC_DIR)/commands/swap.c
 
-stack_dir				=	$(src_dir)stack/split.c \
-										$(src_dir)stack/stack_init.c \
-										$(src_dir)stack/stack_utils.c
+STACK_DIR   = $(SRC_DIR)/stack/split.c \
+              $(SRC_DIR)/stack/stack_init.c \
+              $(SRC_DIR)/stack/stack_utils.c
 
-main_dir				= 	$(src_dir)main/split.c
+MAIN_DIR    = $(SRC_DIR)/main/split.c
 
-srcs					= 	$(commands_dir) $(PUSH_SWAP_DIR)
-
-obj						= 	$(srcs:$(src_dir)%.c=$(obj_dir)/%.o)
-
-DEPS					= 	$(obj:%.o=%.d)
+SRCS        = $(COMMANDS_DIR) $(STACK_DIR) $(MAIN_DIR)
+OBJS        = $(SRCS:$(SRC_DIR)%.c=$(OBJ_DIR)/%.o)
+DEPS        = $(OBJS:%.o=%.d)
 
 -include $(DEPS)
 
-silent					=	> /dev/null 2>&1
+SILENT      = > /dev/null 2>&1
 
+$(OBJ_DIR)/%.o: $(SRC_DIR)%.c | $(OBJ_DIR) $(OBJ_DIR)/commands $(OBJ_DIR)/push_swap
+    @$(CC) $(CFLAGS) -I $(LIBFT_DIR) -I $(SRC_DIR) -c $< -o $@ $(INCLUDES) $(SILENT)
 
-$(obj_dir)/%.o:			$(src_dir)%.c | $(obj_dir) $(obj_dir)/commands $(obj_dir)/push_swap
-						@$(cc) $(CFLAGS) -I $(libft_dir) -I $(src_dir) -c $< -o $@ $(includes) $(silent)
+all: $(NAME)
+    @echo "\033[4;36m[Program is ready]\033[0m"
 
-all:					$(NAME)
-						@echo "\033[4;36m[Program is ready]\033[0m"
-
-
-$(NAME):				$(libft) $(obj)
-						@$(CC) $(obj) $(CFLAGS) -o $(NAME) $(libinclude) $(silent)
-						@echo "\033[4;36m[push_swap created]\033[0m"
-
+$(NAME): $(LIBFT) $(OBJS)
+    @$(CC) $(OBJS) $(CFLAGS) -o $(NAME) $(LIBINCLUDE) $(SILENT)
+    @echo "\033[4;36m[push_swap created]\033[0m"
 
 $(LIBFT):
-						@$(MAKE) -C $(libft_dir) all -s $(silent)
-						@echo "\033[4;36m[Libft created]\033[0m"
+    @$(MAKE) -C $(LIBFT_DIR) all -s $(SILENT)
+    @echo "\033[4;36m[Libft created]\033[0m"
 
+$(OBJ_DIR):
+    @$(MKDIR) $(OBJ_DIR) $(SILENT)
 
-$(obj_dir):
-						@$(mkdir) $(obj_dir) $(silent)
+$(OBJ_DIR)/commands:
+    @mkdir -p $(OBJ_DIR)/commands $(SILENT)
 
-$(obj_dir)/commands:
-						@mkdir -p $(obj_dir)/commands $(silent)
-
-$(obj_dir)/push_swap:
-						@mkdir -p $(obj_dir)/push_swap $(silent)
-
+$(OBJ_DIR)/push_swap:
+    @mkdir -p $(OBJ_DIR)/push_swap $(SILENT)
 
 clean:
-						@$(MAKE) -C $(libft_dir) clean $(silent)
-						@$(rm) $(obj_dir) $(silent)
-						@echo "\033[4;36m[Cleaned up]\033[0m"
+    @$(MAKE) -C $(LIBFT_DIR) clean $(SILENT)
+    @$(RM) $(OBJ_DIR) $(SILENT)
+    @echo "\033[4;36m[Cleaned up]\033[0m"
 
-fclean:					clean
-						@$(MAKE) -C $(libft_dir) fclean $(silent)
-						@$(rm) $(NAME) $(silent)
-						@echo "\033[4;36m[Fully cleaned up]\033[0m"
+fclean: clean
+    @$(MAKE) -C $(LIBFT_DIR) fclean $(SILENT)
+    @$(RM) $(NAME) $(SILENT)
+    @echo "\033[4;36m[Fully cleaned up]\033[0m"
 
-re:						fclean
-						@$(MAKE) all -s
+re: fclean
+    @$(MAKE) all -s
 
-.PHONY:					all clean fclean re libft
+.PHONY: all clean fclean re libft
