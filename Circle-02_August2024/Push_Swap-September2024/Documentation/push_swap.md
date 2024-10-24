@@ -249,7 +249,7 @@ Throughout the process, the function initializes node data and uses helper funct
 
 ##### sort_three
 
-sort_three - Sort a stack of three elements
+Sort a stack of three elements
 
 This function sorts a stack containing exactly three elements. It uses a combination of rotate and swap operations to achieve the correct order.
 
@@ -321,6 +321,68 @@ of the operation based on the provided flag.
 ### Stack Handling
 
 #### split.c
+
+##### count_words
+
+Count the number of substrings in a string separated by a delimiter
+
+This function counts the number of substrings (words) in a given string, where words are separated by a specified delimiter character.
+
+The function works as follows:
+
+1. Initializes a count variable to 0 and a boolean flag 'inside_word'.
+2. Iterates through the string:
+   - **a.** Skips any consecutive delimiter characters.
+   - **b.** When a non-delimiter character is found:
+      - If not already inside a word, increments the count and sets 'inside_word' to true.
+      - Continues until the next delimiter or end of string is reached.
+3. Returns the final count of words.
+
+**@str:** The input string to be analyzed
+**@c:** The delimiter character
+**@return:** The number of substrings (words) in the input string
+
+##### get_next_Word
+
+Extract the next substring (word) from a string separated by a delimiter
+
+This function extracts and returns the next word from a given string, where words are separated by a specified delimiter character.
+It maintains a static cursor to track the position within the string across multiple calls, allowing it to continue processing from where it left off.
+
+The function works as follows:
+
+1. Skips any leading delimiter characters at the current cursor position.
+2. Calculates the length of the next word by counting characters until a delimiter
+   or the end of the string is encountered.
+3. Allocates memory for the new word, including space for a null terminator.
+4. Copies characters from the original string into the new word until a delimiter
+   or end of string is reached.
+5. Null-terminates the new word and returns it.
+
+**@str:** The input string to be processed
+**@c:** The delimiter character separating words
+**@return:** A newly allocated string containing the next word, or NULL
+
+##### split
+
+Split a string into an array of substrings based on a delimiter
+
+This function splits the input string into an array of substrings, using the specified delimiter character.
+It handles memory allocation and cleanup in case of errors.
+
+The function works as follows:
+
+1. Counts the number of words in the input string.
+2. Allocates memory for an array to hold pointers to each substring, plus
+   one additional slot for null termination.
+3. Extracts each substring using get_next_word and stores it in the array.
+4. If any memory allocation fails during the process, it frees all previously
+   allocated memory and returns NULL.
+5. Null-terminates the array of substrings.
+
+**@str:** The input string to be split
+**@c:** The delimiter character
+**@return:** An array of strings (char**) containing the substrings, or NULL if memory allocation fails or if there are no words in the input string
 
 #### stack_init.c
 

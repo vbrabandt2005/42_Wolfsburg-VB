@@ -6,7 +6,7 @@
 #    By: vbrabandt <vbrabandt@proton.me>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/10/23 12:31:12 by vbrabandt         #+#    #+#              #
-#    Updated: 2024/10/23 12:53:03 by vbrabandt        ###   ########.fr        #
+#    Updated: 2024/10/24 16:45:10 by vbrabandt        ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,9 +26,15 @@ libft					=	$(libft_dir)/libft.a
 libinclude				=	-L $(libft_dir) -lft
 
 commands_dir			=	$(src_dir)commands/push.c \
-                        	$(src_dir)commands/rev_rotate.c \
-                            $(src_dir)commands/rotate.c \
-                            $(src_dir)commands/swap.c
+                        					$(src_dir)commands/rev_rotate.c \
+                            				$(src_dir)commands/rotate.c \
+											$(src_dir)commands/sort_stacks.c \
+											$(src_dir)commands/sort_three.c \
+                            				$(src_dir)commands/swap.c
+
+stack_dir				=	$(src_dir)stack/split.c \
+										$(src_dir)stack/stack_init.c \
+										$(src_dir)stack/stack_utils.c
 
 main_dir				= 	$(src_dir)main/split.c
 
@@ -56,7 +62,7 @@ $(NAME):				$(libft) $(obj)
 
 
 $(LIBFT):
-						@$(MAKE) -C $(LIBFT_DIR) all -s $(silent)
+						@$(MAKE) -C $(libft_dir) all -s $(silent)
 						@echo "\033[4;36m[Libft created]\033[0m"
 
 
@@ -71,13 +77,13 @@ $(obj_dir)/push_swap:
 
 
 clean:
-						@$(MAKE) -C $(LIBFT_DIR) clean $(SILENT)
-						@$(RM) $(OBJ_DIR) $(SILENT)
+						@$(MAKE) -C $(libft_dir) clean $(silent)
+						@$(rm) $(obj_dir) $(silent)
 						@echo "\033[4;36m[Cleaned up]\033[0m"
 
 fclean:					clean
-						@$(MAKE) -C $(LIBFT_DIR) fclean $(SILENT)
-						@$(RM) $(NAME) $(SILENT)
+						@$(MAKE) -C $(libft_dir) fclean $(silent)
+						@$(rm) $(NAME) $(silent)
 						@echo "\033[4;36m[Fully cleaned up]\033[0m"
 
 re:						fclean
