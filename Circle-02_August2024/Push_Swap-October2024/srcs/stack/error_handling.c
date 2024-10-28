@@ -6,22 +6,24 @@
 /*   By: vbrabandt <vbrabandt@proton.me>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 13:32:34 by vbrabandt         #+#    #+#             */
-/*   Updated: 2024/10/28 15:01:58 by vbrabandt        ###   ########.fr       */
+/*   Updated: 2024/10/28 15:54:53 by vbrabandt        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int	error_syntax(char *str_n)
+int	error_syntax(const char *str)
 {
-	if (!(*str_n == '+' || *str_n == '-' || (*str_n >= '0' && *str_n <= '9')))
+	if (*str == '+' || *str == '-')
+		str++;
+	if (*str < '0' || *str > '9')
 		return (1);
-	if ((*str_n == '+' || *str_n == '-') && !(str_n[1] >= '0'
-			&& str_n[1] <= '9'))
-		return (1);
-	while (*++str_n)
-		if (!(*str_n >= '0' && *str_n <= '9'))
+	while (*str)
+	{
+		if (*str < '0' || *str > '9')
 			return (1);
+		str++;
+	}
 	return (0);
 }
 
