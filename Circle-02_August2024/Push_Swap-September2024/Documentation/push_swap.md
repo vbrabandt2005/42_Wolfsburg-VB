@@ -311,14 +311,45 @@ This function swaps the top two nodes of both stack A and stack B. If either sta
 
 If print_mode is set to PRINT, it outputs "ss" to indicate the operation.
 
-The function calls the `swap` function for both stacks and handles the printing
-of the operation based on the provided flag.
+The function calls the `swap` function for both stacks and handles the printing of the operation based on the provided flag.
 
 **@a:** Pointer to the pointer of stack A's top node
 **@b:** Pointer to the pointer of stack B's top node
 **@print_mode:** Boolean flag to determine if "ss" should be printed
 
 ### Stack Handling
+
+#### error_handling.c
+
+##### error_syntax
+
+##### error_duplicate
+
+##### free_stack
+
+##### free_errors
+
+#### init_a_to_b.c
+
+##### current_index
+
+##### set_target_a
+
+##### cost_analysis_a
+
+##### set_cheapest
+
+##### init_nodes_a
+
+#### init_b_to_a.c
+
+##### set_target_b
+
+##### init_nodes_b
+
+#### push_swap.c
+
+##### main
 
 #### split.c
 
@@ -386,4 +417,109 @@ The function works as follows:
 
 #### stack_init.c
 
+##### atol
+
+##### append_node
+
+##### init_stack_a
+
+##### get_cheapest
+
+##### prep_for_push
+
 #### stack_utils.c
+
+##### stack_len
+
+Calculate and return the length of a stack
+
+This function traverses the stack from the given node to the end, counting the number of nodes in the process.
+It handles the case of an empty stack (NULL input) by returning 0.
+
+The function works as follows:
+
+1. Checks if the input stack is NULL, returning 0 if it is.
+2. Initializes a counter to 0.
+3. Traverses the stack using the 'next' pointer until reaching the end.
+4. Increments the counter for each node visited.
+5. Returns the final count, which represents the stack length.
+
+**@stack:** Pointer to the top node of the stack
+
+**@return:** The number of nodes in the stack, or 0 if the stack is empty
+
+##### find_last
+
+Find and return the pointer to the last node in a stack
+
+This function traverses the stack from the given node to the end, returning a pointer to the last node.
+It handles the case of an empty stack (NULL input) by returning NULL.
+
+The function works as follows:
+
+1. Checks if the input stack is NULL, returning NULL if it is.
+2. Traverses the stack using the 'next' pointer until reaching a node whose 'next' pointer is NULL (indicating the last node).
+3. Returns the pointer to the last node found.
+
+**@stack:** Pointer to the top node of the stack
+
+**@return:** Pointer to the last node in the stack, or NULL if the stack is empty
+
+##### find_min
+
+Find and return the node with the smallest number in a stack
+
+This function traverses the entire stack to find the node containing the smallest number.
+It handles the case of an empty stack (NULL input) by returning NULL.
+
+The function works as follows:
+
+1. Checks if the input stack is NULL, returning NULL if it is.
+2. Initializes 'min' with LONG_MAX to ensure any number in the stack will be smaller.
+3. Traverses the entire stack:
+   **a.** Compares each node's number with the current minimum.
+   **b.** If a smaller number is found, updates 'min' and 'min_node'.
+4. Returns the pointer to the node with the smallest number.
+
+**@stack:** Pointer to the top node of the stack
+
+**@return:** Pointer to the node with the smallest number, or NULL if the stack is empty
+
+##### find_max
+
+Find and return the node with the largest number in a stack
+
+This function traverses the entire stack to find the node containing the largest number.
+It handles the case of an empty stack (NULL input) by returning NULL.
+
+The function works as follows:
+
+1. Checks if the input stack is NULL, returning NULL if it is.
+2. Initializes 'max' with LONG_MIN to ensure any number in the stack will be larger.
+3. Traverses the entire stack:
+   **a.** Compares each node's number with the current maximum.
+   **b.** If a larger number is found, updates 'max' and 'max_node'.
+4. Returns the pointer to the node with the largest number.
+
+**@stack:** Pointer to the top node of the stack
+
+**@return:** Pointer to the node with the largest number, or NULL if the stack is empty
+
+##### stack_sorted
+
+Check if a stack is sorted in ascending order
+
+This function traverses the stack to determine if it is sorted in ascending order. An empty stack is considered sorted.
+The function checks each pair of adjacent nodes to ensure that the values are in ascending order.
+
+The function works as follows:
+
+1. Checks if the input stack is NULL, returning true if it is (empty stack is considered sorted).
+2. Traverses the stack, comparing each node with its next node:
+   **a.** If the current node's value is greater than the next node's value, returns false.
+   **b.** If not, moves to the next node.
+3. If the entire stack is traversed without finding any out-of-order pairs, returns true.
+
+**@stack:** Pointer to the top node of the stack
+
+**@return:** true if the stack is sorted in ascending order or empty, false otherwise

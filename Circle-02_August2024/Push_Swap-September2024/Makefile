@@ -6,7 +6,7 @@
 #    By: vbrabandt <vbrabandt@proton.me>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/10/23 12:31:12 by vbrabandt         #+#    #+#              #
-#    Updated: 2024/10/24 16:45:10 by vbrabandt        ###   ########.fr        #
+#    Updated: 2024/10/28 13:37:25 by vbrabandt        ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -32,7 +32,11 @@ COMMANDS_DIR = $(SRC_DIR)/commands/push.c \
                $(SRC_DIR)/commands/sort_three.c \
                $(SRC_DIR)/commands/swap.c
 
-STACK_DIR   = $(SRC_DIR)/stack/split.c \
+STACK_DIR   = $(SRC_DIR)/stack/error_handling.c \
+              $(SRC_DIR)/stack/init_a_to_b.c \
+              $(SRC_DIR)/stack/init_b_to_a.c \
+              $(SRC_DIR)/stack/push_swap.c \
+              $(SRC_DIR)/stack/split.c \
               $(SRC_DIR)/stack/stack_init.c \
               $(SRC_DIR)/stack/stack_utils.c
 

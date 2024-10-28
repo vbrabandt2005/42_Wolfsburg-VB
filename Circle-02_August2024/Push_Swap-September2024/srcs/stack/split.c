@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: vbrabandt <vbrabandt@proton.me>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/24 14:22:35 by bjbogisc          #+#    #+#             */
-/*   Updated: 2024/10/24 16:17:27 by vbrabandt        ###   ########.fr       */
+/*   Created: 2024/10/28 13:32:42 by vbrabandt         #+#    #+#             */
+/*   Updated: 2024/10/28 13:32:45 by vbrabandt        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,31 +58,31 @@ static char	*get_next_word(const char *str, char c)
 	return (word);
 }
 
-char **split(char *s, char c)
+char	**split(char *str, char c)
 {
-    int word_count;
-    char **result;
-    int i;
+	int word_count;
+	char **result;
+	int i;
 
-    i = 0;
-    word_count = count_words(s, c);
-    if (!word_count)
-        return (NULL);
-    result = malloc(sizeof(char *) * (word_count + 1));
-    if (!result)
-        return (NULL);
-    while (i < word_count)
-    {
-        result[i] = get_next_word(s, c);
-        if (!result[i])
-        {
-            while (i > 0)
-                free(result[--i]);
-            free(result);
-            return (NULL);
-        }
-        i++;
-    }
-    result[i] = NULL;
-    return (result);
+	i = 0;
+	word_count = count_words(str, c);
+	if (!word_count)
+		return (NULL);
+	result = malloc(sizeof(char *) * (word_count + 1));
+	if (!result)
+		return (NULL);
+	while (i < word_count)
+	{
+		result[i] = get_next_word(str, c);
+		if (!result[i])
+		{
+			while (i > 0)
+				free(result[--i]);
+			free(result);
+			return (NULL);
+		}
+		i++;
+	}
+	result[i] = (NULL);
+	return (result);
 }
