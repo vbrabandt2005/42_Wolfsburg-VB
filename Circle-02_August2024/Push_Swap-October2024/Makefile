@@ -6,7 +6,7 @@
 #    By: vbrabandt <vbrabandt@proton.me>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/10/23 12:31:12 by vbrabandt         #+#    #+#              #
-#    Updated: 2024/10/28 13:37:25 by vbrabandt        ###   ########.fr        #
+#    Updated: 2024/10/28 15:39:44 by vbrabandt        ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -25,7 +25,8 @@ LIBFT_DIR   = ./Libft_Modified-2024
 LIBFT       = $(LIBFT_DIR)/libft.a
 LIBINCLUDE  = -L $(LIBFT_DIR) -lft
 
-COMMANDS_DIR = $(SRC_DIR)/commands/push.c \
+COMMANDS_DIR = $(SRC_DIR)/commands/move.c \
+               $(SRC_DIR)/commands/push.c \
                $(SRC_DIR)/commands/rev_rotate.c \
                $(SRC_DIR)/commands/rotate.c \
                $(SRC_DIR)/commands/sort_stacks.c \
