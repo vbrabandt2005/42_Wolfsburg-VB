@@ -6,7 +6,7 @@
 /*   By: vbrabandt <vbrabandt@proton.me>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 13:32:42 by vbrabandt         #+#    #+#             */
-/*   Updated: 2024/10/28 13:32:45 by vbrabandt        ###   ########.fr       */
+/*   Updated: 2024/10/28 15:08:30 by vbrabandt        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,9 +60,9 @@ static char	*get_next_word(const char *str, char c)
 
 char	**split(char *str, char c)
 {
-	int word_count;
-	char **result;
-	int i;
+	int		word_count;
+	char	**result;
+	int		i;
 
 	i = 0;
 	word_count = count_words(str, c);

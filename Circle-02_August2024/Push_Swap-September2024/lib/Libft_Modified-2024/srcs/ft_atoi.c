@@ -6,7 +6,7 @@
 /*   By: vbrabandt <vbrabandt@proton.me>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/10 10:54:43 by vbraband          #+#    #+#             */
-/*   Updated: 2024/07/10 04:01:08 by vbrabandt        ###   ########.fr       */
+/*   Updated: 2024/10/28 14:53:48 by vbrabandt        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,7 @@
 
 static int	check_space(int c)
 {
-	if ((c > 8 && c < 14)
-		|| (c == 32))
+	if ((c > 8 && c < 14) || (c == 32))
 		return (8192);
 	return (0);
 }
@@ -56,7 +55,7 @@ int	ft_atoi(char const *str)
 	return (n);
 }
 
-/* 
+/*
 int	main(void)
 {
 	printf("%d", ft_atoi("69420"));

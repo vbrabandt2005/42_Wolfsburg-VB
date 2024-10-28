@@ -6,7 +6,7 @@
 /*   By: vbrabandt <vbrabandt@proton.me>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 13:32:50 by vbrabandt         #+#    #+#             */
-/*   Updated: 2024/10/28 13:32:52 by vbrabandt        ###   ########.fr       */
+/*   Updated: 2024/10/28 15:09:33 by vbrabandt        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,6 @@ static void	append_node(t_stack_node **stack, int n)
 	node->next = NULL;
 	node->num = n;
 	node->cheapest = 0;
-
 	if (!(*stack))
 	{
 		*stack = node;
