@@ -6,7 +6,7 @@
 /*   By: vbrabandt <vbrabandt@proton.me>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/23 12:46:41 by vbrabandt         #+#    #+#             */
-/*   Updated: 2024/10/28 15:05:54 by vbrabandt        ###   ########.fr       */
+/*   Updated: 2024/10/29 15:32:54 by vbrabandt        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,11 +38,24 @@ typedef struct s_stack_node
 }						t_stack_node;
 
 /* --- Error Handling --- */
+int	error_syntax(const char *str);
+int	error_duplicate(t_stack_node *a, int n);
+void	free_stack(t_stack_node **stack);
+void	free_errors(t_stack_node **a);
+
 
 /* --- Stack Inititation --- */
 char					**split(char *str, char c);
+void					init_stack_a(t_stack_node **a, char **argv);
 
 /* --- Node Initiation --- */
+t_stack_node			*get_cheapest(t_stack_node *stack);
+void					init_nodes_a(t_stack_node *a, t_stack_node *b);
+void					init_nodes_b(t_stack_node *a, t_stack_node *b);
+void					current_index(t_stack_node *stack);
+void					set_cheapest(t_stack_node *stack);
+void					prep_for_push(t_stack_node **stack,
+							t_stack_node *top_node, char stack_name);
 
 /* --- Stack Utils --- */
 int						stack_len(t_stack_node *stack);
@@ -67,6 +80,11 @@ void					pb(t_stack_node **a, t_stack_node **b, bool print_mode);
 void					move_a_to_b(t_stack_node **a, t_stack_node **b);
 void					move_b_to_a(t_stack_node **a, t_stack_node **b);
 void					min_on_top(t_stack_node **a);
+
+void					rev_rotate_both(t_stack_node **a, t_stack_node **b,
+							t_stack_node *cheapest_node);
+void					rotate_both(t_stack_node **a, t_stack_node **b,
+							t_stack_node *cheapest_node);
 
 /* --- Algorithm --- */
 void					sort_three(t_stack_node **a);

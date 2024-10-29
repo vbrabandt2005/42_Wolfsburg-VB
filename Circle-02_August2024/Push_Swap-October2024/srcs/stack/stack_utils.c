@@ -6,7 +6,7 @@
 /*   By: vbrabandt <vbrabandt@proton.me>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 13:33:00 by vbrabandt         #+#    #+#             */
-/*   Updated: 2024/10/28 13:33:02 by vbrabandt        ###   ########.fr       */
+/*   Updated: 2024/10/29 14:49:25 by vbrabandt        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ int	stack_len(t_stack_node *stack)
 	int	count;
 
 	if (!stack)
-		return (NULL);
+		return (0);
 	count = 0;
 	while (stack)
 	{
