@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   init_a_to_b.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vbrabandt <vbrabandt@proton.me>            +#+  +:+       +#+        */
+/*   By: bjbogisc <bjbogisc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/28 13:32:30 by vbrabandt         #+#    #+#             */
-/*   Updated: 2024/10/29 14:46:35 by vbrabandt        ###   ########.fr       */
+/*   Created: 2024/10/28 15:40:37 by bjbogisc          #+#    #+#             */
+/*   Updated: 2024/10/29 13:42:27 by bjbogisc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,7 +67,6 @@ static void	cost_analysis(t_stack_node *a, t_stack_node *b)
 
 	len_a = stack_len(a);
 	len_b = stack_len(b);
-
 	while (a)
 	{
 		a->push_cost = a->index;

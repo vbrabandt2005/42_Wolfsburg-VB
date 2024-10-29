@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   stack_utils.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vbrabandt <vbrabandt@proton.me>            +#+  +:+       +#+        */
+/*   By: bjbogisc <bjbogisc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/28 13:33:00 by vbrabandt         #+#    #+#             */
-/*   Updated: 2024/10/29 14:49:25 by vbrabandt        ###   ########.fr       */
+/*   Created: 2024/10/22 11:56:16 by bjbogisc          #+#    #+#             */
+/*   Updated: 2024/10/29 15:13:55 by bjbogisc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,7 +79,7 @@ t_stack_node	*find_max(t_stack_node *stack)
 bool	stack_sorted(t_stack_node *stack)
 {
 	if (!stack)
-		return (true);
+		return (1);
 	while (stack->next)
 	{
 		if (stack->num > stack->next->num)

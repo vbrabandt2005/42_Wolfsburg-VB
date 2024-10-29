@@ -2,11 +2,14 @@
 /*                                                                            */
 /*                                                        :::      ::::::::   */
 /*   rotate.c                                           :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: vbrabandt <vbrabandt@proton.me>            +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/28 14:52:14 by vbrabandt         #+#    #+#             */
-/*   Updated: 2024/10/28 14:52:14 by vbrabandt        ###   ########.fr       */
+/*                                                    +:+ +:+        
+	+:+     */
+/*   By: bjbogisc <bjbogisc@student.42.fr>          +#+  +:+      
+	+#+        */
+/*                                                +#+#+#+#+#+  
+	+#+           */
+/*   Created: 2024/10/22 11:56:27 by bjbogisc          #+#    #+#             */
+/*   Updated: 2024/10/22 11:56:27 by bjbogisc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,14 +32,14 @@ static void	rotate(t_stack_node **stack)
 void	ra(t_stack_node **a, bool print_mode)
 {
 	rotate(a);
-	if (print_mode == PRINT)
+	if (!print_mode)
 		ft_printf("ra\n");
 }
 
 void	rb(t_stack_node **b, bool print_mode)
 {
 	rotate(b);
-	if (print_mode == PRINT)
+	if (!print_mode)
 		ft_printf("rb\n");
 }
 
@@ -44,6 +47,6 @@ void	rr(t_stack_node **a, t_stack_node **b, bool print_mode)
 {
 	rotate(a);
 	rotate(b);
-	if (print_mode == PRINT)
+	if (!print_mode)
 		ft_printf("rr\n");
 }

@@ -2,11 +2,14 @@
 /*                                                                            */
 /*                                                        :::      ::::::::   */
 /*   swap.c                                             :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: vbrabandt <vbrabandt@proton.me>            +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/23 15:18:26 by vbrabandt         #+#    #+#             */
-/*   Updated: 2024/10/23 15:18:26 by vbrabandt        ###   ########.fr       */
+/*                                                    +:+ +:+        
+	+:+     */
+/*   By: bjbogisc <bjbogisc@student.42.fr>          +#+  +:+      
+	+#+        */
+/*                                                +#+#+#+#+#+  
+	+#+           */
+/*   Created: 2024/10/22 11:56:20 by bjbogisc          #+#    #+#             */
+/*   Updated: 2024/10/22 11:56:20 by bjbogisc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,14 +31,14 @@ static void	swap(t_stack_node **head)
 void	sa(t_stack_node **a, bool print_mode)
 {
 	swap(a);
-	if (print_mode == PRINT)
+	if (!print_mode)
 		ft_printf("sa\n");
 }
 
 void	sb(t_stack_node **b, bool print_mode)
 {
 	swap(b);
-	if (print_mode == PRINT)
+	if (!print_mode)
 		ft_printf("sb\n");
 }
 
@@ -43,6 +46,6 @@ void	ss(t_stack_node **a, t_stack_node **b, bool print_mode)
 {
 	swap(a);
 	swap(b);
-	if (print_mode == PRINT)
+	if (!print_mode)
 		ft_printf("ss\n");
 }

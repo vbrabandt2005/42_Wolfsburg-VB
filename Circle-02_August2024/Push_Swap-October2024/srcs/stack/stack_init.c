@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   stack_init.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vbrabandt <vbrabandt@proton.me>            +#+  +:+       +#+        */
+/*   By: bjbogisc <bjbogisc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/28 13:32:50 by vbrabandt         #+#    #+#             */
-/*   Updated: 2024/10/29 15:36:41 by vbrabandt        ###   ########.fr       */
+/*   Created: 2024/10/22 13:52:27 by bjbogisc          #+#    #+#             */
+/*   Updated: 2024/10/29 15:56:33 by bjbogisc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,7 +69,7 @@ void	init_stack_a(t_stack_node **a, char **argv)
 		if (error_syntax(argv[i]))
 			free_errors(a);
 		n = ft_atol(argv[i]);
-		if (n < INT_MIN || n > INT_MAX)
+		if (n > INT_MAX || n < INT_MIN)
 			free_errors(a);
 		if (error_duplicate(*a, (int)n))
 			free_errors(a);
@@ -99,16 +99,16 @@ void	prep_for_push(t_stack_node **stack, t_stack_node *top_node,
 		if (stack_name == 'a')
 		{
 			if (top_node->above_median)
-				ra(stack, true);
+				ra(stack, false);
 			else
-				rra(stack, true);
+				rra(stack, false);
 		}
 		else if (stack_name == 'b')
 		{
 			if (top_node->above_median)
-				rb(stack, true);
+				rb(stack, false);
 			else
-				rrb(stack, true);
+				rrb(stack, false);
 		}
 	}
 }

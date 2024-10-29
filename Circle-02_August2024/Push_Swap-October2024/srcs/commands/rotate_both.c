@@ -1,26 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   sort_three.c                                       :+:      :+:    :+:   */
+/*   rotate_both.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bjbogisc <bjbogisc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/22 11:56:24 by bjbogisc          #+#    #+#             */
-/*   Updated: 2024/10/29 11:04:12 by bjbogisc         ###   ########.fr       */
+/*   Created: 2024/10/28 15:44:40 by bjbogisc          #+#    #+#             */
+/*   Updated: 2024/10/29 13:39:28 by bjbogisc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	sort_three(t_stack_node **a)
+void	rotate_both(t_stack_node **a, t_stack_node **b,
+		t_stack_node *cheapest_node)
 {
-	t_stack_node	*biggest_node;
+	while (*b != cheapest_node->target_node && *a != cheapest_node)
+		rr(a, b, false);
+	current_index(*a);
+	current_index(*b);
+}
 
-	biggest_node = find_max(*a);
-	if (biggest_node == *a)
-		ra(a, false);
-	else if ((*a)->next == biggest_node)
-		rra(a, false);
-	if ((*a)->num > (*a)->next->num)
-		sa(a, false);
+void	rev_rotate_both(t_stack_node **a, t_stack_node **b,
+		t_stack_node *cheapest_node)
+{
+	while (*b != cheapest_node->target_node && *a != cheapest_node)
+		rrr(a, b, false);
+	current_index(*a);
+	current_index(*b);
 }

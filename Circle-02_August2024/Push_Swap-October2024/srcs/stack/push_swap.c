@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vbrabandt <vbrabandt@proton.me>            +#+  +:+       +#+        */
+/*   By: bjbogisc <bjbogisc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/28 13:32:19 by vbrabandt         #+#    #+#             */
-/*   Updated: 2024/10/29 14:48:42 by vbrabandt        ###   ########.fr       */
+/*   Created: 2024/10/28 15:40:31 by bjbogisc          #+#    #+#             */
+/*   Updated: 2024/10/29 12:12:03 by bjbogisc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,14 +23,11 @@ int	main(int argc, char **argv)
 		return (1);
 	else if (argc == 2)
 		argv = split(argv[1], ' ');
-	if (argc == 2)
-		init_stack_a(&a, argv);
-	else
-		init_stack_a(&a, argv + 1);
+	init_stack_a(&a, argv + 1);
 	if (!stack_sorted(a))
 	{
 		if (stack_len(a) == 2)
-			sa(&a, true);
+			sa(&a, false);
 		else if (stack_len(a) == 3)
 			sort_three(&a);
 		else

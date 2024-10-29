@@ -145,7 +145,7 @@ This function moves the top node of the stack to the bottom position, effectivel
 It handles the following cases:
 
 **1.** Empty stack or single node stack (no operation)
-*2.* Stack with multiple nodes (top node becomes bottom)
+**2.** Stack with multiple nodes (top node becomes bottom)
 
 The function maintains the integrity of the stack by properly updating next and prev pointers of affected nodes.
 
