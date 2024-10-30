@@ -1,15 +1,3 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   stack_init.c                                       :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: bjbogisc <bjbogisc@student.42.fr>          +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/22 13:52:27 by bjbogisc          #+#    #+#             */
-/*   Updated: 2024/10/29 15:56:33 by bjbogisc         ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
 #include "push_swap.h"
 
 static long	ft_atol(const char *str)
@@ -18,8 +6,9 @@ static long	ft_atol(const char *str)
 	int		sign;
 
 	result = 0;
-	sign = 1;
-	while ((*str >= 9 && *str <= 13) || *str == 32)
+	sign = 1; 
+	while (*str == ' ' || *str == '\t' || *str == '\n' || \
+			*str == '\r' || *str == '\f' || *str == '\v')
 		str++;
 	if (*str == '-' || *str == '+')
 	{
@@ -29,7 +18,7 @@ static long	ft_atol(const char *str)
 	}
 	while (ft_isdigit(*str))
 		result = result * 10 + (*str++ - '0');
-	return (sign * result);
+	return (result * sign);
 }
 
 static void	append_node(t_stack_node **stack, int n)
@@ -72,7 +61,7 @@ void	init_stack_a(t_stack_node **a, char **argv)
 		if (n > INT_MAX || n < INT_MIN)
 			free_errors(a);
 		if (error_duplicate(*a, (int)n))
-			free_errors(a);
+			free_errors(a); 
 		append_node(a, (int)n);
 		i++;
 	}
@@ -91,10 +80,11 @@ t_stack_node	*get_cheapest(t_stack_node *stack)
 	return (NULL);
 }
 
-void	prep_for_push(t_stack_node **stack, t_stack_node *top_node,
-		char stack_name)
+void	prep_for_push(t_stack_node **stack,
+						t_stack_node *top_node,
+						char stack_name)
 {
-	if (*stack != top_node)
+	while (*stack != top_node)
 	{
 		if (stack_name == 'a')
 		{
@@ -109,6 +99,6 @@ void	prep_for_push(t_stack_node **stack, t_stack_node *top_node,
 				rb(stack, false);
 			else
 				rrb(stack, false);
-		}
+		}	
 	}
 }
