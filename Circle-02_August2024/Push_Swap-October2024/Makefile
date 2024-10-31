@@ -6,7 +6,7 @@
 #    By: vbrabandt <vbrabandt@proton.me>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/10/23 12:31:12 by vbrabandt         #+#    #+#              #
-#    Updated: 2024/10/31 16:48:07 by vbrabandt        ###   ########.fr        #
+#    Updated: 2024/10/31 17:00:39 by vbrabandt        ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -50,7 +50,7 @@ DEPS        = $(OBJS:%.o=%.d)
 SILENT      = > /dev/null 2>&1
 
 $(OBJ_DIR)/%.o: $(SRC_DIR)/%.c | $(OBJ_DIR) $(OBJ_DIR)/commands $(OBJ_DIR)/stack
-	$(CC) $(CFLAGS) -I $(LIBFT_DIR) -I $(SRC_DIR) -c $< -o $@ $(INCLUDES)
+	@$(CC) $(CFLAGS) -I $(LIBFT_DIR) -I $(SRC_DIR) -c $< -o $@ $(INCLUDES) $(SILENT)
 	
 all: $(NAME)
 	@echo "\033[4;36m[Program is ready]\033[0m"
