@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   stack_init.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: vbrabandt <vbrabandt@proton.me>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/10/31 16:44:48 by vbrabandt         #+#    #+#             */
+/*   Updated: 2024/10/31 16:47:23 by vbrabandt        ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "push_swap.h"
 
 static long	ft_atol(const char *str)
@@ -6,9 +18,8 @@ static long	ft_atol(const char *str)
 	int		sign;
 
 	result = 0;
-	sign = 1; 
-	while (*str == ' ' || *str == '\t' || *str == '\n' || \
-			*str == '\r' || *str == '\f' || *str == '\v')
+	sign = 1;
+	while ((*str >= 9 && *str <= 13) || *str == 32)
 		str++;
 	if (*str == '-' || *str == '+')
 	{
@@ -56,12 +67,12 @@ void	init_stack_a(t_stack_node **a, char **argv)
 	while (argv[i])
 	{
 		if (error_syntax(argv[i]))
-			free_errors(a);
+			free_errors(a, argv);
 		n = ft_atol(argv[i]);
 		if (n > INT_MAX || n < INT_MIN)
-			free_errors(a);
+			free_errors(a, argv);
 		if (error_duplicate(*a, (int)n))
-			free_errors(a); 
+			free_errors(a, argv);
 		append_node(a, (int)n);
 		i++;
 	}
@@ -80,9 +91,8 @@ t_stack_node	*get_cheapest(t_stack_node *stack)
 	return (NULL);
 }
 
-void	prep_for_push(t_stack_node **stack,
-						t_stack_node *top_node,
-						char stack_name)
+void	prep_for_push(t_stack_node **stack, t_stack_node *top_node,
+		char stack_name)
 {
 	while (*stack != top_node)
 	{
@@ -99,6 +109,6 @@ void	prep_for_push(t_stack_node **stack,
 				rb(stack, false);
 			else
 				rrb(stack, false);
-		}	
+		}
 	}
 }

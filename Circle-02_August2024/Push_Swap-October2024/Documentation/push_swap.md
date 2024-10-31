@@ -1,5 +1,70 @@
 # Push_Swap
 
+## Stack Sorting Algorithm Implementation
+
+This program implements a stack sorting algorithm known as the Turk Algorithm.
+It efficiently sorts a stack of integers using a limited set of operations.
+The program processes input, initializes stacks, performs sorting operations
+and outputs the sequence of operations used to sort the stack.
+
+The main components and processes of the program are as follows:
+
+### 1. Input Processing and Stack Initialization
+
+   The program begins by processing command-line arguments to initialize stack A:
+   **a.** For a single string input, it splits the string into individual numbers.
+   **b.** For multiple arguments, it directly uses the provided numbers.
+   **c.** It performs error checking for invalid inputs, duplicates, and out-of-range values.
+   **d.** The numbers are converted to integers and added to stack A.
+
+### 2. Stack Sorting
+
+   The sorting process depends on the number of elements in stack A:
+   **a.** For 2 elements: A simple swap operation (`sa`) is performed if needed.
+   **b.** For 3 elements: A specific 3-number sorting algorithm is applied.
+   **c.** For more than 3 elements: The Turk Algorithm is employed.
+
+### 3. Turk Algorithm Implementation
+
+   The Turk Algorithm efficiently sorts larger stacks using the following steps:
+   **a.** Calculate the optimal chunk size based on the number of elements.
+   **b.** Divide the numbers in stack A into chunks.
+   **c.** Push numbers from each chunk to stack B in a specific order.
+   **d.** Rotate numbers in stack A to access different chunks.
+   **e.** Once all numbers are in stack B, push them back to stack A in sorted order.
+
+### 4. Stack Operations
+
+   The program uses a set of basic stack operations to perform the sorting (explained later in more detail):
+
+   **sa:** Swap the top two elements of stack A
+   **sb:** Swap the top two elements of stack B
+   **ss:** Perform sa and sb simultaneously
+   **pa:** Push the top element from stack B to stack A
+   **pb:** Push the top element from stack A to stack B
+   **ra:** Rotate stack A (move top element to bottom)
+   **rb:** Rotate stack B (move top element to bottom)
+   **rr:** Perform ra and rb simultaneously
+   **rra:** Reverse rotate stack A (move bottom element to top)
+   **rrb:** Reverse rotate stack B (move bottom element to top)
+   **rrr:** Perform rra and rrb simultaneously
+
+### 5. Output
+
+   The program outputs the sequence of operations used to sort the stack. These operations
+   are printed to the standard output, one operation per line.
+
+### 6. Memory Management
+
+   Throughout the process, the program manages memory allocation and deallocation:
+
+  **a.** Freeing split input strings after use
+  **b.** Properly freeing stack nodes when they are no longer needed
+  **c.** Ensuring all allocated memory is freed before the program exits
+
+>Note: The efficiency of the sorting process depends on the implementation details of the Turk Algorithm,
+>which optimizes the number of operations based on the input size and values.
+
 ## Functions used in this Project
 
 ### Command Operations
@@ -55,8 +120,8 @@ Push the top of 'a' on top of 'b' and print the operation
 
 This function moves the top node from stack A to the top of stack B. If print_mode is set to PRINT, it outputs "pb" to indicate the operation.
 
-**@a:** Pointer to the pointer of stack A's top node
 **@b:** Pointer to the pointer of stack B's top node
+**@a:** Pointer to the pointer of stack A's top node
 **@print_mode:** Boolean flag to determine if "pb" should be printed
 
 #### rev_rotate.c
@@ -144,8 +209,8 @@ This function moves the top node of the stack to the bottom position, effectivel
 
 It handles the following cases:
 
-**1.** Empty stack or single node stack (no operation)
-**2.** Stack with multiple nodes (top node becomes bottom)
+*1.* Empty stack or single node stack (no operation)
+*2.* Stack with multiple nodes (top node becomes bottom)
 
 The function maintains the integrity of the stack by properly updating next and prev pointers of affected nodes.
 
@@ -365,22 +430,24 @@ The function works as follows:
 
 ##### free_stack
 
-Free all nodes in a stack
+Free all allocated memory and exit with an error message
 
-This function deallocates all memory associated with the nodes in the given stack.
-It iterates through the stack, freeing each node and updating the stack pointer to the next node until the entire stack is deallocated.
+This function deallocates all memory associated with the stack and the argument array,
+prints an error message and exits the program.
 
 The function works as follows:
 
-1. While the stack is not empty:
-   **a.** Store the next node in a temporary variable.
-   **b.** Free the current node.
-   **c.** Update the stack pointer to the next node.
-2. After the loop, the stack pointer will be NULL, indicating an empty stack.
+1. Frees the stack using the free_stack function.
+2. If the argv pointer is not pointing to &argv[1] (indicating dynamically allocated arguments):
+   **a.** Iterates through the argv array, freeing each string.
+   **b.** Frees the argv array itself.
+3. Prints "Error\n" to the standard output.
+4. Exits the program with status code 1.
 
-**@stack:** Pointer to the pointer of the top node of the stack
+**@a:** Pointer to the pointer of the top node of the stack
+**@argv:** The argument array to be freed if dynamically allocated
 
->Note: This function modifies the original stack pointer to NULL after freeing all nodes.
+>Note: This function does not return as it calls exit(1) to terminate the program.
 
 ##### free_errors
 
@@ -545,27 +612,55 @@ The function works as follows:
 
 #### push_swap.c
 
+##### handle_input
+
+Process command-line arguments and initialize stack A
+
+This function handles the input processing for the stack sorting program.
+It differentiates between single-string and multi-argument inputs,
+initializes stack A accordingly, and manages memory allocation.
+
+The function works as follows:
+
+1. Check if the input is a single string:
+   **a.** Split the input string into an array of strings.
+   **b.** If splitting fails, exit the program.
+   **c.** Initialize stack A with the split strings.
+2. If multiple arguments are provided:
+   **a.** Initialize stack A with `argv + 1` (skipping the program name).
+3. If `split_argv` was created (for single string input):
+   **a.** Free each individual string in `split_argv`.
+   **b.** Free the `split_argv` array itself.
+
+**@a:** Pointer to the pointer of the top node of stack A
+**@argc:** Number of command-line arguments
+**@argv:** Array of command-line argument strings
+
+>Note: This function modifies stack A and may allocate memory for split arguments, which it then frees before returning.
+
 ##### main
 
 Entry point of the program for stack sorting
 
-This function initializes and sorts a stack of integers. It handles different input formats,
-(single string or multiple arguments) and applies appropriate sorting algorithms based on the number of elements.
+This function initializes and sorts a stack of integers.
+It handles different input formats and applies appropriate sorting algorithms based on the number of elements.
 
 The function works as follows:
 
-1. Check for valid input (at least one argument).
-2. If a single argument is provided, split it into an array of strings.
-3. Initialize stack A with the provided numbers.
-4. If stack A is not already sorted:
-   a. For 2 elements: perform a single swap if needed.
-   b. For 3 elements: use a specialized sort_three function.
-   c. For more elements: use a general sort_stacks function.
-5. Free the memory allocated for stack A.
+1. Initialize two stacks: 'a' and 'b' to NULL.
+2. Check for valid input (at least one non-empty argument).
+3. Process the input and initialize stack 'a' using handle_input function.
+4. If stack 'a' is not already sorted:
+   **a.** For 2 elements: perform a single swap (sa) if needed.
+   **b.** For 3 elements: use a specialized sort_three function.
+   **c.** For more elements: use a general sort_stacks function.
+5. Free the memory allocated for both stack 'a' and 'b'.
 
 **@argc:** Number of command-line arguments
 **@argv:** Array of command-line argument strings
-**@return:** 0 on successful execution, 1 if no arguments are provided
+**@return:** 0 on successful execution, 1 if no valid arguments are provided
+
+>Note: The function uses two stacks ('a' and 'b') for sorting operations.
 
 #### split.c
 
@@ -595,6 +690,7 @@ Extract the next substring (word) from a string separated by a delimiter
 
 This function extracts and returns the next word from a given string, where words are separated by a specified delimiter character.
 It maintains a static cursor to track the position within the string across multiple calls, allowing it to continue processing from where it left off.
+If there are no more words to extract, the function resets its internal position to 0 and returns NULL.
 
 The function works as follows:
 
@@ -608,7 +704,10 @@ The function works as follows:
 
 **@str:** The input string to be processed
 **@c:** The delimiter character separating words
-**@return:** A newly allocated string containing the next word, or NULL
+**@return:** A newly allocated string containing the next word, or NULL if there are no more words,
+or if memory allocation fails.
+
+>Note: The Function uses a static variable to maintain state between calls.
 
 ##### split
 
