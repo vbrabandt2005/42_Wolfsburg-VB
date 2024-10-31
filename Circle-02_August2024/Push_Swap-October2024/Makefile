@@ -6,7 +6,7 @@
 #    By: vbrabandt <vbrabandt@proton.me>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/10/23 12:31:12 by vbrabandt         #+#    #+#              #
-#    Updated: 2024/10/31 17:00:39 by vbrabandt        ###   ########.fr        #
+#    Updated: 2024/10/31 18:16:26 by vbrabandt        ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -84,5 +84,23 @@ fclean: clean
 
 re: fclean
 	@$(MAKE) all -s
+
+build:
+	@$(MAKE) all -s
+	@$(MKDIR) Visualizer/build
+	@cd Visualizer/build && cmake .. $(SILENT) && make $(SILENT)
+	@echo "\033[1;36m[Visualizer built]\033[0m"
+	@echo "\033[0;36mTo Run Visualizer: make visualize\033[0m"
+
+visualize:
+	@if [ -f "./Visualizer/build/bin/visualizer" ]; then \
+        ./Visualizer/build/bin/visualizer; \
+	else \
+		echo "\033[1;31mVisualizer is not built or doesn't exist\033[0m"; \
+    fi
+
+fuck: fclean
+	@$(RM) Visualizer/build imgui.ini
+	@echo "\033[4;36m[Fully fully cleaned up]\033[0m"
 
 .PHONY: all clean fclean re libft
