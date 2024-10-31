@@ -1,55 +1,6 @@
-# Push Swap Visualizer
+# Push_Swap Visualizer-Forked
 
-This project is a visualizer for the **"PUSH_SWAP"** 42 School Project.
-
-**Push Swap** is a program that takes as argument a space separated list of numbers and outputs a list of commands that can be used to sort them.
-
-You can read the subject [here](https://github.com/Binary-Hackers/42_Subjects/blob/master/00_Projects/02_Algorithmic/push_swap.pdf).
-
-## Install
-
-- Clone the `push_swap_visualizer` repository into the directory where your `push_swap` project is located:
-
-```bash
-git clone https://github.com/o-reo/push_swap_visualizer.git
-```
-
-This project uses C++17, cmake, SFML and ImGui.
-
-- Install required packages (if not already installed)
-  For Debian-based systems, you can install the necessary packages using the following commands:
-
-```bash
-sudo apt-get update
-sudo apt-get install cmake
-sudo apt-get install g++
-sudo apt-get install clang
-sudo apt-get install libgl1-mesa-dev libglu1-mesa-dev
-sudo apt-get install libx11-dev libxrandr-dev
-sudo apt-get install libudev-dev
-sudo apt-get install libfreetype-dev
-```
-
-- Navigate to the `push_swap_visualizer` directory, create `build` directory, and navigate into the build directory:
-
-```bash
-cd push_swap_visualizer
-mkdir build
-cd build
-```
-
-- Generate the build files using CMake and compile the visualizer:
-
-```bash
-cmake ..
-make
-```
-
-- Run the visualizer:
-
-```bash
-./bin/visualizer
-```
+This is a Fork of [Emmanuel Ruaud (o-reo)'s ](https://github.com/o-reo) [Push_Swap_Visualizer](https://github.com/o-reo/push_swap_visualizer) intended for incorperated testing and demonstration of Push_Swap.
 
 ## Usage
 
@@ -68,4 +19,27 @@ make
   - **Pause** and go **Step** by step to see the details of your algorithm.
   - **Load** to restart the animation
 
-![](https://i.imgur.com/zqcsZfY.png)
+![Push_Swap_Visualizer](https://i.imgur.com/zqcsZfY.png)
+
+## Requirements
+
+This project uses C++17, cmake, SFML and ImGui.
+
+- Install required packages (if not already installed)
+  For Debian-based systems, you can install the necessary packages using the following commands:
+
+```bash
+sudo apt-get update
+sudo apt-get install cmake
+sudo apt-get install g++
+sudo apt-get install clang
+sudo apt-get install libgl1-mesa-dev libglu1-mesa-dev
+sudo apt-get install libx11-dev libxrandr-dev
+sudo apt-get install libudev-dev
+sudo apt-get install libfreetype-dev
+```
+
+## License
+
+[Emmanuel Ruaud (o-reo)'s ](https://github.com/o-reo) [Push_Swap_Visualizer](https://github.com/o-reo/push_swap_visualizer) was originally licensed as GPL-3.0, as my 42_Wolfsburg-VB is also GPL-3.0, that means these two projects should be compatible.
+
