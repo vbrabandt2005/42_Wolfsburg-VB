@@ -58,9 +58,9 @@ The main components and processes of the program are as follows:
 
    Throughout the process, the program manages memory allocation and deallocation:
 
-  **a.** Freeing split input strings after use
-  **b.** Properly freeing stack nodes when they are no longer needed
-  **c.** Ensuring all allocated memory is freed before the program exits
+   **a.** Freeing split input strings after use
+   **b.** Properly freeing stack nodes when they are no longer needed
+   **c.** Ensuring all allocated memory is freed before the program exits
 
 >Note: The efficiency of the sorting process depends on the implementation details of the Turk Algorithm,
 >which optimizes the number of operations based on the input size and values.
