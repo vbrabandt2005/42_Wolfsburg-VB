@@ -19,12 +19,9 @@ and outputs the sequence of operations used to sort the stack.
 
 ### Inspiration
 
-<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/wRvipSG4Mmk?si=NnQvvr26sYnZ41yH" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
 - [Thuggonaut's Push_Swap](https://github.com/Thuggonaut/42IC_Ring02_Push_swap) and her [wonderful tutorial video](https://youtu.be/wRvipSG4Mmk?si=JVKh-_dEabhi_rIu)
 - [A. Yigit Ogun's blog post on Push_Swap and the mechanical turk algorithm](https://medium.com/@ayogun/push-swap-c1f5d2d41e97)
 
 ### Visualizer
 
 - [Emmanuel Ruaud (o-reo)'s ](https://github.com/o-reo) [Push_Swap_Visualizer](https://github.com/o-reo/push_swap_visualizer)
-- 
