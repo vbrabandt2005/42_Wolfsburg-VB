@@ -22,17 +22,17 @@ Repository/Archive of everything I've done at [42WOB](https://42wolfsburg.de/).
 - [Libft_Original](https://github.com/vbrabandt2005/42_Wolfsburg-VB/tree/main/Circle-00_June2024/Libft_Original-2024) (100% - June 2024)
 - [Libft_Modified](https://github.com/vbrabandt2005/42_Wolfsburg-VB/tree/main/Circle-00_June2024/Libft_Modified-2024) (Unrelated)
 
-### [Milestone/Circle. 1](https://github.com/vbrabandt2005/42_Wolfsburg-VB/tree/main/Circle-01_July-August2024)
+### [Milestone/Circle. 1](https://github.com/vbrabandt2005/42_Wolfsburg-VB/tree/main/Circle-01_July2024)
 
-- [Born2BeRoot](https://github.com/vbrabandt2005/42_Wolfsburg-VB/tree/main/Circle-01_July-August2024/Born2BeRoot-2024) (Documentation only - 100% - July 2024)
-- [ft_printf](https://github.com/vbrabandt2005/42_Wolfsburg-VB/tree/main/Circle-01_July-August2024/ft_printf-2024) (100% - July 2024)
-- [Get_Next_Line](https://github.com/vbrabandt2005/42_Wolfsburg-VB/tree/main/Circle-01_July-August2024/Get_Next_Line-2024) (125% - July-August 2024)
+- [Born2BeRoot](https://github.com/vbrabandt2005/42_Wolfsburg-VB/tree/main/Circle-01_July2024/Born2BeRoot-2024) (Documentation only - 100% - July 2024)
+- [ft_printf](https://github.com/vbrabandt2005/42_Wolfsburg-VB/tree/main/Circle-01_July2024/ft_printf-2024) (100% - July 2024)
+- [Get_Next_Line](https://github.com/vbrabandt2005/42_Wolfsburg-VB/tree/main/Circle-01_July2024/Get_Next_Line-2024) (125% - July-August 2024)
 
 ### Milestone/Circle. 2
 
 - [So_Long](https://github.com/vbrabandt2005/42_Wolfsburg-VB/tree/main/Circle-02_August2024/So_Long-August2024) (125% - August-September 2024)
 - [MiniTalk](https://github.com/vbrabandt2005/42_Wolfsburg-VB/tree/main/Circle-02_August2024/MiniTalk-October2024) (115% - October 2024)
-- [Push_Swap](https://github.com/vbrabandt2005/42_Wolfsburg-VB/tree/main/Circle-02_August2024/Push_Swap-October2024) (WIP - October 2024)
+- [Push_Swap](https://github.com/vbrabandt2005/42_Wolfsburg-VB/tree/main/Circle-02_August2024/Push_Swap-October2024) (October 2024)
 
 ### Milestone/Circle. 3
 
