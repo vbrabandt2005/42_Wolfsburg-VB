@@ -6,7 +6,7 @@
 /*   By: vbrabandt <vbrabandt@proton.me>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 16:44:48 by vbrabandt         #+#    #+#             */
-/*   Updated: 2024/10/31 16:47:23 by vbrabandt        ###   ########.fr       */
+/*   Updated: 2024/11/01 12:02:18 by vbrabandt        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,7 +58,7 @@ static void	append_node(t_stack_node **stack, int n)
 	}
 }
 
-void	init_stack_a(t_stack_node **a, char **argv)
+void	init_stack_a(t_stack_node **a, char **argv, bool is_split)
 {
 	long	n;
 	int		i;
@@ -67,12 +67,12 @@ void	init_stack_a(t_stack_node **a, char **argv)
 	while (argv[i])
 	{
 		if (error_syntax(argv[i]))
-			free_errors(a, argv);
+			free_errors(a, argv, is_split);
 		n = ft_atol(argv[i]);
 		if (n > INT_MAX || n < INT_MIN)
-			free_errors(a, argv);
+			free_errors(a, argv, is_split);
 		if (error_duplicate(*a, (int)n))
-			free_errors(a, argv);
+			free_errors(a, argv, is_split);
 		append_node(a, (int)n);
 		i++;
 	}

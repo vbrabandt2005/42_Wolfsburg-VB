@@ -6,7 +6,7 @@
 /*   By: vbrabandt <vbrabandt@proton.me>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/23 12:46:41 by vbrabandt         #+#    #+#             */
-/*   Updated: 2024/10/31 16:49:29 by vbrabandt        ###   ########.fr       */
+/*   Updated: 2024/11/01 12:04:10 by vbrabandt        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,11 +41,14 @@ typedef struct s_stack_node
 int						error_syntax(char *str_n);
 int						error_duplicate(t_stack_node *a, int n);
 void					free_stack(t_stack_node **stack);
-void					free_errors(t_stack_node **a, char **argv);
+void					free_errors(t_stack_node **a, char **argv,
+							bool is_split);
+void					free_split(char **split_argv);
 
 /* --- Stack Inititation --- */
 char					**split(char *s, char c);
-void					init_stack_a(t_stack_node **a, char **argv);
+void					init_stack_a(t_stack_node **a, char **argv,
+							bool is_split);
 
 /* --- Node Initiation --- */
 t_stack_node			*get_cheapest(t_stack_node *stack);

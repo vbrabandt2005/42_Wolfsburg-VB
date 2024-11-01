@@ -6,7 +6,7 @@
 /*   By: vbrabandt <vbrabandt@proton.me>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 16:47:02 by vbrabandt         #+#    #+#             */
-/*   Updated: 2024/10/31 16:47:21 by vbrabandt        ###   ########.fr       */
+/*   Updated: 2024/11/01 12:02:44 by vbrabandt        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,12 +57,12 @@ void	free_stack(t_stack_node **stack)
 	*stack = NULL;
 }
 
-void	free_errors(t_stack_node **a, char **argv)
+void	free_errors(t_stack_node **a, char **argv, bool is_split)
 {
 	int	i;
 
 	free_stack(a);
-	if (argv != &argv[1])
+	if (is_split)
 	{
 		i = 0;
 		while (argv[i])
@@ -71,4 +71,19 @@ void	free_errors(t_stack_node **a, char **argv)
 	}
 	ft_printf("Error\n");
 	exit(1);
+}
+
+void	free_split(char **split_argv)
+{
+	int	i;
+
+	if (!split_argv)
+		return ;
+	i = 0;
+	while (split_argv[i])
+	{
+		free(split_argv[i]);
+		i++;
+	}
+	free(split_argv);
 }
