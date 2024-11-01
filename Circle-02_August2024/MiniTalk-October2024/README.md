@@ -49,7 +49,7 @@ Our goal was to make a messaging server and client in C using the internal UNIX 
 
 Every MiniTalk project (including mine and literally one from a staff member) has a de-facto text length limit of around ~2000 words on Linux.
 
-From what I heard fromW senior students, their code worked perfectly when they were using MacOS, I suspect it may be because differences on how MacOS (UNIX) and Ubuntu (Linux) deals with Signals.
+From what I heard from senior students, their code worked perfectly when they were using MacOS, I suspect it may be because differences on how MacOS (UNIX) and Ubuntu (Linux) deals with Signals.
 
 So to break MiniTalk just give it 3000+ words (from the [**Lorum Ipsum**](https://www.loremipsum.de/) for example) and then see the wonderful cries of the PC terminal.
 
