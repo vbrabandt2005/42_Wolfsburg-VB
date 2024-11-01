@@ -24,4 +24,4 @@ and outputs the sequence of operations used to sort the stack.
 
 ### Visualizer
 
-- [Emmanuel Ruaud (o-reo)'s ](https://github.com/o-reo) [Push_Swap_Visualizer](https://github.com/o-reo/push_swap_visualizer)
+- [Emmanuel Ruaud (o-reo)'s](https://github.com/o-reo) [Push_Swap_Visualizer](https://github.com/o-reo/push_swap_visualizer)
