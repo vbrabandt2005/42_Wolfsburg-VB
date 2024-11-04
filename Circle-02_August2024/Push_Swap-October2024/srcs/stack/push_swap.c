@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: vbrabandt <vbrabandt@proton.me>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/28 15:40:31 by bjbogisc          #+#    #+#             */
-/*   Updated: 2024/11/01 12:00:50 by vbrabandt        ###   ########.fr       */
+/*   Created: 2024/11/04 13:41:27 by vbrabandt         #+#    #+#             */
+/*   Updated: 2024/11/04 13:41:28 by vbrabandt        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,6 @@ static void	handle_input(t_stack_node **a, int argc, char **argv)
 	}
 	else
 		init_stack_a(a, argv + 1, is_split);
-
 }
 
 int	main(int argc, char **argv)
