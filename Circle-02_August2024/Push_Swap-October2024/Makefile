@@ -6,7 +6,7 @@
 #    By: vbrabandt <vbrabandt@proton.me>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/10/23 12:31:12 by vbrabandt         #+#    #+#              #
-#    Updated: 2024/11/01 12:44:53 by vbrabandt        ###   ########.fr        #
+#    Updated: 2024/11/15 13:28:11 by vbrabandt        ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -80,6 +80,7 @@ clean:
 fclean: clean
 	@$(MAKE) -C $(LIBFT_DIR) fclean $(SILENT)
 	@$(RM) $(NAME) $(SILENT)
+	@$(RM) checker_project
 	@echo "\033[4;36m[Fully cleaned up]\033[0m"
 
 re: fclean
@@ -99,8 +100,13 @@ visualize:
 		echo "\033[1;31mVisualizer is not built or doesn't exist\033[0m"; \
     fi
 
+auto_checker:
+	@$(MAKE) all -s
+	./push_swap_auto_checker.sh
+
 fuck: fclean
 	@$(RM) Visualizer/build imgui.ini
+	@$(RM) checker_project push_swap_tutorial
 	@echo "\033[4;36m[Fully fully cleaned up]\033[0m"
 
 .PHONY: all clean fclean re libft
