@@ -36,8 +36,4 @@ and outputs the sequence of operations used to sort the stack.
 - [Emmanuel Ruaud (o-reo)'s](https://github.com/o-reo) [Push_Swap_Visualizer](https://github.com/o-reo/push_swap_visualizer)
 - [Dongyeop Kim (GitHub - yupab3) || (42Intra - dongyeuk)'s](https://github.com/yupab3) [Push_Swap_Auto_Checker](https://github.com/yupab3/push_swap_auto_checker)
 
-> Visualizer only has very minor modification to make it fit into the project
-> 
-> Push_Swap_Auto_Checker was not modified at all
-> 
 > Both are Licensed as GPL-3.0 which should mean they are compatible with this project.
