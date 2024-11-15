@@ -109,4 +109,4 @@ fuck: fclean
 	@$(RM) checker_project push_swap_tutorial
 	@echo "\033[4;36m[Fully fully cleaned up]\033[0m"
 
-.PHONY: all clean fclean re libft
+.PHONY: all clean fclean re libft build visualize auto_checker fuck
