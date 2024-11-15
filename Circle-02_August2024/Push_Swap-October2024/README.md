@@ -9,7 +9,7 @@ It efficiently sorts a stack of integers using a limited set of operations.
 The program processes input, initializes stacks, performs sorting operations
 and outputs the sequence of operations used to sort the stack.
 
-![me be like](https://media1.tenor.com/m/izTNkY2BgkAAAAAC/fade-away-oooooooooooo.gif)⠀⠀⠀⠀
+![me be like](https://media1.tenor.com/m/izTNkY2BgkAAAAAC/fade-away-oooooooooooo.gif)
 
 > Yes, It's painful.
 
