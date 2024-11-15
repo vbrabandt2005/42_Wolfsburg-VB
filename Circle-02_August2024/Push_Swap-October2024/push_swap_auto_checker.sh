@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# Push_Swap_Auto_Checker
+# Originally by Dongyeop Kim (GitHub - yupab3) (42Intra - dongyeuk)
+
 echo -e "\033[1;37m##################################################\033[0m"
 echo -e "\033[1;37m############## [PUSH SWAP TUTORIAL] ##############\033[0m"
 echo -e "\033[1;37m##################################################\033[0m"
