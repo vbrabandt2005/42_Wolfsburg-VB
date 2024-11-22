@@ -6,7 +6,7 @@
 #    By: vbrabandt <vbrabandt@proton.me>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/10/23 12:31:12 by vbrabandt         #+#    #+#              #
-#    Updated: 2024/11/15 13:28:11 by vbrabandt        ###   ########.fr        #
+#    Updated: 2024/11/22 12:28:11 by vbrabandt        ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -88,6 +88,7 @@ re: fclean
 
 build:
 	@$(MAKE) all -s
+	@echo "\033[1;36m[building Visualizer]\033[0m"
 	@$(MKDIR) Visualizer/build
 	@cd Visualizer/build && cmake .. $(SILENT) && make $(SILENT)
 	@echo "\033[1;36m[Visualizer built]\033[0m"

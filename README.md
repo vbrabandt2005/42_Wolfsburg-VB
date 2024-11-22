@@ -32,7 +32,7 @@ Repository/Archive of everything I've done at [42WOB](https://42wolfsburg.de/).
 
 - [So_Long](https://github.com/vbrabandt2005/42_Wolfsburg-VB/tree/main/Circle-02_August2024/So_Long-August2024) (125% - August-September 2024)
 - [MiniTalk](https://github.com/vbrabandt2005/42_Wolfsburg-VB/tree/main/Circle-02_August2024/MiniTalk-October2024) (115% - October 2024)
-- [Push_Swap](https://github.com/vbrabandt2005/42_Wolfsburg-VB/tree/main/Circle-02_August2024/Push_Swap-October2024) (October 2024)
+- [Push_Swap](https://github.com/vbrabandt2005/42_Wolfsburg-VB/tree/main/Circle-02_August2024/Push_Swap-October2024) (100% - October-November 2024)
 
 ### Milestone/Circle. 3
 
