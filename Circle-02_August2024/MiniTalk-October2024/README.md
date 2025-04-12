@@ -53,4 +53,3 @@ From what I heard from senior students, their code worked perfectly when they we
 
 So to break MiniTalk just give it 3000+ words (from the [**Lorum Ipsum**](https://www.loremipsum.de/) for example) and then see the wonderful cries of the PC terminal.
 
-## Credits
