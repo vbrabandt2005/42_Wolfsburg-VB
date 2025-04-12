@@ -34,10 +34,9 @@ Repository/Archive of everything I've done at [42WOB](https://42wolfsburg.de/).
 - [MiniTalk](https://github.com/vbrabandt2005/42_Wolfsburg-VB/tree/main/Circle-02_August2024/MiniTalk-October2024) (115% - October 2024)
 - [Push_Swap](https://github.com/vbrabandt2005/42_Wolfsburg-VB/tree/main/Circle-02_August2024/Push_Swap-October2024) (100% - October-November 2024)
 
-### Milestone/Circle. 3
+## Note
 
-- Philosophers (TODO)
-- MiniShell (TODO)
+Due to personal reasons I'm no longer a student at 42 Wolfsburg, so no projects or fixes will be made to this repo.
 
 ## Licence
 
