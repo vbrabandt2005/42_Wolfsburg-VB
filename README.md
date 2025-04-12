@@ -36,7 +36,7 @@ Repository/Archive of everything I've done at [42WOB](https://42wolfsburg.de/).
 
 ## Note
 
-Due to personal reasons I'm no longer a student at 42 Wolfsburg, so no projects or fixes will be made to this repo.
+Due to personal reasons I'm no longer a student at 42 Wolfsburg, so no projects or fixes will be made to this repo in the foreseen future.
 
 ## Licence
 
